@@ -55,10 +55,9 @@
   },
   "trusted": {
     "companies": [
+      { "name": "Reggio Calabria", "logo": "images/companies/reggio_calabria.png", "height": 44 },
       { "name": "Company name", "logo": "" },
-      { "name": "Company name", "logo": "" },
-      { "name": "Company name", "logo": "" },
-      { "name": "Company name", "logo": "" },
+      { "name": "Dipartimento per la Trasformazione Digitale", "logo": "images/companies/transformazione.png" },
       { "name": "Company name", "logo": "" },
       { "name": "Company name", "logo": "" }
     ]

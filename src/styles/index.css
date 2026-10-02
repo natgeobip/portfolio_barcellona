@@ -136,11 +136,11 @@ img { display: block; max-width: 100%; }
 .card__arrow { margin-top: auto; color: var(--red); }
 
 /* ---------- logo carousel ---------- */
-.logos { background: var(--red); color: #fff; overflow: hidden; padding: 18px 0; }
-.logos__track { display: flex; width: max-content; animation: logos-scroll 30s linear infinite; }
+.logos { background: var(--red); color: #fff; overflow: hidden; padding: 12px 0; }
+.logos__track { display: flex; width: max-content; animation: logos-scroll 70s linear infinite; }
 .logos:hover .logos__track { animation-play-state: paused; }
-.logos li { flex: none; display: flex; align-items: center; gap: 8px; padding: 0 44px; font-size: .85rem; font-weight: 500; white-space: nowrap; }
-.logos img { height: 28px; width: auto; filter: brightness(0) invert(1); } /* logo resi bianchi su sfondo rosso */
+.logos li { flex: none; display: flex; align-items: center; gap: 8px; padding: 0 36px; height: 46px; font-size: .85rem; font-weight: 500; white-space: nowrap; }
+.logos img { display: block; height: 28px; width: auto; max-width: 240px; object-fit: contain; }
 @keyframes logos-scroll { to { transform: translateX(-50%); } }
 @media (prefers-reduced-motion: reduce) { .logos__track { animation: none; } }
 
