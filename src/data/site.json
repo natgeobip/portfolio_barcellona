@@ -1,0 +1,79 @@
+{
+  "name": "BIP Space",
+  "hero": {
+    "eyebrow": "Portfolio",
+    "titleLight": "BIP",
+    "titleBold": "Space",
+    "text": "Trasformiamo i dati satellitari in decisioni: geospatial analytics, GIS, remote sensing e data intelligence al servizio dell'innovazione.",
+    "cta": "Get started",
+    "image": "images/satellite_orbit.png",
+    "satellite": "images/satellite.png"
+  },
+  "about": {
+    "eyebrow": "Who we are",
+    "title": "Where space data meets decisions",
+    "text": [
+      "BIP Space è il team di Business Integration Partners dedicato all'osservazione della Terra e all'analisi dei dati geospaziali. Combiniamo competenze tecniche e conoscenza di business per trasformare immagini satellitari in informazioni utili.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    ],
+    "skills": [
+      { "title": "Geospatial Analytics", "text": "Analisi spaziali e modelli su dati territoriali." },
+      { "title": "GIS", "text": "Mappe, geodatabase e piattaforme webGIS." },
+      { "title": "Remote Sensing", "text": "Elaborazione di dati satellitari ottici e radar." },
+      { "title": "Data Intelligence", "text": "Dashboard e insight per decisioni operative." }
+    ]
+  },
+  "team": {
+    "eyebrow": "Our people",
+    "title": "Meet our team",
+    "blocks": [
+      {
+        "title": "The people behind the work",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore."
+      },
+      {
+        "title": "Built by people",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia."
+      }
+    ],
+    "members": [
+      { "name": "Rob", "role": "Role", "bio": "", "photo": "images/team/Rob.png", "linkedin": "" },
+      { "name": "Fede", "role": "Role", "bio": "", "photo": "images/team/Fede.png", "linkedin": "" },
+      { "name": "Luci", "role": "Role", "bio": "", "photo": "images/team/Luci.png", "linkedin": "" },
+      { "name": "Corinne", "role": "Role", "bio": "", "photo": "images/team/Corinne.png", "linkedin": "" },
+      { "name": "Gianlu", "role": "Role", "bio": "", "photo": "images/team/Gianlu.png", "linkedin": "" },
+      { "name": "Bea", "role": "Role", "bio": "", "photo": "images/team/Bea.png", "linkedin": "" },
+      { "name": "Naty", "focus": "45%", "role": "Role", "bio": "", "photo": "images/team/Naty.png", "linkedin": "" },
+      { "name": "Isa", "role": "Role", "bio": "", "photo": "images/team/isa.png", "linkedin": "" },
+      { "name": "Tom", "role": "Role", "bio": "", "photo": "images/team/Tom.png", "linkedin": "" },
+      { "name": "Flavia", "role": "Role", "bio": "", "photo": "images/team/Flavia.png", "linkedin": "" }
+    ]
+  },
+  "projects": {
+    "eyebrow": "Our work",
+    "title": "Projects"
+  },
+  "trusted": {
+    "companies": [
+      { "name": "Company name", "logo": "" },
+      { "name": "Company name", "logo": "" },
+      { "name": "Company name", "logo": "" },
+      { "name": "Company name", "logo": "" },
+      { "name": "Company name", "logo": "" },
+      { "name": "Company name", "logo": "" }
+    ]
+  },
+  "footer": {
+    "eyebrow": "Find us here",
+    "titleLight": "Let's shape",
+    "titleBold": "the next frontier together",
+    "cta": "Let's get in touch",
+    "ctaHref": "mailto:space@example.com",
+    "links": [
+      { "label": "LinkedIn", "href": "https://www.linkedin.com/" },
+      { "label": "Instagram", "href": "https://www.instagram.com/" },
+      { "label": "Website", "href": "https://example.com/" },
+      { "label": "Fuels", "href": "https://example.com/" }
+    ]
+  }
+}

@@ -1,0 +1,81 @@
+import Hero from '../components/Hero.jsx'
+import SectionHeading from '../components/SectionHeading.jsx'
+import TeamGallery from '../components/TeamGallery.jsx'
+import ProjectCard from '../components/ProjectCard.jsx'
+import Footer from '../components/Footer.jsx'
+import LogoCarousel from '../components/LogoCarousel.jsx'
+import site from '../data/site.json'
+import projects from '../data/projects.json'
+
+const navLinks = [
+  { label: 'WHO WE ARE', id: 'about' },
+  { label: 'PROJECTS', id: 'projects' },
+  { label: 'MEET OUR TEAM', id: 'team' },
+  { label: 'CONTACT US', id: 'contact' },
+]
+
+export default function Home() {
+  const { hero, about, team, trusted } = site
+
+  return (
+    <>
+      <Hero
+        variant="home"
+        navLinks={navLinks}
+        eyebrow={hero.eyebrow}
+        titleLight={hero.titleLight}
+        titleBold={hero.titleBold}
+        text={hero.text}
+        cta={hero.cta}
+        ctaTarget="projects"
+        banner={hero.image}
+        satellite={hero.satellite}
+      />
+
+      <LogoCarousel companies={trusted.companies} />
+
+      <section className="section" id="about">
+        <SectionHeading eyebrow={about.eyebrow} title={about.title} />
+        <div className="about">
+          <div className="about__text">
+            {about.text.map((t, i) => (
+              <p key={i}>{t}</p>
+            ))}
+          </div>
+          <ul className="about__skills">
+            {about.skills.map((s) => (
+              <li key={s.title}>
+                <h3>{s.title}</h3>
+                <p>{s.text}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <section className="section" id="projects">
+        <SectionHeading eyebrow={site.projects.eyebrow} title={site.projects.title} />
+        <div className="cards">
+          {projects.map((p) => (
+            <ProjectCard key={p.slug} project={p} />
+          ))}
+        </div>
+      </section>
+
+      <section className="section" id="team">
+        <SectionHeading eyebrow={team.eyebrow} title={team.title} />
+        <div className="team__text">
+          {team.blocks.map((b) => (
+            <div key={b.title}>
+              <h3>{b.title}</h3>
+              <p>{b.text}</p>
+            </div>
+          ))}
+        </div>
+        <TeamGallery members={team.members} />
+      </section>
+
+      <Footer />
+    </>
+  )
+}

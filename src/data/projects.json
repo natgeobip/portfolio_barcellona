@@ -1,0 +1,170 @@
+[
+  {
+    "slug": "vegetation-loss-construction-detection",
+    "titleLight": "Vegetation Loss to",
+    "titleBold": "Construction Detection",
+    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+    "tags": ["Remote Sensing", "Sentinel-2", "Change Detection"],
+    "image": "images/placeholder.svg",
+    "heroText": "Land-cover change from Sentinel-2 to track urban growth and flag new construction sites.",
+    "overview": {
+      "title": "Project at a glance",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "stats": [
+        { "value": "18 M +", "label": "Lorem ipsum" },
+        { "value": "51 %", "label": "Lorem ipsum" },
+        { "value": "32 X +", "label": "Lorem ipsum" },
+        { "value": "18 M +", "label": "Lorem ipsum" }
+      ],
+      "meta": { "Client": "Lorem ipsum", "Scope": "Lorem ipsum", "Region": "Lorem ipsum", "Duration": "Lorem ipsum" }
+    },
+    "story": [
+      { "icon": "challenge", "label": "The challenge", "title": "Lorem ipsum dolor", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation." },
+      { "icon": "analyzed", "label": "What was analyzed", "title": "Lorem ipsum dolor", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation." },
+      { "icon": "approach", "label": "Our approach", "title": "Lorem ipsum dolor", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation." }
+    ],
+    "insights": {
+      "title": "Data that drives decisions",
+      "main": { "image": "images/placeholder.svg", "caption": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." },
+      "charts": [
+        { "title": "Graph of project", "image": "images/placeholder.svg", "caption": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor." },
+        { "title": "Graph of project", "image": "images/placeholder.svg", "caption": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor." }
+      ]
+    },
+    "results": {
+      "title": "Results that matter",
+      "items": [
+        { "value": "30%", "label": "Lorem ipsum" },
+        { "value": "18 M +", "label": "Lorem ipsum" },
+        { "value": "40%", "label": "Lorem ipsum" },
+        { "value": "Executive dashboard", "label": "Lorem ipsum", "small": true }
+      ]
+    }
+  },
+  {
+    "slug": "urban-heat-island-mapping",
+    "titleLight": "Urban Heat Island",
+    "titleBold": "Mapping",
+    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+    "tags": ["GIS", "Landsat", "Climate"],
+    "image": "images/placeholder.svg",
+    "heroText": "Thermal satellite data combined with GIS layers to map heat exposure across the city.",
+    "overview": {
+      "title": "Project at a glance",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "stats": [
+        { "value": "12 M +", "label": "Lorem ipsum" },
+        { "value": "45 %", "label": "Lorem ipsum" },
+        { "value": "20 X +", "label": "Lorem ipsum" },
+        { "value": "9 M +", "label": "Lorem ipsum" }
+      ],
+      "meta": { "Client": "Lorem ipsum", "Scope": "Lorem ipsum", "Region": "Lorem ipsum", "Duration": "Lorem ipsum" }
+    },
+    "story": [
+      { "icon": "challenge", "label": "The challenge", "title": "Lorem ipsum dolor", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." },
+      { "icon": "analyzed", "label": "What was analyzed", "title": "Lorem ipsum dolor", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." },
+      { "icon": "approach", "label": "Our approach", "title": "Lorem ipsum dolor", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." }
+    ],
+    "insights": {
+      "title": "Data that drives decisions",
+      "main": { "image": "images/placeholder.svg", "caption": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+      "charts": [
+        { "title": "Graph of project", "image": "images/placeholder.svg", "caption": "Lorem ipsum dolor sit amet." },
+        { "title": "Graph of project", "image": "images/placeholder.svg", "caption": "Lorem ipsum dolor sit amet." }
+      ]
+    },
+    "results": {
+      "title": "Results that matter",
+      "items": [
+        { "value": "25%", "label": "Lorem ipsum" },
+        { "value": "10 M +", "label": "Lorem ipsum" },
+        { "value": "35%", "label": "Lorem ipsum" },
+        { "value": "Executive dashboard", "label": "Lorem ipsum", "small": true }
+      ]
+    }
+  },
+  {
+    "slug": "coastal-erosion-monitoring",
+    "titleLight": "Coastal Erosion",
+    "titleBold": "Monitoring",
+    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+    "tags": ["SAR", "Time Series", "Environment"],
+    "image": "images/placeholder.svg",
+    "heroText": "Multi-year SAR time series to measure shoreline retreat and support coastal planning.",
+    "overview": {
+      "title": "Project at a glance",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "stats": [
+        { "value": "8 M +", "label": "Lorem ipsum" },
+        { "value": "63 %", "label": "Lorem ipsum" },
+        { "value": "15 X +", "label": "Lorem ipsum" },
+        { "value": "6 M +", "label": "Lorem ipsum" }
+      ],
+      "meta": { "Client": "Lorem ipsum", "Scope": "Lorem ipsum", "Region": "Lorem ipsum", "Duration": "Lorem ipsum" }
+    },
+    "story": [
+      { "icon": "challenge", "label": "The challenge", "title": "Lorem ipsum dolor", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." },
+      { "icon": "analyzed", "label": "What was analyzed", "title": "Lorem ipsum dolor", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." },
+      { "icon": "approach", "label": "Our approach", "title": "Lorem ipsum dolor", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." }
+    ],
+    "insights": {
+      "title": "Data that drives decisions",
+      "main": { "image": "images/placeholder.svg", "caption": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+      "charts": [
+        { "title": "Graph of project", "image": "images/placeholder.svg", "caption": "Lorem ipsum dolor sit amet." },
+        { "title": "Graph of project", "image": "images/placeholder.svg", "caption": "Lorem ipsum dolor sit amet." }
+      ]
+    },
+    "results": {
+      "title": "Results that matter",
+      "items": [
+        { "value": "20%", "label": "Lorem ipsum" },
+        { "value": "5 M +", "label": "Lorem ipsum" },
+        { "value": "50%", "label": "Lorem ipsum" },
+        { "value": "Executive dashboard", "label": "Lorem ipsum", "small": true }
+      ]
+    }
+  },
+  {
+    "slug": "crop-health-yield-analytics",
+    "titleLight": "Crop Health &",
+    "titleBold": "Yield Analytics",
+    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+    "tags": ["Agriculture", "NDVI", "Data Intelligence"],
+    "image": "images/placeholder.svg",
+    "heroText": "Vegetation indices and machine learning to estimate crop condition and expected yield.",
+    "overview": {
+      "title": "Project at a glance",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "stats": [
+        { "value": "25 M +", "label": "Lorem ipsum" },
+        { "value": "72 %", "label": "Lorem ipsum" },
+        { "value": "40 X +", "label": "Lorem ipsum" },
+        { "value": "14 M +", "label": "Lorem ipsum" }
+      ],
+      "meta": { "Client": "Lorem ipsum", "Scope": "Lorem ipsum", "Region": "Lorem ipsum", "Duration": "Lorem ipsum" }
+    },
+    "story": [
+      { "icon": "challenge", "label": "The challenge", "title": "Lorem ipsum dolor", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." },
+      { "icon": "analyzed", "label": "What was analyzed", "title": "Lorem ipsum dolor", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." },
+      { "icon": "approach", "label": "Our approach", "title": "Lorem ipsum dolor", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." }
+    ],
+    "insights": {
+      "title": "Data that drives decisions",
+      "main": { "image": "images/placeholder.svg", "caption": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+      "charts": [
+        { "title": "Graph of project", "image": "images/placeholder.svg", "caption": "Lorem ipsum dolor sit amet." },
+        { "title": "Graph of project", "image": "images/placeholder.svg", "caption": "Lorem ipsum dolor sit amet." }
+      ]
+    },
+    "results": {
+      "title": "Results that matter",
+      "items": [
+        { "value": "28%", "label": "Lorem ipsum" },
+        { "value": "20 M +", "label": "Lorem ipsum" },
+        { "value": "45%", "label": "Lorem ipsum" },
+        { "value": "Executive dashboard", "label": "Lorem ipsum", "small": true }
+      ]
+    }
+  }
+]
