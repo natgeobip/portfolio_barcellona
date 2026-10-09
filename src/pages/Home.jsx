@@ -23,6 +23,7 @@ export default function Home() {
         variant="home"
         navLinks={navLinks}
         eyebrow={hero.eyebrow}
+        titleLogo={hero.titleLogo}
         titleLight={hero.titleLight}
         titleBold={hero.titleBold}
         text={hero.text}

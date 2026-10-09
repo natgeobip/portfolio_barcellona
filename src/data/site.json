@@ -2,6 +2,7 @@
   "name": "BIP Space",
   "hero": {
     "eyebrow": "Portfolio",
+    "titleLogo": "images/bip_logo.png",
     "titleLight": "BIP",
     "titleBold": "Space",
     "text": "Trasformiamo i dati satellitari in decisioni: geospatial analytics, GIS, remote sensing e data intelligence al servizio dell'innovazione.",
@@ -17,10 +18,22 @@
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     ],
     "skills": [
-      { "title": "Geospatial Analytics", "text": "Analisi spaziali e modelli su dati territoriali." },
-      { "title": "GIS", "text": "Mappe, geodatabase e piattaforme webGIS." },
-      { "title": "Remote Sensing", "text": "Elaborazione di dati satellitari ottici e radar." },
-      { "title": "Data Intelligence", "text": "Dashboard e insight per decisioni operative." }
+      {
+        "title": "Geospatial Analytics",
+        "text": "Analisi spaziali e modelli su dati territoriali."
+      },
+      {
+        "title": "GIS",
+        "text": "Mappe, geodatabase e piattaforme webGIS."
+      },
+      {
+        "title": "Remote Sensing",
+        "text": "Elaborazione di dati satellitari ottici e radar."
+      },
+      {
+        "title": "Data Intelligence",
+        "text": "Dashboard e insight per decisioni operative."
+      }
     ]
   },
   "team": {
@@ -37,16 +50,78 @@
       }
     ],
     "members": [
-      { "name": "Rob", "role": "Role", "bio": "", "photo": "images/team/Rob.png", "linkedin": "" },
-      { "name": "Fede", "role": "Role", "bio": "", "photo": "images/team/Fede.png", "linkedin": "" },
-      { "name": "Luci", "role": "Role", "bio": "", "photo": "images/team/Luci.png", "linkedin": "" },
-      { "name": "Corinne", "role": "Role", "bio": "", "photo": "images/team/Corinne.png", "linkedin": "" },
-      { "name": "Gianlu", "role": "Role", "bio": "", "photo": "images/team/Gianlu.png", "linkedin": "" },
-      { "name": "Bea", "role": "Role", "bio": "", "photo": "images/team/Bea.png", "linkedin": "" },
-      { "name": "Naty", "focus": "45%", "role": "Role", "bio": "", "photo": "images/team/Naty.png", "linkedin": "" },
-      { "name": "Isa", "role": "Role", "bio": "", "photo": "images/team/isa.png", "linkedin": "" },
-      { "name": "Tom", "role": "Role", "bio": "", "photo": "images/team/Tom.png", "linkedin": "" },
-      { "name": "Flavia", "role": "Role", "bio": "", "photo": "images/team/Flavia.png", "linkedin": "" }
+      {
+        "name": "Fede",
+        "role": "Role",
+        "bio": "",
+        "photo": "images/team/Fede.png",
+        "linkedin": ""
+      },
+      {
+        "name": "Luci",
+        "role": "Role",
+        "bio": "",
+        "photo": "images/team/Luci.png",
+        "linkedin": ""
+      },
+      {
+        "name": "Corinne",
+        "role": "Role",
+        "bio": "",
+        "photo": "images/team/Corinne.png",
+        "linkedin": ""
+      },
+      {
+        "name": "Gianlu",
+        "role": "Role",
+        "bio": "",
+        "photo": "images/team/Gianlu.png",
+        "linkedin": ""
+      },
+      {
+        "name": "Rob",
+        "role": "Role",
+        "bio": "",
+        "photo": "images/team/Rob.png",
+        "linkedin": "",
+        "featured": true
+      },
+      {
+        "name": "Bea",
+        "role": "Role",
+        "bio": "",
+        "photo": "images/team/Bea.png",
+        "linkedin": ""
+      },
+      {
+        "name": "Naty",
+        "focus": "45%",
+        "role": "Role",
+        "bio": "",
+        "photo": "images/team/Naty.png",
+        "linkedin": ""
+      },
+      {
+        "name": "Isa",
+        "role": "Role",
+        "bio": "",
+        "photo": "images/team/isa.png",
+        "linkedin": ""
+      },
+      {
+        "name": "Tom",
+        "role": "Role",
+        "bio": "",
+        "photo": "images/team/Tom.png",
+        "linkedin": ""
+      },
+      {
+        "name": "Flavia",
+        "role": "Role",
+        "bio": "",
+        "photo": "images/team/Flavia.png",
+        "linkedin": ""
+      }
     ]
   },
   "projects": {
@@ -55,11 +130,20 @@
   },
   "trusted": {
     "companies": [
-      { "name": "Reggio Calabria", "logo": "images/companies/reggio_calabria.png", "height": 44 },
-      { "name": "Company name", "logo": "" },
-      { "name": "Dipartimento per la Trasformazione Digitale", "logo": "images/companies/transformazione.png" },
-      { "name": "Company name", "logo": "" },
-      { "name": "Company name", "logo": "" }
+      {
+        "name": "Reggio Calabria",
+        "logo": "images/companies/reggio_calabria.png",
+        "height": 44
+      },
+      {
+        "name": "Dipartimento per la Trasformazione Digitale",
+        "logo": "images/companies/transformazione.png"
+      },
+      {
+        "name": "European Central Bank",
+        "logo": "images/companies/banco_central.png",
+        "height": 40
+      }
     ]
   },
   "footer": {
@@ -69,10 +153,22 @@
     "cta": "Let's get in touch",
     "ctaHref": "mailto:space@example.com",
     "links": [
-      { "label": "LinkedIn", "href": "https://www.linkedin.com/" },
-      { "label": "Instagram", "href": "https://www.instagram.com/" },
-      { "label": "Website", "href": "https://example.com/" },
-      { "label": "Fuels", "href": "https://example.com/" }
+      {
+        "label": "LinkedIn",
+        "href": "https://www.linkedin.com/"
+      },
+      {
+        "label": "Instagram",
+        "href": "https://www.instagram.com/"
+      },
+      {
+        "label": "Website",
+        "href": "https://example.com/"
+      },
+      {
+        "label": "Fuels",
+        "href": "https://example.com/"
+      }
     ]
   }
 }

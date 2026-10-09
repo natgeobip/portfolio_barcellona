@@ -1,169 +1,455 @@
 [
   {
+    "slug": "air-quality-estimation",
+    "titleLight": "Air Quality",
+    "titleBold": "Estimation",
+    "summary": "A workflow that combines Sentinel-5P satellite data with ERA5 meteorology to map ground-level NO₂, O₃, PM10 and PM2.5 over Lombardy.",
+    "tags": ["Sentinel-5P", "ERA5", "Air Quality", "Regression"],
+    "image": "images/projects/air-quality-estimation/monthly-no2.png",
+    "heroText": "From satellite columns to ground-level concentrations of NO₂, O₃, PM10 and PM2.5 over Lombardy, ready for hourly prediction with Sentinel-4.",
+    "overview": {
+      "title": "Project at a glance",
+      "text": "The product turns satellite column measurements into daily air-quality maps at the surface, for 1,244 points covering the whole region, and is built to move to hourly prediction when Sentinel-4 becomes operational. It estimates ground-level concentrations of four pollutants by linking satellite observations, meteorology and reference air-quality data.",
+      "stats": [
+        { "value": "1,244", "label": "Grid points over Lombardy" },
+        { "value": "500 m", "label": "Target resolution" },
+        { "value": "4", "label": "Pollutants: NO₂, O₃, PM10, PM2.5" },
+        { "value": "8", "label": "Models (4 pollutants × 2 targets)" }
+      ],
+      "meta": {
+        "Area": "Lombardy, Northern Italy",
+        "Period": "2025, with a test on H1 2026",
+        "Data": "Sentinel-5P, ERA5, CAMS, ARPA",
+        "Output": "Daily maps and quality layers"
+      }
+    },
+    "story": [
+      {
+        "icon": "challenge",
+        "label": "The challenge",
+        "title": "Satellites see a column, people breathe at ground level",
+        "text": "Satellites measure the atmosphere as a vertical column, while health and policy decisions depend on what people breathe at ground level. Ground stations measure that directly, but they are sparse and unevenly distributed."
+      },
+      {
+        "icon": "analyzed",
+        "label": "What was analyzed",
+        "title": "Satellite, weather and reference data",
+        "text": "Sentinel-5P (TROPOMI) tropospheric NO₂, O₃, SO₂, HCHO and UV aerosol index, ERA5 meteorology, CAMS and ARPA Lombardia reference maps, plus elevation, emissions and land use."
+      },
+      {
+        "icon": "approach",
+        "label": "Our approach",
+        "title": "One regression per pollutant and target",
+        "text": "For each pollutant, one satellite indicator is smoothed over the previous days and combined with five meteorological variables in a multiple regression. The same structure is applied to the CAMS and ARPA references, giving eight models."
+      }
+    ],
+    "data": {
+      "title": "Data sources",
+      "items": [
+        { "name": "Sentinel-5P", "text": "Tropospheric NO₂, O₃, SO₂, HCHO and UV aerosol index, from the Copernicus Data Space." },
+        { "name": "ERA5", "text": "Temperature, wind, boundary layer height, precipitation and solar radiation." },
+        { "name": "CAMS and ARPA Lombardia", "text": "CAMS modelled air quality and the ARPA 1 × 1 km assimilated maps, used as reference targets." },
+        { "name": "Static layers", "text": "Elevation (DEM), emission maps and land use." }
+      ],
+      "deliverablesTitle": "What the product delivers",
+      "deliverables": [
+        "Daily maps of estimated NO₂, O₃, PM10 and PM2.5 concentrations for 2025, with monthly and yearly summaries.",
+        "Residual maps that show where the estimate departs from the reference.",
+        "Coverage and quality layers that show where and when an estimate is available and how reliable it is."
+      ]
+    },
+    "methods": {
+      "title": "From raw data to the final product",
+      "text": [
+        "Satellite, meteorological and reference data are downloaded for the same period with a single script, reprojected and resampled to a 500 m grid, and sampled at the 1,244 points. For each pollutant, one satellite indicator is selected, smoothed over the previous days, and combined with five meteorological variables in a multiple regression. The models are checked with a time-based validation and then re-fitted on the full year to produce the maps.",
+        "The choice of satellite indicators comes from a correlation analysis. NO₂ is the clearest signal, ozone moves in the opposite direction to NO₂, and particulate matter is the hardest to capture from space."
+      ],
+      "figures": [
+        { "image": "images/projects/air-quality-estimation/workflow.png", "caption": "Inputs, processing and outputs of the workflow." },
+        { "image": "images/projects/air-quality-estimation/correlation.png", "caption": "Figure 1. Correlation between pollutants (CAMS), Sentinel-5P indicators and wind, on daily data." }
+      ]
+    },
+    "insights": {
+      "title": "Data that drives decisions",
+      "main": {
+        "image": "images/projects/air-quality-estimation/monthly-no2.png",
+        "caption": "Figure 2. Monthly mean NO₂ estimated by the model (2025). It shows the winter build-up over the Po plain and the Milan area, much lower values in the alpine north, and the minimum in the summer months. Labels are in Italian."
+      },
+      "charts": [],
+      "gallery": [
+        { "title": "Coverage", "image": "images/projects/air-quality-estimation/coverage.png", "caption": "Figure 3. Share of days with an estimate at each point (2025). Gaps depend on satellite availability." },
+        { "title": "Model quality", "image": "images/projects/air-quality-estimation/model-quality.png", "caption": "Figure 4. Out-of-sample estimates against the ARPA reference, with residuals. The estimates reproduce the general level and the seasonal pattern, and are less accurate for peaks and local extremes." },
+        { "title": "Spatial errors", "image": "images/projects/air-quality-estimation/pm10-errors.png", "caption": "Figure 5. PM10: spatial summary of the errors (bias, MAE, correlation and valid days per point, 2025)." }
+      ]
+    },
+    "findings": {
+      "title": "Main findings",
+      "items": [
+        { "title": "Spatial pattern", "text": "NO₂ concentrates in the Po plain and around Milan, with a strong winter peak." },
+        { "title": "Best performance", "text": "Ozone, followed by NO₂. PM10 is the hardest to capture and remains a baseline." },
+        { "title": "Regression to the mean", "text": "The model tends to pull values toward the mean, so very high and very low concentrations are less well captured." },
+        { "title": "Errors vary in space", "text": "In the PM10 example the bias is negative in the alpine north and close to zero in the plain, and the temporal correlation is highest around the Milan area." }
+      ]
+    },
+    "results": {
+      "title": "Results that matter",
+      "items": [
+        { "value": "1,244", "label": "Points covered over Lombardy" },
+        { "value": "365", "label": "Days mapped in 2025" },
+        { "value": "91–95%", "label": "Days with an estimate at each point" },
+        { "value": "Ozone", "label": "Best performance, followed by NO₂" }
+      ]
+    },
+    "limits": {
+      "title": "Limitations and next steps",
+      "items": [
+        "The estimates are validated against CAMS and ARPA assimilated maps, not directly against ground stations."
+      ],
+      "nextTitle": "Next steps",
+      "next": [
+        "Validation against ARPA for 2026, spatial validation on new points, extra covariates (elevation, land use, emissions) and positive-only models.",
+        "Hourly prediction by integrating Sentinel-4 once operational."
+      ]
+    }
+  },
+  {
     "slug": "vegetation-loss-construction-detection",
     "titleLight": "Vegetation Loss to",
     "titleBold": "Construction Detection",
-    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
-    "tags": ["Remote Sensing", "Sentinel-2", "Change Detection"],
-    "image": "images/placeholder.svg",
-    "heroText": "Land-cover change from Sentinel-2 to track urban growth and flag new construction sites.",
+    "summary": "Land-cover change from Sentinel-2 to track urban growth and farmland loss around Iasi, Romania.",
+    "tags": ["Google Earth Engine", "Sentinel-2", "Spectral Indices", "Change Detection"],
+    "image": "images/projects/vegetation-loss-construction-detection/land-cover-maps.png",
+    "heroText": "Land-cover change from Sentinel-2 to track urban growth and farmland loss around Iasi, Romania.",
     "overview": {
       "title": "Project at a glance",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "text": "Cities grow onto farmland, and the loss is slow, spread out and easy to miss. This project measures it with public satellite images, so the answer is objective and can be repeated every year. It asks how much the built-up area has grown, how much farmland was lost and what it became, and whether farmland at risk can be spotted before construction starts.",
       "stats": [
-        { "value": "18 M +", "label": "Lorem ipsum" },
-        { "value": "51 %", "label": "Lorem ipsum" },
-        { "value": "32 X +", "label": "Lorem ipsum" },
-        { "value": "18 M +", "label": "Lorem ipsum" }
+        { "value": "10 m", "label": "Sentinel-2 resolution" },
+        { "value": "6", "label": "Study years, 2017 to 2026" },
+        { "value": "10", "label": "Spectral indices computed" },
+        { "value": "5", "label": "Land-cover classes" }
       ],
-      "meta": { "Client": "Lorem ipsum", "Scope": "Lorem ipsum", "Region": "Lorem ipsum", "Duration": "Lorem ipsum" }
+      "meta": {
+        "Area": "Iasi, Romania",
+        "Period": "2017 to 2026",
+        "Data": "Sentinel-2 Level-2A",
+        "Method": "Threshold rules on spectral indices"
+      }
     },
     "story": [
-      { "icon": "challenge", "label": "The challenge", "title": "Lorem ipsum dolor", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation." },
-      { "icon": "analyzed", "label": "What was analyzed", "title": "Lorem ipsum dolor", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation." },
-      { "icon": "approach", "label": "Our approach", "title": "Lorem ipsum dolor", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation." }
+      {
+        "icon": "challenge",
+        "label": "The challenge",
+        "title": "Farmland loss is slow and easy to miss",
+        "text": "Urban growth eats into farmland gradually and across many small places. The project needs an objective, repeatable measure of how much was lost and what it became."
+      },
+      {
+        "icon": "analyzed",
+        "label": "What was analyzed",
+        "title": "Summer composites from Sentinel-2",
+        "text": "June to August composites at 10 m through Google Earth Engine, with cloudy scenes excluded and remaining clouds, shadows and cirrus masked. Ten spectral indices for vegetation, built-up surfaces, bare soil and water."
+      },
+      {
+        "icon": "approach",
+        "label": "Our approach",
+        "title": "Classify each year, then compare",
+        "text": "Threshold rules assign each pixel to a land-cover class. Area per class is tracked over time, a transition matrix compares the first and last year, and index differences show how strong the change is."
+      }
     ],
+    "data": {
+      "title": "Data sources",
+      "items": [
+        { "name": "Sentinel-2 Level-2A", "text": "Surface reflectance at 10 m through Google Earth Engine. June to August composites, scenes over 20% cloud excluded, and remaining clouds, shadows and cirrus masked with the SCL band." },
+        { "name": "Study years", "text": "2017, 2019, 2021, 2023, 2025 and 2026, configurable." },
+        { "name": "Reference data", "text": "None yet. Points from high-resolution images or official land-use data are planned for a supervised classifier." }
+      ],
+      "deliverablesTitle": "What the project delivers",
+      "deliverables": [
+        "Tables as CSV and charts as PNG.",
+        "An interactive map with one layer per year.",
+        "Optional GeoTIFF exports to Google Drive."
+      ]
+    },
+    "methods": {
+      "title": "From raw data to the final product",
+      "text": [
+        "The study area is the city of Iasi and the surrounding farmland and periurban area, defined as a configurable rectangle. The official county boundary can be used instead."
+      ],
+      "steps": [
+        { "title": "1. Acquire and composite images", "text": "For each year, summer scenes are filtered and masked, then combined into a median image that is more robust than a single scene." },
+        { "title": "2. Compute ten spectral indices", "text": "NDVI, SAVI, MSAVI2, EVI and LAI for vegetation, NDBI and IBI for built-up surfaces, BSI for bare soil, and NDWI and MNDWI for water." },
+        { "title": "3. Classify land cover", "text": "Threshold rules assign each pixel to water, agriculture and vegetation, urban, bare soil or unclassified, in that order of priority." },
+        { "title": "4. Detect change", "text": "Area per class is tracked over time, a transition matrix compares the first and last year, and index differences show how strong the change is." },
+        { "title": "5. Export results", "text": "Tables as CSV, charts as PNG, an interactive map with one layer per year, and optional GeoTIFF exports to Google Drive." }
+      ]
+    },
     "insights": {
       "title": "Data that drives decisions",
-      "main": { "image": "images/placeholder.svg", "caption": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." },
+      "main": {
+        "image": "images/projects/vegetation-loss-construction-detection/land-cover-maps.png",
+        "caption": "Figure 1. Land-cover maps for the first and the last year."
+      },
       "charts": [
-        { "title": "Graph of project", "image": "images/placeholder.svg", "caption": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor." },
-        { "title": "Graph of project", "image": "images/placeholder.svg", "caption": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor." }
-      ]
+        { "title": "Area per class", "image": "images/projects/vegetation-loss-construction-detection/area-per-class.png", "caption": "Figure 2. Area per class over time." },
+        { "title": "Transition matrix", "image": "images/projects/vegetation-loss-construction-detection/transition-matrix.png", "caption": "Figure 3. Transition matrix heat map." }
+      ],
+      "gallery": []
     },
     "results": {
       "title": "Results that matter",
       "items": [
-        { "value": "30%", "label": "Lorem ipsum" },
-        { "value": "18 M +", "label": "Lorem ipsum" },
-        { "value": "40%", "label": "Lorem ipsum" },
-        { "value": "Executive dashboard", "label": "Lorem ipsum", "small": true }
+        { "value": "10–20 m", "label": "Spatial resolution" },
+        { "value": "2017–2026", "label": "About every two years" },
+        { "value": "5", "label": "Water, agriculture and vegetation, urban, bare soil, unclassified" },
+        { "value": "Threshold rules", "label": "On spectral indices, no trained model yet", "small": true }
+      ]
+    },
+    "limits": {
+      "title": "Limitations and next steps",
+      "items": [
+        "Thresholds need calibration against real images before the numbers can be trusted.",
+        "Freshly ploughed land can meet both the bare soil and the urban rules, and urban wins for now. The multi-year series is what separates the two, because ploughed land turns green again.",
+        "IBI is computed but not used in the classification yet, because it is numerically unstable on water pixels."
+      ],
+      "nextTitle": "Next steps",
+      "next": [
+        "A supervised Random Forest classifier.",
+        "A cross-check with cadastral data.",
+        "A dedicated plugin."
       ]
     }
   },
   {
-    "slug": "urban-heat-island-mapping",
-    "titleLight": "Urban Heat Island",
-    "titleBold": "Mapping",
-    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
-    "tags": ["GIS", "Landsat", "Climate"],
-    "image": "images/placeholder.svg",
-    "heroText": "Thermal satellite data combined with GIS layers to map heat exposure across the city.",
+    "slug": "green-detector",
+    "titleLight": "Green",
+    "titleBold": "Detector",
+    "summary": "A QGIS-based machine-learning workflow for hierarchical urban green-cover mapping from Sentinel-2 data.",
+    "tags": ["QGIS Plugin", "Sentinel-2", "XGBoost", "Land Cover"],
+    "image": "images/projects/green-detector/study-area.png",
+    "heroText": "Sentinel-2 imagery, terrain predictors and multi-source reference labels turned into a four-class green-cover map with probability, uncertainty and confidence.",
     "overview": {
       "title": "Project at a glance",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "text": "Urban green cover supports climate adaptation, biodiversity, environmental quality and planning. Green Detector is a QGIS plugin that builds a 10 m Sentinel-2 predictor stack, trains a hierarchical classifier that first separates green from non-green surfaces and then tells agricultural, forest and shrub-and-herbaceous vegetation apart, and delivers a four-class map together with probability, uncertainty and confidence layers.",
       "stats": [
-        { "value": "12 M +", "label": "Lorem ipsum" },
-        { "value": "45 %", "label": "Lorem ipsum" },
-        { "value": "20 X +", "label": "Lorem ipsum" },
-        { "value": "9 M +", "label": "Lorem ipsum" }
+        { "value": "67.03%", "label": "Green cover mapped" },
+        { "value": "3,182 km²", "label": "Metropolitan City of Reggio Calabria" },
+        { "value": "10 m", "label": "Sentinel-2 resolution" },
+        { "value": "4", "label": "Classes in the final map" }
       ],
-      "meta": { "Client": "Lorem ipsum", "Scope": "Lorem ipsum", "Region": "Lorem ipsum", "Duration": "Lorem ipsum" }
+      "meta": {
+        "Area": "Metropolitan City of Reggio Calabria, Italy",
+        "Image date": "Sentinel-2 L2A, 4 June 2025",
+        "Models": "XGBoost, binary and vegetation type",
+        "Output": "QGIS plugin, four-class map and confidence"
+      }
     },
     "story": [
-      { "icon": "challenge", "label": "The challenge", "title": "Lorem ipsum dolor", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." },
-      { "icon": "analyzed", "label": "What was analyzed", "title": "Lorem ipsum dolor", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." },
-      { "icon": "approach", "label": "Our approach", "title": "Lorem ipsum dolor", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." }
+      {
+        "icon": "challenge",
+        "label": "The challenge",
+        "title": "Reproducible green mapping with uncertainty",
+        "text": "Mapping urban green cover with satellites is well established, but operational workflows often lack reproducibility, an assessment of uncertainty, and a direct link to geographic information systems."
+      },
+      {
+        "icon": "analyzed",
+        "label": "What was analyzed",
+        "title": "Sentinel-2, terrain and reference labels",
+        "text": "A 10 m Sentinel-2 predictor stack with elevation and slope, trained on vegetation, bare-soil, building, road and water references over 97 municipalities with a sharp gradient from the coast to the mountains."
+      },
+      {
+        "icon": "approach",
+        "label": "Our approach",
+        "title": "A hierarchical classifier",
+        "text": "First separate green from non-green surfaces, then tell vegetation types apart. Filtering the vegetation-type result with the green decision removes buildings and roads labelled as vegetation, and extra layers show where a prediction is weakly supported."
+      }
     ],
+    "data": {
+      "title": "Data sources",
+      "items": [
+        { "name": "Sentinel-2 Level-2A", "text": "Two adjacent tiles from the same acquisition of 4 June 2025. Bands B02, B03, B04 and B08 at their native 10 m; B11 and B12 resampled from 20 m to 10 m. The scene classification layer supplies the water reference." },
+        { "name": "Digital elevation model", "text": "10 m DEM aligned to the Sentinel-2 grid. Slope is computed in degrees with the Zevenbergen-Thorne algorithm." },
+        { "name": "Administrative boundary", "text": "Official ISTAT boundary of the Metropolitan City, rasterized on the 10 m grid: 31,819,826 pixels." },
+        { "name": "Vegetation references", "text": "Polygons for agricultural vegetation (903), forest vegetation (229) and shrub and herbaceous vegetation (331), plus 6,643 auxiliary green labels derived with AI." },
+        { "name": "Non-green references", "text": "Bare-soil polygons (1,722), urban non-green polygons (120), OpenStreetMap building footprints (163,483), buffered road polygons (33,659) and water pixels from the scene classification layer." }
+      ],
+      "deliverablesTitle": "What the plugin produces",
+      "deliverables": [
+        "Binary green and non-green classification, with a green-cover probability and a binary uncertainty layer.",
+        "Three-class vegetation-type map, with class probabilities, maximum class probability and normalised predictive entropy.",
+        "Final four-class map: non-green, agricultural, forest, and shrub and herbaceous vegetation.",
+        "Hierarchical confidence layer that combines the support of both models."
+      ]
+    },
+    "methods": {
+      "title": "From raw data to the final product",
+      "text": [
+        "The hierarchy matters because a model trained only on vegetation classes labels every pixel as some kind of vegetation, buildings and roads included. Filtering the vegetation-type result with the green/non-green decision removes that error. The extra layers show where a prediction is weakly supported, so the class map is not read as more certain than it is.",
+        "Green Detector is organized in tabs that match the processing modules: data preparation, feature construction, dataset generation, model training, prediction, post-processing, quality control and transferability. Each stage can be run and checked on its own, and trained models and scaling settings are stored apart from the interface. The finished workflow was also applied, without retraining, to Villa Borghese, a historic urban park of about 135 ha in Rome, to test how well it transfers to a very different landscape."
+      ],
+      "figures": [
+        { "image": "images/projects/green-detector/summary.png", "caption": "Problem, approach and impact at a glance." },
+        { "image": "images/projects/green-detector/study-area.png", "caption": "Figure 1. Study area, hierarchical classification and workflow. (A) Official ISTAT area of interest and raster-grid characteristics. (B) Final hierarchical classification and class proportions. (C) The workflow from data preparation to hierarchical prediction and transferability assessment." },
+        { "image": "images/projects/green-detector/labels.png", "caption": "Figure 2. Spatial distribution of the training-label inventory used for the binary and vegetation-type models." },
+        { "image": "images/projects/green-detector/workflow.png", "caption": "Figure 3. End-to-end processing and transferability workflow, from Sentinel-2 imagery, terrain and reference labels to the four-class product and the external application." },
+        { "image": "images/projects/green-detector/plugin-ui.png", "caption": "Figure 4. Green Detector plugin interface and processing controls." },
+        { "image": "images/projects/green-detector/architecture.png", "caption": "Figure 5. Architecture of the plugin: the entry point coordinates preprocessing, modelling, prediction, post-processing and transferability modules, with the interface in Qt forms, pretrained models and QGIS styles in their own packages." }
+      ]
+    },
     "insights": {
       "title": "Data that drives decisions",
-      "main": { "image": "images/placeholder.svg", "caption": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
-      "charts": [
-        { "title": "Graph of project", "image": "images/placeholder.svg", "caption": "Lorem ipsum dolor sit amet." },
-        { "title": "Graph of project", "image": "images/placeholder.svg", "caption": "Lorem ipsum dolor sit amet." }
+      "main": {
+        "image": "images/projects/green-detector/outputs.png",
+        "caption": "Figure 7. Main outputs over the whole area: (A) final hierarchical classification, (B) green-cover probability, (C) hierarchical confidence."
+      },
+      "charts": [],
+      "gallery": [
+        { "title": "Model performance", "image": "images/projects/green-detector/metrics.png", "caption": "Figure 6. Confusion matrices and performance metrics of the selected models. (A) Binary XGBoost. (B) Vegetation-type XGBoost. (C) Summary metrics on the spatially independent test sets." }
+      ]
+    },
+    "findings": {
+      "title": "Main findings",
+      "items": [
+        { "title": "Green cover", "text": "67.03% of the area, 21,328,259 pixels out of 31,819,790 valid pixels at 10 m." },
+        { "title": "Binary model", "text": "XGBoost with macro F1 0.772, ROC AUC 0.857 and log loss 0.470." },
+        { "title": "Vegetation-type model", "text": "XGBoost with macro F1 0.705 and accuracy 0.704. Class F1: agricultural 0.756, forest 0.743, shrub and herbaceous 0.614." },
+        { "title": "Spatially independent validation", "text": "Spatial blocks of about 1 km with 20% held out and no block shared between training and test. Mean hierarchical confidence is 0.646." }
       ]
     },
     "results": {
       "title": "Results that matter",
       "items": [
-        { "value": "25%", "label": "Lorem ipsum" },
-        { "value": "10 M +", "label": "Lorem ipsum" },
-        { "value": "35%", "label": "Lorem ipsum" },
-        { "value": "Executive dashboard", "label": "Lorem ipsum", "small": true }
+        { "value": "67.03%", "label": "Green cover across 3,181.98 km²" },
+        { "value": "0.772", "label": "Macro F1, binary model" },
+        { "value": "0.705", "label": "Macro F1, vegetation-type model" },
+        { "value": "0.646", "label": "Mean hierarchical confidence" }
       ]
     }
   },
   {
-    "slug": "coastal-erosion-monitoring",
-    "titleLight": "Coastal Erosion",
-    "titleBold": "Monitoring",
-    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
-    "tags": ["SAR", "Time Series", "Environment"],
-    "image": "images/placeholder.svg",
-    "heroText": "Multi-year SAR time series to measure shoreline retreat and support coastal planning.",
+    "slug": "urban-heat-index",
+    "titleLight": "Urban Heat",
+    "titleBold": "Index",
+    "summary": "A 36-month satellite assessment of relative surface heat, land-cover dynamics and intervention opportunities in Reggio Calabria.",
+    "tags": ["Sentinel-2", "LST Proxy", "Heat Risk", "Time Series"],
+    "image": "images/projects/urban-heat-index/cover.jpg",
+    "heroText": "Six complementary indicators from monthly Sentinel-2 composites show where relative heat pressure persists, when it intensifies, and which surfaces drive it.",
     "overview": {
       "title": "Project at a glance",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "text": "Heat pressure is shaped by a coupled land-surface system rather than by isolated variables. Vegetation, moisture, built-up intensity and exposed soil interact over time and together determine relative heat intensity. The analysis converts satellite observations into decision-ready information for heat mitigation, urban resilience and asset protection.",
       "stats": [
-        { "value": "8 M +", "label": "Lorem ipsum" },
-        { "value": "63 %", "label": "Lorem ipsum" },
-        { "value": "15 X +", "label": "Lorem ipsum" },
-        { "value": "6 M +", "label": "Lorem ipsum" }
+        { "value": "36", "label": "Monthly observations" },
+        { "value": "6", "label": "Complementary indicators" },
+        { "value": "7.62", "label": "Mean LST proxy" },
+        { "value": "Aug 2024", "label": "Peak heat pressure" }
       ],
-      "meta": { "Client": "Lorem ipsum", "Scope": "Lorem ipsum", "Region": "Lorem ipsum", "Duration": "Lorem ipsum" }
+      "meta": {
+        "Area": "Reggio Calabria, Italy",
+        "Window": "March 2023 to March 2026",
+        "Source": "Sentinel-2 L2A monthly composites",
+        "Output": "Maps, trend analytics, risk signals"
+      }
     },
     "story": [
-      { "icon": "challenge", "label": "The challenge", "title": "Lorem ipsum dolor", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." },
-      { "icon": "analyzed", "label": "What was analyzed", "title": "Lorem ipsum dolor", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." },
-      { "icon": "approach", "label": "Our approach", "title": "Lorem ipsum dolor", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." }
+      {
+        "icon": "challenge",
+        "label": "The challenge",
+        "title": "Where and when does heat pressure persist?",
+        "text": "Cooling actions need to be targeted. That means detecting where and when surface shifts occur, then diagnosing the dominant drivers and prioritizing persistent hotspots."
+      },
+      {
+        "icon": "analyzed",
+        "label": "What was analyzed",
+        "title": "Six indicators from monthly Sentinel-2",
+        "text": "Monthly Sentinel-2 L2A composites with cloud masking (QA60 and SCL) and median compositing, turned into NDVI, NDWI, NDBI, BSI, emissivity and an LST proxy."
+      },
+      {
+        "icon": "approach",
+        "label": "Our approach",
+        "title": "From signal to priorities",
+        "text": "Quality control, temporal normalization, indicator engineering, and spatial and temporal analytics. Interventions are then monitored through NDVI and emissivity gains and a lower LST proxy."
+      }
     ],
+    "data": {
+      "title": "Data sources",
+      "items": [
+        { "name": "Sentinel-2 L2A", "text": "Monthly composites covering March 2023 to March 2026, from the Copernicus Sentinel-2 Level-2A archive." },
+        { "name": "Cloud and quality masking", "text": "QA60 cloud masking, plus the scene classification layer (SCL) to remove contaminated observations." },
+        { "name": "Temporal normalization", "text": "Monthly median compositing, for stable month-to-month comparability." },
+        { "name": "Indicators", "text": "NDVI, NDWI, NDBI, BSI, emissivity and LST proxy." }
+      ],
+      "deliverablesTitle": "What the analysis produces",
+      "deliverables": [
+        "Maps of the monthly indicators and of the LST proxy over the whole area of interest.",
+        "AOI-wide monthly trend analytics for the 36-month period.",
+        "Hotspot geography: persistent hotspot clusters, cooler belts and transition zones.",
+        "Risk signals and a seasonal calendar for timing preventive interventions.",
+        "An interactive map to explore the full 36-month dataset."
+      ]
+    },
+    "methods": {
+      "title": "Building a reliable heat-risk signal",
+      "text": [
+        "Clouds and scene-to-scene variability were minimized first, so that the trends observed are more likely to reflect real surface behavior than data artifacts. The cleaned observations were then translated into six complementary indicators that track how vegetation, moisture, built-up intensity and exposed soil interact through time.",
+        "Relative heat intensity rises when vegetative cooling weakens and exposed urban surfaces dominate: higher NDBI, higher BSI, lower NDVI, lower NDWI and the emissivity signal combine into a higher LST proxy. The LST proxy is a relative heat-pressure index, not a direct temperature measurement: it supports comparison between places and months, not absolute temperature values."
+      ],
+      "steps": [
+        { "title": "NDVI", "text": "Vegetation cooling capacity." },
+        { "title": "NDWI", "text": "Surface moisture behavior." },
+        { "title": "NDBI", "text": "Built-up dominance." },
+        { "title": "BSI", "text": "Prevalence of bare and exposed surfaces." },
+        { "title": "Emissivity", "text": "Surface radiative behavior linked to vegetation fraction." },
+        { "title": "LST proxy", "text": "Relative heat-pressure index." }
+      ],
+      "figures": [
+        { "image": "images/projects/urban-heat-index/cover.jpg", "caption": "Urban Surface Heat Intelligence: area of interest, study window, source, scope and outputs." },
+        { "image": "images/projects/urban-heat-index/workflow.jpg", "caption": "Figure 1. Workflow: quality control, temporal normalization, indicator engineering, and spatial and temporal analytics." },
+        { "image": "images/projects/urban-heat-index/indicators.jpg", "caption": "Figure 2. Indicator interpretation panel and how the indicators combine into a higher LST proxy." }
+      ]
+    },
     "insights": {
       "title": "Data that drives decisions",
-      "main": { "image": "images/placeholder.svg", "caption": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
-      "charts": [
-        { "title": "Graph of project", "image": "images/placeholder.svg", "caption": "Lorem ipsum dolor sit amet." },
-        { "title": "Graph of project", "image": "images/placeholder.svg", "caption": "Lorem ipsum dolor sit amet." }
+      "main": {
+        "image": "images/projects/urban-heat-index/hotspots.jpg",
+        "caption": "Figure 3. Hotspot persistence: LST proxy for March 2023 and March 2026 next to NDVI, NDBI and BSI."
+      },
+      "charts": [],
+      "gallery": [
+        { "title": "Seasonal cycle", "image": "images/projects/urban-heat-index/seasonal-cycle.jpg", "caption": "Figure 4. Seasonal cycle of the indices and the LST proxy over 36 months, with the heat-pressure phase (1, August 2024) and cooling phase (2, January 2025)." }
+      ]
+    },
+    "findings": {
+      "title": "Main findings",
+      "items": [
+        { "title": "The seasonal cycle dominates", "text": "The LST proxy peaks in summer (August 2023 and August 2024, plus October 2025) and reaches its minimum in winter (January 2025). The area follows a repeatable seasonal surface-behavior cycle." },
+        { "title": "Index extremes coincide with LST extremes", "text": "In August 2024 the LST maximum coincides with the NDBI and BSI maxima. In January 2025 the LST minimum coincides with the NDVI maximum. More vegetation goes with less relative heat, and more built-up or dry surface with more heat." },
+        { "title": "The cycle has two phases", "text": "In the heat-pressure phase NDBI and BSI rise while NDVI and emissivity soften. In the cooling phase NDVI and emissivity recover while heat pressure declines. The NDVI minimum falls in October 2025 rather than in summer, which suggests water stress accumulated after the summer." },
+        { "title": "Hotspots are geographically stable", "text": "The same zones stay hot in March 2023 and March 2026, with low NDVI and high NDBI and BSI, while cooler belts keep higher NDVI and emissivity. Transition zones show mixed signatures with seasonal sensitivity." },
+        { "title": "Emissivity and NDWI add little", "text": "Emissivity is almost constant and does not explain the variation of the LST proxy. NDWI is low and stable, which indicates an area dominated by non-water surfaces." }
       ]
     },
     "results": {
       "title": "Results that matter",
       "items": [
-        { "value": "20%", "label": "Lorem ipsum" },
-        { "value": "5 M +", "label": "Lorem ipsum" },
-        { "value": "50%", "label": "Lorem ipsum" },
-        { "value": "Executive dashboard", "label": "Lorem ipsum", "small": true }
-      ]
-    }
-  },
-  {
-    "slug": "crop-health-yield-analytics",
-    "titleLight": "Crop Health &",
-    "titleBold": "Yield Analytics",
-    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
-    "tags": ["Agriculture", "NDVI", "Data Intelligence"],
-    "image": "images/placeholder.svg",
-    "heroText": "Vegetation indices and machine learning to estimate crop condition and expected yield.",
-    "overview": {
-      "title": "Project at a glance",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "stats": [
-        { "value": "25 M +", "label": "Lorem ipsum" },
-        { "value": "72 %", "label": "Lorem ipsum" },
-        { "value": "40 X +", "label": "Lorem ipsum" },
-        { "value": "14 M +", "label": "Lorem ipsum" }
-      ],
-      "meta": { "Client": "Lorem ipsum", "Scope": "Lorem ipsum", "Region": "Lorem ipsum", "Duration": "Lorem ipsum" }
-    },
-    "story": [
-      { "icon": "challenge", "label": "The challenge", "title": "Lorem ipsum dolor", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." },
-      { "icon": "analyzed", "label": "What was analyzed", "title": "Lorem ipsum dolor", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." },
-      { "icon": "approach", "label": "Our approach", "title": "Lorem ipsum dolor", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." }
-    ],
-    "insights": {
-      "title": "Data that drives decisions",
-      "main": { "image": "images/placeholder.svg", "caption": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
-      "charts": [
-        { "title": "Graph of project", "image": "images/placeholder.svg", "caption": "Lorem ipsum dolor sit amet." },
-        { "title": "Graph of project", "image": "images/placeholder.svg", "caption": "Lorem ipsum dolor sit amet." }
+        { "value": "7.62", "label": "Mean LST proxy (standard deviation 1.32)" },
+        { "value": "10.14", "label": "Maximum LST proxy, August 2024" },
+        { "value": "5.27", "label": "Minimum LST proxy, January 2025" },
+        { "value": "0.569", "label": "Mean NDVI (0.471 to 0.672)" }
       ]
     },
-    "results": {
-      "title": "Results that matter",
+    "limits": {
+      "title": "Limitations and monitoring",
       "items": [
-        { "value": "28%", "label": "Lorem ipsum" },
-        { "value": "20 M +", "label": "Lorem ipsum" },
-        { "value": "45%", "label": "Lorem ipsum" },
-        { "value": "Executive dashboard", "label": "Lorem ipsum", "small": true }
+        "Relative index. The LST proxy is derived from the same optical indices (no thermal band), so its agreement with NDVI, NDBI and BSI is partly expected and is not independent evidence. Validation against Landsat thermal data, ECOSTRESS or weather stations is needed.",
+        "Incomplete series. January 2026 is missing from the 36-month series.",
+        "AOI averages. Area-wide averages hide neighborhood-scale variation.",
+        "Association, not causation. The data show association between surface type and relative heat, not that built-up land causes it."
+      ],
+      "nextTitle": "Monitoring indicators",
+      "next": [
+        "LST proxy reduction in priority zones.",
+        "NDVI recovery trajectory.",
+        "Hotspot area contraction.",
+        "Seasonal peak intensity moderation."
       ]
     }
   }

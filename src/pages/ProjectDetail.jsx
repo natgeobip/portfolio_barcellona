@@ -13,12 +13,28 @@ const navLinks = [
   { label: 'CONTACT US', id: 'contact' },
 ]
 
+// Figura con didascalia; cliccando si apre l'immagine a dimensione piena (utile per schemi e mappe dense).
+function Figure({ image, title, caption, className }) {
+  return (
+    <figure className={className}>
+      {title && <h4>{title}</h4>}
+      <a href={asset(image)} target="_blank" rel="noreferrer">
+        <img src={asset(image)} alt={title || caption || ''} loading="lazy" />
+      </a>
+      {caption && <figcaption>{caption}</figcaption>}
+    </figure>
+  )
+}
+
+// Tutte le sezioni oltre a hero, overview, story, insights e results sono opzionali: se mancano nel JSON non vengono mostrate.
 export default function ProjectDetail() {
   const { slug } = useParams()
   const index = projects.findIndex((p) => p.slug === slug)
   const p = projects[index]
 
-  useEffect(() => window.scrollTo(0, 0), [slug])
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [slug])
 
   if (!p) {
     return (
@@ -29,7 +45,7 @@ export default function ProjectDetail() {
     )
   }
 
-  const { overview, story, insights, results } = p
+  const { overview, story, data, methods, insights, findings, results, limits, webgis } = p
 
   return (
     <>
@@ -85,22 +101,82 @@ export default function ProjectDetail() {
         </div>
       </section>
 
+      {data && (
+        <section className="section" id="data">
+          <SectionHeading eyebrow="Data" title={data.title} />
+          <div className="datagrid">
+            <dl className="datalist">
+              {data.items.map((d) => (
+                <div key={d.name}>
+                  <dt>{d.name}</dt>
+                  <dd>{d.text}</dd>
+                </div>
+              ))}
+            </dl>
+            {data.deliverables && (
+              <div>
+                <h3 className="subhead">{data.deliverablesTitle}</h3>
+                <ul className="checks">
+                  {data.deliverables.map((t) => (
+                    <li key={t}>{t}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+        </section>
+      )}
+
+      {methods && (
+        <section className="section methods" id="methods">
+          <SectionHeading eyebrow="Methods" title={methods.title} />
+          <div className="methods__text">
+            {methods.text?.map((t, i) => (
+              <p key={i}>{t}</p>
+            ))}
+          </div>
+          {methods.steps && (
+            <ul className="steps">
+              {methods.steps.map((s) => (
+                <li key={s.title}>
+                  <h4>{s.title}</h4>
+                  <p>{s.text}</p>
+                </li>
+              ))}
+            </ul>
+          )}
+          {methods.figures?.map((f) => (
+            <Figure key={f.image} className="figure-wide" {...f} />
+          ))}
+        </section>
+      )}
+
       <section className="section" id="insights">
         <SectionHeading eyebrow="Data & Insights" title={insights.title} />
-        <div className="insights">
-          <figure className="insights__main">
-            <img src={asset(insights.main.image)} alt="" />
-            <figcaption>{insights.main.caption}</figcaption>
-          </figure>
-          {insights.charts.map((c, i) => (
-            <figure key={i} className="insights__chart">
-              <h4>{c.title}</h4>
-              <img src={asset(c.image)} alt={c.title} />
-              <figcaption>{c.caption}</figcaption>
-            </figure>
+        <div className="insights" style={{ '--n': insights.charts?.length ?? 0 }}>
+          <Figure className="insights__main" {...insights.main} />
+          {insights.charts?.map((c) => (
+            <Figure key={c.image} className="insights__chart" {...c} />
           ))}
         </div>
+        {insights.gallery?.map((g) => (
+          <Figure key={g.image} className="figure-wide" {...g} />
+        ))}
       </section>
+
+      {findings && (
+        <section className="section findings" id="findings">
+          <SectionHeading eyebrow="Findings" title={findings.title} />
+          <ul className="findings__grid">
+            {findings.items.map((f) => (
+              <li key={f.title}>
+                <h4>{f.title}</h4>
+                <p>{f.text}</p>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
 
       <section className="section" id="results">
         <SectionHeading eyebrow="Results" title={results.title} />
@@ -112,8 +188,41 @@ export default function ProjectDetail() {
             </div>
           ))}
         </div>
-        <Link to="/" className="back">← Tutti i progetti</Link>
       </section>
+
+      {limits && (
+        <section className="section" id="limits">
+          <SectionHeading eyebrow="Limits" title={limits.title} />
+          <div className="limits">
+            <ul className="bullets">
+              {limits.items.map((t) => (
+                <li key={t}>{t}</li>
+              ))}
+            </ul>
+            {limits.next && (
+              <div>
+                <h3 className="subhead">{limits.nextTitle}</h3>
+                <ul className="bullets">
+                  {limits.next.map((t) => (
+                    <li key={t}>{t}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+        </section>
+      )}
+
+      {webgis?.url && (
+        <section className="section" id="webgis">
+          <SectionHeading eyebrow="WebGIS" title="Explore the interactive map" />
+          <a className="btn" href={webgis.url} target="_blank" rel="noreferrer">Open the WebGIS</a>
+        </section>
+      )}
+
+      <div className="section back-wrap">
+        <Link to="/" className="back">← Tutti i progetti</Link>
+      </div>
 
       <Footer />
     </>
