@@ -5,7 +5,7 @@
     "titleLogo": "images/bip_logo.png",
     "titleLight": "BIP",
     "titleBold": "Space",
-    "text": "Trasformiamo i dati satellitari in decisioni: geospatial analytics, GIS, remote sensing e data intelligence al servizio dell'innovazione.",
+    "text": "We turn satellite data into decisions: geospatial analytics, GIS, remote sensing and data intelligence at the service of innovation.",
     "cta": "Get started",
     "image": "images/satellite_orbit.png",
     "satellite": "images/satellite.png"
@@ -14,25 +14,25 @@
     "eyebrow": "Who we are",
     "title": "Where space data meets decisions",
     "text": [
-      "BIP Space è il team di Business Integration Partners dedicato all'osservazione della Terra e all'analisi dei dati geospaziali. Combiniamo competenze tecniche e conoscenza di business per trasformare immagini satellitari in informazioni utili.",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      "BIP Space is the Business Integration Partners team dedicated to Earth observation and geospatial data analysis. We combine technical expertise with business knowledge to turn satellite imagery into actionable information.",
+      "From air quality and urban heat to land-cover change and green-space mapping, we work with public bodies and institutions to turn open satellite data into clear, repeatable and decision-ready insights."
     ],
     "skills": [
       {
         "title": "Geospatial Analytics",
-        "text": "Analisi spaziali e modelli su dati territoriali."
+        "text": "Spatial analysis and models built on territorial data."
       },
       {
         "title": "GIS",
-        "text": "Mappe, geodatabase e piattaforme webGIS."
+        "text": "Maps, geodatabases and web GIS platforms."
       },
       {
         "title": "Remote Sensing",
-        "text": "Elaborazione di dati satellitari ottici e radar."
+        "text": "Processing of optical and radar satellite data."
       },
       {
         "title": "Data Intelligence",
-        "text": "Dashboard e insight per decisioni operative."
+        "text": "Dashboards and insights for operational decisions."
       }
     ]
   },
@@ -42,11 +42,11 @@
     "blocks": [
       {
         "title": "The people behind the work",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore."
+        "text": "Our team brings together data scientists, GIS specialists and remote sensing experts. Each project starts from a real question and ends with results that can be verified, reproduced and put to use."
       },
       {
         "title": "Built by people",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia."
+        "text": "Behind every map and model there is a group of curious people who enjoy working across disciplines, sharing what they learn and challenging each other to make satellite data useful for everyone."
       }
     ],
     "members": [

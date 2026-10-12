@@ -12,7 +12,7 @@ export default function App() {
         element={
           <div className="notfound">
             <h1>404</h1>
-            <Link to="/">Torna alla home</Link>
+            <Link to="/">Back to home</Link>
           </div>
         }
       />

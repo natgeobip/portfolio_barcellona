@@ -39,8 +39,8 @@ export default function ProjectDetail() {
   if (!p) {
     return (
       <div className="notfound">
-        <h1>Progetto non trovato</h1>
-        <Link to="/">Torna alla home</Link>
+        <h1>Project not found</h1>
+        <Link to="/">Back to home</Link>
       </div>
     )
   }
