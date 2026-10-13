@@ -3,14 +3,14 @@ import { asset } from '../utils.js'
 import { Arrow } from './Icons.jsx'
 
 export default function ProjectCard({ project }) {
-  const { slug, titleLight, titleBold, summary, tags, image } = project
+  const { slug, subtitle, titleLight, titleBold, summary, tags, image } = project
   return (
     <Link to={`/project/${slug}`} className="card">
       <div className="card__image">
         <img src={asset(image)} alt="" />
       </div>
       <div className="card__body">
-        <h3>{titleLight} {titleBold}</h3>
+        <h3>{subtitle || `${titleLight} ${titleBold}`.trim()}</h3>
         <p>{summary}</p>
         <ul className="tags">
           {tags.map((t) => (

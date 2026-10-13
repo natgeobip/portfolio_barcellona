@@ -4,7 +4,7 @@
     "eyebrow": "Portfolio",
     "titleLogo": "images/bip_logo.png",
     "titleLight": "BIP",
-    "titleBold": "Space",
+    "titleBold": "Space\nData Applications\nfor downstream",
     "text": "We turn satellite data into decisions: geospatial analytics, GIS, remote sensing and data intelligence at the service of innovation.",
     "cta": "Get started",
     "image": "images/satellite_orbit.png",
@@ -79,6 +79,21 @@
         "linkedin": ""
       },
       {
+        "name": "Irenne",
+        "focus": "58%",
+        "role": "Consultant",
+        "bio": "",
+        "photo": "images/team/irenne.png",
+        "linkedin": ""
+      },
+      {
+        "name": "Valerio",
+        "role": "Consultant",
+        "bio": "",
+        "photo": "images/team/valerio.png",
+        "linkedin": ""
+      },
+      {
         "name": "Roberto",
         "role": "Head of BIP Space",
         "bio": "",
@@ -120,6 +135,13 @@
         "role": "Consultant",
         "bio": "",
         "photo": "images/team/Flavia.png",
+        "linkedin": ""
+      },
+      {
+        "name": "Edoardo",
+        "role": "Consultant",
+        "bio": "",
+        "photo": "images/team/edoardo.png",
         "linkedin": ""
       }
     ]

@@ -53,8 +53,8 @@ export default function ProjectDetail() {
         variant="detail"
         navLinks={navLinks}
         eyebrow={`PROJECT ${index + 1}`}
-        titleLight={p.titleLight}
-        titleBold={p.titleBold}
+        titleLight={p.subtitle ? "" : p.titleLight}
+        titleBold={p.subtitle || p.titleBold}
         text={p.heroText}
         cta="Get started"
         ctaTarget="overview"

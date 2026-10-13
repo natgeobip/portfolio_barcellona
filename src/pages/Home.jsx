@@ -1,7 +1,7 @@
 import Hero from '../components/Hero.jsx'
 import SectionHeading from '../components/SectionHeading.jsx'
 import TeamGallery from '../components/TeamGallery.jsx'
-import ProjectCard from '../components/ProjectCard.jsx'
+import ProjectCarousel from '../components/ProjectCarousel.jsx'
 import Footer from '../components/Footer.jsx'
 import LogoCarousel from '../components/LogoCarousel.jsx'
 import site from '../data/site.json'
@@ -56,11 +56,7 @@ export default function Home() {
 
       <section className="section" id="projects">
         <SectionHeading eyebrow={site.projects.eyebrow} title={site.projects.title} />
-        <div className="cards">
-          {projects.map((p) => (
-            <ProjectCard key={p.slug} project={p} />
-          ))}
-        </div>
+        <ProjectCarousel projects={projects} />
       </section>
 
       <section className="section" id="team">
