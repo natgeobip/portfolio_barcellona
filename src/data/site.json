@@ -2,9 +2,8 @@
   "name": "BIP Space",
   "hero": {
     "eyebrow": "Portfolio",
-    "titleLogo": "images/bip_logo.png",
-    "titleLight": "BIP",
-    "titleBold": "Space Data \nApplication for downstream",
+    "titleLight": "",
+    "titleBold": "Space Data\nApplication for\ndownstream",
     "text": "We turn satellite data into decisions: geospatial analytics, GIS, remote sensing and data intelligence at the service of innovation.",
     "cta": "Get started",
     "image": "images/satellite_orbit.png",
@@ -35,14 +34,18 @@
         "text": "Dashboards and insights for operational decisions."
       }
     ]
-   
   },
   "dataSources": {
-  "eyebrow": "Our data",
-  "title": "We start from geospatial data and integrate it with other opportunity data",
-  "items": ["Aerial photogrammetry", "Georeferenced data", "Spatial data", "Public databases", "Opportunity data"]
-},
- 
+    "eyebrow": "Our data",
+    "title": "We start from geospatial data and integrate it with other opportunity data",
+    "items": [
+      "Aerial photogrammetry",
+      "Georeferenced data",
+      "Spatial data",
+      "Public databases",
+      "Opportunity data"
+    ]
+  },
   "team": {
     "eyebrow": "Our people",
     "title": "Meet our team",
@@ -145,7 +148,7 @@
       },
       {
         "name": "Nataly Sarmiento",
-        "focus": "45%",
+        "focus": "42%",
         "role": "Consultant",
         "bio": "",
         "photo": "images/team/Naty.png",
@@ -211,4 +214,3 @@
     ]
   }
 }
- 
