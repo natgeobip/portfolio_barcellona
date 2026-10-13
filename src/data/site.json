@@ -2,9 +2,8 @@
   "name": "BIP Space",
   "hero": {
     "eyebrow": "Portfolio",
-    "titleLogo": "images/bip_logo.png",
-    "titleLight": "BIP",
-    "titleBold": "Space Data \nApplication for downstream",
+    "titleLight": "",
+    "titleBold": "Space Data\nApplication for\ndownstream",
     "text": "We turn satellite data into decisions: geospatial analytics, GIS, remote sensing and data intelligence at the service of innovation.",
     "cta": "Get started",
     "image": "images/satellite_orbit.png",
@@ -35,14 +34,18 @@
         "text": "Dashboards and insights for operational decisions."
       }
     ]
-    
   },
   "dataSources": {
-  "eyebrow": "Our data",
-  "title": "We start from geospatial data and integrate it with other opportunity data",
-  "items": ["Aerial photogrammetry", "Georeferenced data", "Spatial data", "Public databases", "Opportunity data"]
-},
-
+    "eyebrow": "Our data",
+    "title": "We start from geospatial data and integrate it with other opportunity data",
+    "items": [
+      "Aerial photogrammetry",
+      "Georeferenced data",
+      "Spatial data",
+      "Public databases",
+      "Opportunity data"
+    ]
+  },
   "team": {
     "eyebrow": "Our people",
     "title": "Meet our team",
@@ -65,25 +68,11 @@
         "linkedin": "https://www.linkedin.com/in/federica-mezzani-ph-d-33976b44/"
       },
       {
-        "name": "Lucia Savatteri",
+        "name": "Valerio Valenti",
         "role": "Consultant",
         "bio": "",
-        "photo": "images/team/Luci.png",
-        "linkedin": ""
-      },
-      {
-        "name": "Corinne",
-        "role": "Lead Consultant",
-        "bio": "",
-        "photo": "images/team/Corinne.png",
-        "linkedin": "https://www.linkedin.com/in/corinnetamburis/"
-      },
-      {
-        "name": "Gianluca Benzi",
-        "role": "Consultant",
-        "bio": "",
-        "photo": "images/team/Gianlu.png",
-        "linkedin": ""
+        "photo": "images/team/valerio.png",
+        "linkedin": "https://www.linkedin.com/in/valeriovalenti1995/"
       },
       {
         "name": "Irene Tutone",
@@ -94,11 +83,25 @@
         "linkedin": "https://www.linkedin.com/in/irene-tutone/"
       },
       {
-        "name": "Valerio Valenti",
+        "name": "Corinne",
+        "role": "Lead Consultant",
+        "bio": "",
+        "photo": "images/team/Corinne.png",
+        "linkedin": "https://www.linkedin.com/in/corinnetamburis/"
+      },
+      {
+        "name": "Edoardo",
         "role": "Consultant",
         "bio": "",
-        "photo": "images/team/valerio.png",
-        "linkedin": "https://www.linkedin.com/in/valeriovalenti1995/"
+        "photo": "images/team/edoardo.png",
+        "linkedin": "https://www.linkedin.com/in/edoardoscalia/"
+      },
+      {
+        "name": "Beatrice Cascone",
+        "role": "Consultant",
+        "bio": "",
+        "photo": "images/team/Bea.png",
+        "linkedin": "https://www.linkedin.com/in/beatrice-cascone-573906196/"
       },
       {
         "name": "Roberto Muscinelli",
@@ -109,26 +112,18 @@
         "featured": true
       },
       {
-        "name": "Beatrice Cascone",
+        "name": "Lucia Savatteri",
         "role": "Consultant",
         "bio": "",
-        "photo": "images/team/Bea.png",
-        "linkedin": "https://www.linkedin.com/in/beatrice-cascone-573906196/"
+        "photo": "images/team/Luci.png",
+        "linkedin": ""
       },
       {
-        "name": "Nataly Sarmiento",
-        "focus": "45%",
+        "name": "Gianluca Benzi",
         "role": "Consultant",
         "bio": "",
-        "photo": "images/team/Naty.png",
-        "linkedin": "https://www.linkedin.com/in/nasarmientoo/"
-      },
-      {
-        "name": "Isabela Saud-Mino",
-        "role": "Consultant",
-        "bio": "",
-        "photo": "images/team/isa.png",
-        "linkedin": "https://www.linkedin.com/in/claudiaisabelasaudmino/"
+        "photo": "images/team/Gianlu.png",
+        "linkedin": ""
       },
       {
         "name": "Tommaso Soricelli",
@@ -145,11 +140,19 @@
         "linkedin": "https://www.linkedin.com/in/flavia-castelli-a794b4344/"
       },
       {
-        "name": "Edoardo",
+        "name": "Nataly Sarmiento",
+        "focus": "43%",
         "role": "Consultant",
         "bio": "",
-        "photo": "images/team/edoardo.png",
-        "linkedin": "https://www.linkedin.com/in/edoardoscalia/"
+        "photo": "images/team/Naty.png",
+        "linkedin": "https://www.linkedin.com/in/nasarmientoo/"
+      },
+      {
+        "name": "Isabela Saud-Mino",
+        "role": "Consultant",
+        "bio": "",
+        "photo": "images/team/isa.png",
+        "linkedin": "https://www.linkedin.com/in/claudiaisabelasaudmino/"
       }
     ]
   },
