@@ -143,6 +143,20 @@
         "name": "European Central Bank",
         "logo": "images/companies/banco_central.png",
         "height": 40
+      },
+      {
+        "name": "Agenzia Spaziale Italiana",
+        "logo": "images/companies/asi_logo.png",
+        "height": 44
+      },
+      {
+        "name": "Regione Veneto",
+        "logo": "images/companies/veneto_logo.png",
+        "height": 44
+      },
+      {
+        "name": "IRIDE",
+        "logo": "images/companies/iride_logo.png"
       }
     ]
   },

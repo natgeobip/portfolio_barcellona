@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" font-family="Work Sans, Arial, sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="#5b6573"/></marker></defs>
+<rect width="1200" height="460" fill="#ffffff"/>
+<text x="40" y="52" font-size="26" font-weight="700" fill="#0b1f3a">From territorial factors to a flood risk grid</text>
+<text x="40" y="80" font-size="15" fill="#5b6573">Susceptibility describes the terrain; scenarios and drainage state modify it</text>
+<rect x="40" y="120" width="230" height="130" rx="10" fill="#f3f4f6" stroke="#d9dde3"/>
+<text x="155" y="170" text-anchor="middle" font-size="19" font-weight="700" fill="#1c2430">Territorial factors</text>
+<text x="155" y="196" text-anchor="middle" font-size="14" fill="#1c2430" opacity=".85">Terrain, land cover,</text>
+<text x="155" y="215" text-anchor="middle" font-size="14" fill="#1c2430" opacity=".85">Sentinel-2 indices</text>
+<rect x="340" y="120" width="230" height="130" rx="10" fill="#0b1f3a" stroke="#0b1f3a"/>
+<text x="455" y="170" text-anchor="middle" font-size="19" font-weight="700" fill="#ffffff">Machine learning</text>
+<text x="455" y="196" text-anchor="middle" font-size="14" fill="#ffffff" opacity=".85">Interpretable model,</text>
+<text x="455" y="215" text-anchor="middle" font-size="14" fill="#ffffff" opacity=".85">spatial validation</text>
+<rect x="640" y="120" width="230" height="130" rx="10" fill="#f3f4f6" stroke="#d9dde3"/>
+<text x="755" y="170" text-anchor="middle" font-size="19" font-weight="700" fill="#1c2430">Base susceptibility</text>
+<text x="755" y="196" text-anchor="middle" font-size="14" fill="#1c2430" opacity=".85">Continuous and</text>
+<text x="755" y="215" text-anchor="middle" font-size="14" fill="#1c2430" opacity=".85">classified maps</text>
+<rect x="940" y="120" width="220" height="130" rx="10" fill="#e5322d" stroke="#e5322d"/>
+<text x="1050" y="170" text-anchor="middle" font-size="19" font-weight="700" fill="#ffffff">Risk grid</text>
+<text x="1050" y="196" text-anchor="middle" font-size="14" fill="#ffffff" opacity=".85">25 m cells, exposed</text>
+<text x="1050" y="215" text-anchor="middle" font-size="14" fill="#ffffff" opacity=".85">roads and elements</text>
+<line x1="270" y1="185" x2="336" y2="185" stroke="#5b6573" stroke-width="2" marker-end="url(#a)"/>
+<line x1="570" y1="185" x2="636" y2="185" stroke="#5b6573" stroke-width="2" marker-end="url(#a)"/>
+<line x1="870" y1="185" x2="936" y2="185" stroke="#5b6573" stroke-width="2" marker-end="url(#a)"/>
+<rect x="520" y="320" width="200" height="100" rx="10" fill="#ffffff" stroke="#e5322d"/>
+<text x="620" y="364" text-anchor="middle" font-size="19" font-weight="700" fill="#1c2430">Rain scenarios</text>
+<text x="620" y="390" text-anchor="middle" font-size="14" fill="#1c2430" opacity=".85">Ordinary, intense, extreme</text>
+<rect x="760" y="320" width="200" height="100" rx="10" fill="#ffffff" stroke="#e5322d"/>
+<text x="860" y="364" text-anchor="middle" font-size="19" font-weight="700" fill="#1c2430">Drainage state</text>
+<text x="860" y="390" text-anchor="middle" font-size="14" fill="#1c2430" opacity=".85">Scenario modifier</text>
+<rect x="280" y="320" width="200" height="100" rx="10" fill="#ffffff" stroke="#e5322d"/>
+<text x="380" y="364" text-anchor="middle" font-size="19" font-weight="700" fill="#1c2430">Rain-on-grid</text>
+<text x="380" y="390" text-anchor="middle" font-size="14" fill="#1c2430" opacity=".85">Simplified water depth</text>
+<line x1="860" y1="320" x2="1010" y2="258" stroke="#e5322d" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#a)"/>
+<line x1="620" y1="320" x2="1040" y2="258" stroke="#e5322d" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#a)"/>
+<line x1="380" y1="320" x2="1070" y2="258" stroke="#e5322d" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#a)"/>
+</svg>

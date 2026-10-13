@@ -452,5 +452,259 @@
         "Seasonal peak intensity moderation."
       ]
     }
+  },
+  {
+    "slug": "irrigation-monitoring-sicily",
+    "titleLight": "Irrigation Monitoring",
+    "titleBold": "in Sicily",
+    "summary": "A satellite-based prototype to monitor water use and crop water stress in Sicilian olive groves and citrus orchards, built on seasonal Sentinel-2 indices.",
+    "tags": ["Sentinel-2", "Water Stress", "Spectral Indices", "Precision Agriculture"],
+    "image": "images/projects/irrigation-monitoring-sicily/ndvi-seasons.png",
+    "heroText": "Seasonal Sentinel-2 composites and four spectral indices show how olive groves around Castelvetrano respond to water availability, to support irrigation planning and the control of water use.",
+    "overview": {
+      "title": "Project at a glance",
+      "text": "Agricultural water consortia struggle to trace consumption and collect fees, because they have no continuous monitoring system. This makes it hard to plan water needs and to control waste. The project proposes an integrated remote-sensing prototype, working on two target areas and designed on the model of IrriSAT and of the satellite irrigation monitoring implemented by Regione Campania. The integration of satellite data with ground sensors already in the territory, such as the SIAS agrometeorological network, is also being evaluated.",
+      "stats": [
+        { "value": "2", "label": "Target areas: Ribera and Castelvetrano" },
+        { "value": "4", "label": "Spectral indices: NDVI, NDWI, WDSI, SAVI" },
+        { "value": "1,088", "label": "Sentinel-2 scenes in four seasonal composites" },
+        { "value": "< 25%", "label": "Cloud cover allowed per scene" }
+      ],
+      "meta": {
+        "Area": "Castelvetrano and Ribera, Sicily, Italy",
+        "Period": "December 2022 to November 2023",
+        "Data": "Sentinel-2, digital terrain model",
+        "Output": "Seasonal index maps and terrain layers"
+      }
+    },
+    "story": [
+      {
+        "icon": "challenge",
+        "label": "The challenge",
+        "title": "Water use is hard to trace and charge",
+        "text": "Without continuous monitoring, consortia cannot tell how much water each agricultural area uses. The prototype aims to monitor consumption for each area, forecast crop water needs, spot anomalous or unauthorised withdrawals, reduce waste and support strategic planning. It targets regions, land reclamation consortia and farmers."
+      },
+      {
+        "icon": "analyzed",
+        "label": "What was analyzed",
+        "title": "Sentinel-2 seasons and terrain",
+        "text": "Seasonal Sentinel-2 composites over Castelvetrano from December 2022 to November 2023, with scenes above 25% cloud cover excluded, plus terrain layers for Sicily: elevation, slope and the Topographic Wetness Index."
+      },
+      {
+        "icon": "approach",
+        "label": "Our approach",
+        "title": "Four indices read season by season",
+        "text": "NDVI and SAVI measure vegetation vigour, NDWI detects leaf water content and WDSI combines NDVI and NDWI to flag plants that stay green but lose water. Maps are compared across the four seasons, following an IrriSAT-style architecture."
+      }
+    ],
+    "data": {
+      "title": "Data sources",
+      "items": [
+        { "name": "Sentinel-2", "text": "Seasonal composites of Castelvetrano: winter (December 2022 to February 2023) from 213 scenes, spring (March to May 2023) from 209, summer (June to August 2023) from 392 and autumn (September to November 2023) from 274. Scenes with cloud cover above 25% are excluded." },
+        { "name": "Digital terrain model", "text": "Elevation (DTM) of Sicily, with slope and the Topographic Wetness Index (TWI) derived from it." },
+        { "name": "SIAS network", "text": "Local readings from the Sicilian agrometeorological network. Combining them with the satellite data (data fusion) is under evaluation, to maximise the precision of the model." },
+        { "name": "Reference model", "text": "IrriSAT, which uses Sentinel-2 to estimate crop evapotranspiration and sends registered farmers a personalised irrigation advice in millimetres of water. In Campania it is run by Ariespace with the AGEA paying agency and the SIGRIAN database." }
+      ],
+      "deliverablesTitle": "What the prototype produces",
+      "deliverables": [
+        "Seasonal NDVI, NDWI, WDSI and SAVI maps for Castelvetrano.",
+        "Terrain layers for Sicily: elevation, slope and Topographic Wetness Index.",
+        "A prototype design for irrigation monitoring on two target areas, on the model of IrriSAT.",
+        "A support framework with three functions: classification of the territory, support to the design of water needs, and monitoring at 1, 3 and 5 years."
+      ]
+    },
+    "methods": {
+      "title": "From satellite scenes to water stress maps",
+      "text": [
+        "The prototype covers two areas. Ribera (Agrigento) has 6,000 to 7,000 ha of citrus orchards, of which 1,600 ha are DOP, on more than 1,500 farms with very fragmented land (Washington Navel, Navelina, Brasiliana and Vaniglia). Castelvetrano (Trapani) has 6,000 to 7,000 ha of olive groves (Nocellara del Belice) in the Belice valley, about 12,000 ha when neighbouring municipalities are included, on 3,000 to 4,000 farms, with 500 to 700 mm of rain per year and high land fragmentation.",
+        "The architecture is similar to IrriSAT: the satellite sees how much the plant is transpiring and the system turns it into the millimetres of water to give, avoiding waste. Water stress is read through four indices that describe different parts of the plant and soil system, and the analysis shown in this page covers Castelvetrano."
+      ],
+      "steps": [
+        { "title": "1. Build seasonal composites", "text": "Sentinel-2 scenes are collected for each season, with a 25% cloud threshold, and combined into one composite per season (1,088 scenes in total)." },
+        { "title": "2. Compute the indices", "text": "NDVI and SAVI measure vegetation vigour, and SAVI is more reliable where soil is exposed. NDWI detects water content in the leaves. WDSI = (NDVI - NDWI) / |NDVI + NDWI| captures the plant's physiological response: it goes to zero when the two indices agree, with no stress, and rises toward +1 when vegetation is green but short of water." },
+        { "title": "3. Add terrain context", "text": "Elevation, slope and the Topographic Wetness Index show where water tends to accumulate or run off, from the digital terrain model, where each pixel holds an accurate elevation." },
+        { "title": "4. Compare the seasons", "text": "Maps are read season by season, to see how vegetation vigour and water content change through the year and where stress persists." },
+        { "title": "5. Support planning and control", "text": "The planned service has three functions: classification of the territory and identification of the parameters that matter for agriculture, support to the design of water needs, and monitoring at 1, 3 and 5 years to verify the effects of policies and any deviations due to illicit use." }
+      ],
+      "figures": [
+        { "image": "images/projects/irrigation-monitoring-sicily/target-areas.png", "caption": "Figure 1. The two target areas in Sicily: Castelvetrano (olive groves) and Ribera (citrus orchards)." },
+        { "image": "images/projects/irrigation-monitoring-sicily/data-fusion.png", "caption": "Figure 2. Data fusion concept: satellite data and readings from the SIAS weather stations are combined into one irrigation output." },
+        { "image": "images/projects/irrigation-monitoring-sicily/slope-elevation.png", "caption": "Figure 3. Slope (left) and elevation (right) over Sicily, from the digital terrain model." },
+        { "image": "images/projects/irrigation-monitoring-sicily/twi.png", "caption": "Figure 4. Topographic Wetness Index over Sicily. Yellow marks the highest values along valleys and coastal plains, where water accumulates. Orange marks the lowest values, on the Madonie, the Nebrodi and Etna." }
+      ]
+    },
+    "insights": {
+      "title": "Data that drives decisions",
+      "main": {
+        "image": "images/projects/irrigation-monitoring-sicily/ndvi-seasons.png",
+        "caption": "Figure 5. NDVI by season at Castelvetrano. Winter and spring show intense green and good photosynthetic activity. In summer yellow-orange dominates, reflecting water stress from heat and drought. In autumn there is a partial recovery thanks to the first rains, although inland areas remain in difficulty."
+      },
+      "charts": [],
+      "gallery": [
+        { "title": "NDWI", "image": "images/projects/irrigation-monitoring-sicily/ndwi-seasons.png", "caption": "Figure 6. NDWI by season at Castelvetrano. Values are highest in winter and spring, when there is more humidity, reach their minimum in summer because of seasonal drought, and partly recover in autumn. In summer the leaves have lost a significant amount of water, but the tree resists. Lake Trinità appears red in winter because the formula uses NIR and SWIR, and deep water absorbs almost all NIR." },
+        { "title": "WDSI", "image": "images/projects/irrigation-monitoring-sicily/wdsi-seasons.png", "caption": "Figure 7. WDSI by season at Castelvetrano. The red persists through all four seasons, showing chronic water stress. The recurring blue anomaly is Lake Trinità, a permanent water body with no stress." },
+        { "title": "SAVI", "image": "images/projects/irrigation-monitoring-sicily/savi-seasons.png", "caption": "Figure 8. SAVI by season at Castelvetrano. In winter the groves show good vegetation cover, with some orange areas of bare soil between the canopies. In spring green recedes and orange advances. In summer yellow-orange dominates the whole area, and autumn stays similar with a slight recovery." }
+      ]
+    },
+    "findings": {
+      "title": "Main findings",
+      "items": [
+        { "title": "Vegetation follows a Mediterranean cycle", "text": "NDVI is highest in winter and spring, when olive trees show intense green and optimal water conditions, drops sharply in summer as the trees slow their metabolism to save water, and partly recovers in autumn." },
+        { "title": "Leaf water content peaks in the wet months", "text": "NDWI is highest in winter and spring and lowest in summer, with a partial recovery in autumn." },
+        { "title": "Water stress is chronic", "text": "NDVI and NDWI move in opposite directions: the plant keeps its chlorophyll but loses leaf water. At Castelvetrano this divergence is at its maximum and constant through the year, which explains the persistent red in the WDSI maps." },
+        { "title": "Bare soil shows between the trees", "text": "SAVI reveals exposed soil between the canopies already in winter, and low cover across the area in summer." },
+        { "title": "Terrain explains where water is retained", "text": "TWI values across Sicily are mostly medium to low (5 to 12), typical of a Mediterranean island with marked relief, steep slopes and little capacity to retain water." }
+      ]
+    },
+    "results": {
+      "title": "Results that matter",
+      "items": [
+        { "value": "1,088", "label": "Sentinel-2 scenes in four seasonal composites" },
+        { "value": "4", "label": "Indices compared across seasons: NDVI, NDWI, WDSI, SAVI" },
+        { "value": "5 to 12", "label": "Typical TWI values across Sicily, pointing to low water retention" },
+        { "value": "All year", "label": "Persistent water stress signal in WDSI at Castelvetrano" }
+      ]
+    },
+    "limits": {
+      "title": "Limitations and next steps",
+      "items": [
+        "The analysis shown covers Castelvetrano. Results for the Ribera citrus orchards are not shown yet.",
+        "The maps are interpreted visually, season by season. No validation against field measurements, irrigation records or weather station data is reported.",
+        "The integration with the SIAS network is still being evaluated, so the maps rely on satellite data only.",
+        "Water bodies such as Lake Trinità stand out in the indices and need to be read separately from the crops."
+      ],
+      "nextTitle": "Next steps",
+      "next": [
+        "Fuse the satellite data with the SIAS station readings.",
+        "Forecast crop water needs and flag anomalous or unauthorised withdrawals.",
+        "Extend the analysis to the Ribera citrus orchards.",
+        "Monitor at 1, 3 and 5 years to verify the effect of policies and detect deviations."
+      ]
+    }
+  },
+  {
+    "slug": "drains-flood-risk",
+    "titleLight": "DRAINS Urban",
+    "titleBold": "Flood Risk",
+    "summary": "A demonstrator that combines Earth observation, terrain data, rainfall and field information to map urban flood susceptibility and support drainage management.",
+    "tags": ["Sentinel-2", "Machine Learning", "Flood Risk", "WebGIS"],
+    "image": "images/projects/drains-flood-risk/architecture.svg",
+    "heroText": "From heterogeneous territorial data to susceptibility maps, rain scenarios and a risk grid, published as GIS services and explored through a web application.",
+    "overview": {
+      "title": "Project at a glance",
+      "text": "Urban flooding depends on terrain, surface sealing, rainfall and the condition of the drainage network. DRAINS integrates these sources in a modular demonstrator: a reproducible analytical pipeline produces the products, a GIS platform publishes them, and a web application lets users consult, filter and compare them. Citizens and field operators contribute reports and surveys that feed the same picture of the territory.",
+      "stats": [
+        { "value": "3", "label": "Rain scenario classes" },
+        { "value": "25 m", "label": "Modelling grid" },
+        { "value": "2", "label": "Territorial feedback flows: citizens and field operators" },
+        { "value": "50 cm", "label": "Target planimetric accuracy for field surveys" }
+      ],
+      "meta": {
+        "Area": "Pilot urban area",
+        "Stage": "Demonstrator design",
+        "Data": "Sentinel-2, terrain model, rainfall, drainage network, reports",
+        "Output": "Susceptibility maps, scenarios, risk grid, dashboards"
+      }
+    },
+    "story": [
+      {
+        "icon": "challenge",
+        "label": "The challenge",
+        "title": "Flood risk information is scattered",
+        "text": "Terrain, land cover, rainfall, drain conditions and reports from the territory sit in different formats, resolutions and update cycles. Public administrations need them in one place to see where water accumulates and which elements are exposed."
+      },
+      {
+        "icon": "analyzed",
+        "label": "What was analyzed",
+        "title": "Territorial, satellite and field data",
+        "text": "A digital terrain model and derived factors, Sentinel-2 indices, land cover, green areas, rainfall, OpenStreetMap, historical flood reports and the position and status of drains."
+      },
+      {
+        "icon": "approach",
+        "label": "Our approach",
+        "title": "Process, publish, consult",
+        "text": "Python pipelines handle data fusion, machine learning and simulation. Validated outputs are published as GIS services and consumed by a web application, so the models can be re-run without touching the front end."
+      }
+    ],
+    "data": {
+      "title": "Data sources",
+      "items": [
+        { "name": "Sentinel-2", "text": "Level-2A imagery from STAC catalogues, with scene quality control and cloud masking, used to derive NDVI, SAVI and NDWI." },
+        { "name": "Terrain model", "text": "Digital terrain model and derived factors such as slope, runoff accumulation and the Topographic Wetness Index." },
+        { "name": "Land cover and context", "text": "Land use and cover, sealed surfaces, green areas, buildings, roads and administrative boundaries, including OpenStreetMap." },
+        { "name": "Rainfall and weather", "text": "Rainfall records from monitoring networks to define scenarios, and forecast data from external APIs used as consultation context." },
+        { "name": "Reports and surveys", "text": "Historical flood reports, validated citizen reports and drain surveys from field operators." }
+      ],
+      "deliverablesTitle": "What the demonstrator produces",
+      "deliverables": [
+        "Continuous and classified flood susceptibility maps.",
+        "Ordinary, intense and extreme rain scenarios, and scenarios linked to the state of the drainage network.",
+        "Water depth maps from a simplified rain-on-grid simulation.",
+        "A risk grid with exposed roads and elements, plus indicators for dashboards.",
+        "A web application with 2D maps, 3D scenes, filters, scenario comparison and export."
+      ]
+    },
+    "methods": {
+      "title": "From heterogeneous data to a risk grid",
+      "text": [
+        "All sources are checked, reprojected to a common reference system, clipped to the area of interest and aligned on a shared grid. Territorial factors can be computed at a finer detail and are then aggregated to a regular 25 m modelling grid, so the model does not claim more precision than the observations support.",
+        "An interpretable supervised model estimates the relative susceptibility to surface water accumulation from the link between territorial factors and historical flood events. Drains are handled separately from the base factors, as a modifier of the scenarios, so that better drainage never raises the estimated risk."
+      ],
+      "steps": [
+        { "title": "1. Acquire and validate", "text": "Availability, structure, reference system and attribute completeness are verified for every dataset." },
+        { "title": "2. Harmonize", "text": "Reprojection, clipping, gap handling and alignment of resolutions on a common grid." },
+        { "title": "3. Build the features", "text": "Terrain, land cover and satellite indices are computed and linked to the historical flood observations." },
+        { "title": "4. Model susceptibility", "text": "An interpretable classifier is trained and calibrated, with variables selected iteratively and spatially independent validation." },
+        { "title": "5. Add scenarios and simulation", "text": "Rain classes and drain conditions modify the base susceptibility, and a simplified rain-on-grid run estimates water depth." },
+        { "title": "6. Validate and publish", "text": "Checked outputs are published as GIS services and consumed by the web application." }
+      ],
+      "figures": [
+        { "image": "images/projects/drains-flood-risk/architecture.svg", "caption": "Figure 1. Architecture: processing, publication and consultation are separate, and citizen reports and field surveys feed back into the platform." },
+        { "image": "images/projects/drains-flood-risk/risk-chain.svg", "caption": "Figure 2. Logical chain from territorial factors to the risk grid." }
+      ]
+    },
+    "insights": {
+      "title": "Data that drives decisions",
+      "main": {
+        "image": "images/projects/drains-flood-risk/risk-chain.svg",
+        "caption": "Figure 3. The base susceptibility describes the territory. Rain scenarios, drainage state and the simulation add the conditions of an event."
+      },
+      "charts": [],
+      "gallery": []
+    },
+    "findings": {
+      "title": "Design choices",
+      "items": [
+        { "title": "Processing is separate from publication", "text": "The analytical pipeline does not depend on the GIS platform. Models can be re-run, outputs updated and the publication layer replaced without changing the algorithms." },
+        { "title": "Open formats and tools", "text": "Python and open source libraries produce GeoTIFF, GeoPackage, Shapefile and CSV, readable in common desktop GIS software." },
+        { "title": "Drains are a scenario modifier", "text": "Because the position of drains can reflect known problem areas, they are kept out of the base model and applied through explicit, controllable factors." },
+        { "title": "Two sources of ground truth", "text": "Citizen reports and field surveys are kept distinct by origin, accuracy and validation status, yet shown in one view." },
+        { "title": "Spatial validation", "text": "Cross-validation with spatial splits, ROC and AUC, coefficient stability and sensitivity analysis check robustness and reporting bias." }
+      ]
+    },
+    "results": {
+      "title": "Results that matter",
+      "items": [
+        { "value": "3", "label": "Rain scenario classes: ordinary, intense, extreme" },
+        { "value": "25 m", "label": "Regular grid for risk and reporting" },
+        { "value": "2D + 3D", "label": "Maps, scenes and dashboards in one web application" },
+        { "value": "Open", "label": "Standard formats and OGC services for interoperability" }
+      ]
+    },
+    "limits": {
+      "title": "Limitations and next steps",
+      "items": [
+        "The demonstrator is a decision-support tool. It does not replace a full hydraulic or hydrodynamic study of the drainage network.",
+        "The rain-on-grid simulation is simplified and meant for preliminary comparison of scenarios and areas.",
+        "Historical flood reports can be biased towards places where people are more likely to report.",
+        "Final model variables and performance metrics will be documented after calibration and validation."
+      ],
+      "nextTitle": "Next steps",
+      "next": [
+        "Calibrate and validate the susceptibility model and publish its metrics.",
+        "Evaluate forecast rainfall as a model input once consistent time series exist.",
+        "Extend the demonstrator with new datasets, modules and services."
+      ]
+    }
   }
 ]

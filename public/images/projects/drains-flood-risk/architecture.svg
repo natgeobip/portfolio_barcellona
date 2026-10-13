@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" font-family="Work Sans, Arial, sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="#5b6573"/></marker></defs>
+<rect width="1200" height="520" fill="#ffffff"/>
+<text x="40" y="52" font-size="26" font-weight="700" fill="#0b1f3a">DRAINS demonstrator: from data to decisions</text>
+<text x="40" y="80" font-size="15" fill="#5b6573">Processing, publication and consultation are kept separate and connected through standard services</text>
+<rect x="40" y="130" width="190" height="120" rx="10" fill="#f3f4f6" stroke="#d9dde3"/>
+<text x="135" y="184" text-anchor="middle" font-size="19" font-weight="700" fill="#1c2430">Data sources</text>
+<text x="135" y="208" text-anchor="middle" font-size="14" fill="#1c2430" opacity=".85">Satellite, terrain, rain</text>
+<rect x="290" y="130" width="190" height="120" rx="10" fill="#0b1f3a" stroke="#0b1f3a"/>
+<text x="385" y="184" text-anchor="middle" font-size="19" font-weight="700" fill="#ffffff">Analytical pipeline</text>
+<text x="385" y="208" text-anchor="middle" font-size="14" fill="#ffffff" opacity=".85">Python, open source</text>
+<rect x="540" y="130" width="190" height="120" rx="10" fill="#f3f4f6" stroke="#d9dde3"/>
+<text x="635" y="184" text-anchor="middle" font-size="19" font-weight="700" fill="#1c2430">Validated outputs</text>
+<text x="635" y="208" text-anchor="middle" font-size="14" fill="#1c2430" opacity=".85">Maps, scenarios, grids</text>
+<rect x="790" y="130" width="170" height="120" rx="10" fill="#f3f4f6" stroke="#d9dde3"/>
+<text x="875" y="184" text-anchor="middle" font-size="19" font-weight="700" fill="#1c2430">GIS services</text>
+<text x="875" y="208" text-anchor="middle" font-size="14" fill="#1c2430" opacity=".85">Published layers</text>
+<rect x="1010" y="130" width="150" height="120" rx="10" fill="#e5322d" stroke="#e5322d"/>
+<text x="1085" y="184" text-anchor="middle" font-size="19" font-weight="700" fill="#ffffff">Web app</text>
+<text x="1085" y="208" text-anchor="middle" font-size="14" fill="#ffffff" opacity=".85">Maps, 3D, dashboards</text>
+<line x1="230" y1="190" x2="286" y2="190" stroke="#5b6573" stroke-width="2" marker-end="url(#a)"/>
+<line x1="480" y1="190" x2="536" y2="190" stroke="#5b6573" stroke-width="2" marker-end="url(#a)"/>
+<line x1="730" y1="190" x2="786" y2="190" stroke="#5b6573" stroke-width="2" marker-end="url(#a)"/>
+<line x1="960" y1="190" x2="1006" y2="190" stroke="#5b6573" stroke-width="2" marker-end="url(#a)"/>
+<text x="40" y="320" font-size="15" font-weight="700" fill="#0b1f3a" letter-spacing="1">FEEDBACK FROM THE TERRITORY</text>
+<rect x="540" y="350" width="190" height="110" rx="10" fill="#ffffff" stroke="#e5322d"/>
+<text x="635" y="399" text-anchor="middle" font-size="19" font-weight="700" fill="#1c2430">Citizen reports</text>
+<text x="635" y="423" text-anchor="middle" font-size="14" fill="#1c2430" opacity=".85">Blocked or flooded drains</text>
+<rect x="790" y="350" width="170" height="110" rx="10" fill="#ffffff" stroke="#e5322d"/>
+<text x="875" y="399" text-anchor="middle" font-size="19" font-weight="700" fill="#1c2430">Field surveys</text>
+<text x="875" y="423" text-anchor="middle" font-size="14" fill="#1c2430" opacity=".85">Drain position and status</text>
+<line x1="635" y1="350" x2="635" y2="258" stroke="#e5322d" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#a)"/>
+<line x1="875" y1="350" x2="875" y2="258" stroke="#e5322d" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#a)"/>
+<text x="40" y="410" font-size="15" fill="#5b6573">Reports and surveys are kept distinct by origin, accuracy and validation status.</text>
+</svg>
