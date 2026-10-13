@@ -1,11 +1,12 @@
 [
   {
     "slug": "air-quality-estimation",
-    "titleLight": "Air Quality",
-    "titleBold": "Estimation",
+    "titleLight": "",
+    "titleBold": "AirSense",
+    "subtitle": "Ground-Level Air Quality Intelligence",
     "summary": "A workflow that combines Sentinel-5P satellite data with ERA5 meteorology to map ground-level NO₂, O₃, PM10 and PM2.5 over Lombardy.",
     "tags": ["Sentinel-5P", "ERA5", "Air Quality", "Regression"],
-    "image": "images/projects/air-quality-estimation/monthly-no2.png",
+    "image": "images/projects/thumbnails/airsense.png",
     "heroText": "From satellite columns to ground-level concentrations of NO₂, O₃, PM10 and PM2.5 over Lombardy, ready for hourly prediction with Sentinel-4.",
     "overview": {
       "title": "Project at a glance",
@@ -114,11 +115,12 @@
   },
   {
     "slug": "vegetation-loss-construction-detection",
-    "titleLight": "Vegetation Loss to",
-    "titleBold": "Construction Detection",
+    "titleLight": "",
+    "titleBold": "LandShift",
+    "subtitle": "Urban Growth & Farmland Monitoring",
     "summary": "Land-cover change from Sentinel-2 to track urban growth and farmland loss around Iasi, Romania.",
     "tags": ["Google Earth Engine", "Sentinel-2", "Spectral Indices", "Change Detection"],
-    "image": "images/projects/vegetation-loss-construction-detection/land-cover-maps.png",
+    "image": "images/projects/thumbnails/landshift.png",
     "heroText": "Land-cover change from Sentinel-2 to track urban growth and farmland loss around Iasi, Romania.",
     "overview": {
       "title": "Project at a glance",
@@ -221,11 +223,12 @@
   },
   {
     "slug": "green-detector",
-    "titleLight": "Green",
-    "titleBold": "Detector",
+    "titleLight": "",
+    "titleBold": "GreenMap",
+    "subtitle": "Urban Green Cover Mapping",
     "summary": "A QGIS-based machine-learning workflow for hierarchical urban green-cover mapping from Sentinel-2 data.",
     "tags": ["QGIS Plugin", "Sentinel-2", "XGBoost", "Land Cover"],
-    "image": "images/projects/green-detector/study-area.png",
+    "image": "images/projects/thumbnails/greenmap.png",
     "heroText": "Sentinel-2 imagery, terrain predictors and multi-source reference labels turned into a four-class green-cover map with probability, uncertainty and confidence.",
     "overview": {
       "title": "Project at a glance",
@@ -327,11 +330,12 @@
   },
   {
     "slug": "urban-heat-index",
-    "titleLight": "Urban Heat",
-    "titleBold": "Index",
+    "titleLight": "",
+    "titleBold": "HeatLens",
+    "subtitle": "Urban Heat & Resilience Assessment",
     "summary": "A 36-month satellite assessment of relative surface heat, land-cover dynamics and intervention opportunities in Reggio Calabria.",
     "tags": ["Sentinel-2", "LST Proxy", "Heat Risk", "Time Series"],
-    "image": "images/projects/urban-heat-index/cover.jpg",
+    "image": "images/projects/thumbnails/heatlens.png",
     "heroText": "Six complementary indicators from monthly Sentinel-2 composites show where relative heat pressure persists, when it intensifies, and which surfaces drive it.",
     "overview": {
       "title": "Project at a glance",
@@ -455,11 +459,12 @@
   },
   {
     "slug": "irrigation-monitoring-sicily",
-    "titleLight": "Irrigation Monitoring",
-    "titleBold": "in Sicily",
+    "titleLight": "",
+    "titleBold": "AgroWater",
+    "subtitle": "Crop Water Stress Monitoring",
     "summary": "A satellite-based prototype to monitor water use and crop water stress in Sicilian olive groves and citrus orchards, built on seasonal Sentinel-2 indices.",
     "tags": ["Sentinel-2", "Water Stress", "Spectral Indices", "Precision Agriculture"],
-    "image": "images/projects/irrigation-monitoring-sicily/ndvi-seasons.png",
+    "image": "images/projects/thumbnails/agrowater.png",
     "heroText": "Seasonal Sentinel-2 composites and four spectral indices show how olive groves around Castelvetrano respond to water availability, to support irrigation planning and the control of water use.",
     "overview": {
       "title": "Project at a glance",
@@ -584,11 +589,12 @@
   },
   {
     "slug": "drains-flood-risk",
-    "titleLight": "DRAINS Urban",
-    "titleBold": "Flood Risk",
+    "titleLight": "",
+    "titleBold": "FloodWatch",
+    "subtitle": "Urban Flood Risk & Drainage Support",
     "summary": "A demonstrator that combines Earth observation, terrain data, rainfall and field information to map urban flood susceptibility and support drainage management.",
     "tags": ["Sentinel-2", "Machine Learning", "Flood Risk", "WebGIS"],
-    "image": "images/projects/drains-flood-risk/architecture.svg",
+    "image": "images/projects/thumbnails/floodwatch.png",
     "heroText": "From heterogeneous territorial data to susceptibility maps, rain scenarios and a risk grid, published as GIS services and explored through a web application.",
     "overview": {
       "title": "Project at a glance",
