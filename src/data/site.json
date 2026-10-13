@@ -51,73 +51,73 @@
     ],
     "members": [
       {
-        "name": "Fede",
-        "role": "Role",
+        "name": "Federica",
+        "role": "Associate Manager",
         "bio": "",
         "photo": "images/team/Fede.png",
         "linkedin": ""
       },
       {
-        "name": "Luci",
-        "role": "Role",
+        "name": "Lucia",
+        "role": "Consultant",
         "bio": "",
         "photo": "images/team/Luci.png",
         "linkedin": ""
       },
       {
         "name": "Corinne",
-        "role": "Role",
+        "role": "Lead Consultant",
         "bio": "",
         "photo": "images/team/Corinne.png",
         "linkedin": ""
       },
       {
-        "name": "Gianlu",
-        "role": "Role",
+        "name": "Gianluca",
+        "role": "Consultant",
         "bio": "",
         "photo": "images/team/Gianlu.png",
         "linkedin": ""
       },
       {
-        "name": "Rob",
-        "role": "Role",
+        "name": "Roberto",
+        "role": "Head of BIP Space",
         "bio": "",
         "photo": "images/team/Rob.png",
         "linkedin": "",
         "featured": true
       },
       {
-        "name": "Bea",
-        "role": "Role",
+        "name": "Beatrice",
+        "role": "Consultant",
         "bio": "",
         "photo": "images/team/Bea.png",
         "linkedin": ""
       },
       {
-        "name": "Naty",
+        "name": "Nataly",
         "focus": "45%",
-        "role": "Role",
+        "role": "Consultant",
         "bio": "",
         "photo": "images/team/Naty.png",
         "linkedin": ""
       },
       {
-        "name": "Isa",
-        "role": "Role",
+        "name": "Isabela",
+        "role": "Consultant",
         "bio": "",
         "photo": "images/team/isa.png",
         "linkedin": ""
       },
       {
-        "name": "Tom",
-        "role": "Role",
+        "name": "Tommaso",
+        "role": "Consultant",
         "bio": "",
         "photo": "images/team/Tom.png",
         "linkedin": ""
       },
       {
         "name": "Flavia",
-        "role": "Role",
+        "role": "Consultant",
         "bio": "",
         "photo": "images/team/Flavia.png",
         "linkedin": ""
@@ -177,11 +177,7 @@
       },
       {
         "label": "Website",
-        "href": "https://example.com/"
-      },
-      {
-        "label": "Fuels",
-        "href": "https://example.com/"
+        "href": "https://www.bip-group.com/industries/space"
       }
     ]
   }
