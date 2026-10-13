@@ -15,7 +15,7 @@ const navLinks = [
 ]
 
 export default function Home() {
-  const { hero, about, team, trusted } = site
+  const { hero, about, dataSources, team, trusted } = site
 
   return (
     <>
@@ -53,6 +53,22 @@ export default function Home() {
           </ul>
         </div>
       </section>
+
+      {dataSources && (
+        <section className="section datasources-wrap" id="data">
+          <div className="datasources">
+            <div>
+              <p className="eyebrow eyebrow--light">{dataSources.eyebrow}</p>
+              <h3>{dataSources.title}</h3>
+            </div>
+            <ul>
+              {dataSources.items.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
 
       <section className="section" id="projects">
         <SectionHeading eyebrow={site.projects.eyebrow} title={site.projects.title} />
