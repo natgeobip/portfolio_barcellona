@@ -4,7 +4,7 @@
     "eyebrow": "Portfolio",
     "titleLogo": "images/bip_logo.png",
     "titleLight": "BIP",
-    "titleBold": "Space\nData Applications\nfor downstream",
+    "titleBold": "Space Data \nApplication for downstream",
     "text": "We turn satellite data into decisions: geospatial analytics, GIS, remote sensing and data intelligence at the service of innovation.",
     "cta": "Get started",
     "image": "images/satellite_orbit.png",
@@ -14,7 +14,7 @@
     "eyebrow": "Who we are",
     "title": "Where space data meets decisions",
     "text": [
-      "BIP Space is the Business Integration Partners team dedicated to Earth observation and geospatial data analysis. We combine technical expertise with business knowledge to turn satellite imagery into actionable information.",
+      "BIP Space is the Earth observation and geospatial data analysis team of Business Integration Partners, part of the Government & Public Services (GPS) business area. We combine technical expertise with business knowledge to turn satellite imagery into actionable information.",
       "From air quality and urban heat to land-cover change and green-space mapping, we work with public bodies and institutions to turn open satellite data into clear, repeatable and decision-ready insights."
     ],
     "skills": [
@@ -35,7 +35,14 @@
         "text": "Dashboards and insights for operational decisions."
       }
     ]
+    
   },
+  "dataSources": {
+  "eyebrow": "Our data",
+  "title": "We start from geospatial data and integrate it with other opportunity data",
+  "items": ["Aerial photogrammetry", "Georeferenced data", "Spatial data", "Public databases", "Opportunity data"]
+},
+
   "team": {
     "eyebrow": "Our people",
     "title": "Meet our team",
@@ -51,14 +58,14 @@
     ],
     "members": [
       {
-        "name": "Federica",
+        "name": "Federica Mezzani",
         "role": "Associate Manager",
         "bio": "",
         "photo": "images/team/Fede.png",
-        "linkedin": ""
+        "linkedin": "https://www.linkedin.com/in/federica-mezzani-ph-d-33976b44/"
       },
       {
-        "name": "Lucia",
+        "name": "Lucia Savatteri",
         "role": "Consultant",
         "bio": "",
         "photo": "images/team/Luci.png",
@@ -69,80 +76,80 @@
         "role": "Lead Consultant",
         "bio": "",
         "photo": "images/team/Corinne.png",
-        "linkedin": ""
+        "linkedin": "https://www.linkedin.com/in/corinnetamburis/"
       },
       {
-        "name": "Gianluca",
+        "name": "Gianluca Benzi",
         "role": "Consultant",
         "bio": "",
         "photo": "images/team/Gianlu.png",
         "linkedin": ""
       },
       {
-        "name": "Irenne",
+        "name": "Irene Tutone",
         "focus": "58%",
-        "role": "Consultant",
+        "role": "Project Manager",
         "bio": "",
         "photo": "images/team/irenne.png",
-        "linkedin": ""
+        "linkedin": "https://www.linkedin.com/in/irene-tutone/"
       },
       {
-        "name": "Valerio",
+        "name": "Valerio Valenti",
         "role": "Consultant",
         "bio": "",
         "photo": "images/team/valerio.png",
-        "linkedin": ""
+        "linkedin": "https://www.linkedin.com/in/valeriovalenti1995/"
       },
       {
-        "name": "Roberto",
+        "name": "Roberto Muscinelli",
         "role": "Head of BIP Space",
         "bio": "",
         "photo": "images/team/Rob.png",
-        "linkedin": "",
+        "linkedin": "https://www.linkedin.com/in/roberto-muscinelli-6a6a221bb/",
         "featured": true
       },
       {
-        "name": "Beatrice",
+        "name": "Beatrice Cascone",
         "role": "Consultant",
         "bio": "",
         "photo": "images/team/Bea.png",
-        "linkedin": ""
+        "linkedin": "https://www.linkedin.com/in/beatrice-cascone-573906196/"
       },
       {
-        "name": "Nataly",
+        "name": "Nataly Sarmiento",
         "focus": "45%",
         "role": "Consultant",
         "bio": "",
         "photo": "images/team/Naty.png",
-        "linkedin": ""
+        "linkedin": "https://www.linkedin.com/in/nasarmientoo/"
       },
       {
-        "name": "Isabela",
+        "name": "Isabela Saud-Mino",
         "role": "Consultant",
         "bio": "",
         "photo": "images/team/isa.png",
-        "linkedin": ""
+        "linkedin": "https://www.linkedin.com/in/claudiaisabelasaudmino/"
       },
       {
-        "name": "Tommaso",
+        "name": "Tommaso Soricelli",
         "role": "Consultant",
         "bio": "",
         "photo": "images/team/Tom.png",
-        "linkedin": ""
+        "linkedin": "https://www.linkedin.com/in/tommaso-s-a5a496250/"
       },
       {
-        "name": "Flavia",
+        "name": "Flavia Castelli",
         "role": "Consultant",
         "bio": "",
         "photo": "images/team/Flavia.png",
-        "linkedin": ""
+        "linkedin": "https://www.linkedin.com/in/flavia-castelli-a794b4344/"
       },
       {
         "name": "Edoardo",
         "role": "Consultant",
         "bio": "",
         "photo": "images/team/edoardo.png",
-        "linkedin": ""
+        "linkedin": "https://www.linkedin.com/in/edoardoscalia/"
       }
     ]
   },
