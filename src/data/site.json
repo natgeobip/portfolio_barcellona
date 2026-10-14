@@ -79,11 +79,11 @@
         "role": "Consultant",
         "bio": "",
         "photo": "images/team/Luci.png",
-        "linkedin": ""
+        "linkedin": "https://www.linkedin.com/in/lucia-adele-savatteri-251a99234/"
       },
       {
-        "name": "Edoardo",
-        "role": "Consultant",
+        "name": "Edoardo Scalia",
+        "role": "Lead Consultant",
         "bio": "",
         "photo": "images/team/edoardo.png",
         "linkedin": "https://www.linkedin.com/in/edoardoscalia/"
@@ -91,21 +91,21 @@
       {
         "name": "Irene Tutone",
         "focus": "58%",
-        "role": "Project Manager",
+        "role": "Lead Consultant",
         "bio": "",
         "photo": "images/team/irenne.png",
         "linkedin": "https://www.linkedin.com/in/irene-tutone/"
       },
       {
         "name": "Valerio Valenti",
-        "role": "Consultant",
+        "role": "Associate Manager",
         "bio": "",
         "photo": "images/team/valerio.png",
         "linkedin": "https://www.linkedin.com/in/valeriovalenti1995/"
       },
       {
         "name": "Roberto Muscinelli",
-        "role": "Head of BIP Space",
+        "role": "Partner & Head of BIP Space",
         "bio": "",
         "photo": "images/team/Rob.png",
         "linkedin": "https://www.linkedin.com/in/roberto-muscinelli-6a6a221bb/",
@@ -113,7 +113,7 @@
       },
       {
         "name": "Federica Mezzani",
-        "role": "Associate Manager",
+        "role": "Manager",
         "bio": "",
         "photo": "images/team/Fede.png",
         "linkedin": "https://www.linkedin.com/in/federica-mezzani-ph-d-33976b44/"
@@ -127,7 +127,7 @@
       },
       {
         "name": "Beatrice Cascone",
-        "role": "Consultant",
+        "role": "Senior Consultant",
         "bio": "",
         "photo": "images/team/Bea.png",
         "linkedin": "https://www.linkedin.com/in/beatrice-cascone-573906196/"
@@ -137,7 +137,7 @@
         "role": "Consultant",
         "bio": "",
         "photo": "images/team/Gianlu.png",
-        "linkedin": ""
+        "linkedin": "https://www.linkedin.com/in/gianluca-benzi/"
       },
       {
         "name": "Flavia Castelli",
