@@ -712,5 +712,338 @@
         "Extend the demonstrator with new datasets, modules and services."
       ]
     }
+  },
+  {
+  "slug": "satellite-broadband-experimentation",
+  "titleLight": "Satellite Broadband",
+  "titleBold": "Experimentation",
+  "summary": "A field trial of Starlink satellite backhaul to bring ultra-broadband connectivity to remote Lombardy villages, with preliminary network quality results.",
+  "tags": [
+    "Starlink",
+    "Satellite Broadband",
+    "MPLS L2VPN",
+    "Network Quality"
+  ],
+  "image": "images/projects/thumbnails/satellite-broadband.png",
+  "heroText": "Traffic from virtual villages served by fibre, copper and wireless is collected at regional access points and carried over Starlink to Milan, to test whether satellite links can support ultra-broadband services.",
+  "overview": {
+    "title": "Project at a glance",
+    "text": "The experimentation tests satellite connectivity as backhaul for ultra-broadband access in Lombardy. Traffic from the Virtual Villages, reached through FTTH, FTTC and FWA access networks, is collected at an Access Network Collection Point (PRRA) and forwarded over an L2VPN on MPLS carried by the Starlink infrastructure to the aggregation point in Milan Caldera, then routed to the Internet. Quality is measured under load for 60 days at each PRRA.",
+    "stats": [
+      {
+        "value": "10",
+        "label": "PRRAs in the experimentation"
+      },
+      {
+        "value": "2",
+        "label": "PRRAs with the 60 days of data completed"
+      },
+      {
+        "value": "6",
+        "label": "Starlink antennas per PRRA, at most"
+      },
+      {
+        "value": "7",
+        "label": "Virtual Villages analysed so far"
+      }
+    ],
+    "meta": {
+      "Area": "Lombardy, Italy",
+      "Period": "60 days of data collection per PRRA",
+      "Data": "Network throughput, latency and packet loss",
+      "Output": "Network quality indicators and scores"
+    }
+  },
+  "story": [
+    {
+      "icon": "challenge",
+      "label": "The challenge",
+      "title": "Ultra-broadband beyond the terrestrial network",
+      "text": "Remote villages are hard to serve with terrestrial backhaul. The trial checks whether Starlink links can carry the traffic of fibre, copper and wireless access networks with enough quality for everyday services."
+    },
+    {
+      "icon": "analyzed",
+      "label": "What was analyzed",
+      "title": "Throughput, latency and packet loss",
+      "text": "Average download and upload speed per Virtual Village, UDP latency (a ping under load), TCP round trip time and packet loss, measured under simulated load at the PRRAs of Milano Bernina and Azzano San Paolo."
+    },
+    {
+      "icon": "approach",
+      "label": "Our approach",
+      "title": "Starlink as MPLS backhaul",
+      "text": "Each PRRA aggregates its villages and sends their traffic over an L2VPN on MPLS carried by Starlink. Capacity grows with the number of antennas, up to about 2 Gbps in download and 240 Mbps in upload with six antennas."
+    }
+  ],
+  "data": {
+    "title": "Data sources",
+    "items": [
+      {
+        "name": "Virtual Villages",
+        "text": "Seven villages in the first analysis: Brugherio and Bergamo on FTTH, and Casalmaiocco, Marudo (town hall and school), Pieve Fissiraga and Broni on FTTC."
+      },
+      {
+        "name": "PRRA equipment",
+        "text": "Each PRRA has 6 Starlink Enterprise kits with modem, 1 KVH satellite kit with a 74 cm antenna, 1 Davis weather station, 1 Cisco NCS 540 aggregation router and 1 Huawei EA5801E-FL16 OLT."
+      },
+      {
+        "name": "Weather data",
+        "text": "Weather stations at each PRRA, to correlate network quality with weather conditions in the next phase."
+      }
+    ],
+    "deliverablesTitle": "What the experimentation produces",
+    "deliverables": [
+      "Average speed per Virtual Village, in download and upload.",
+      "UDP latency, TCP round trip time and packet loss.",
+      "A quality score from 1 to 5 for streaming, gaming, workstream, VoIP and web.",
+      "A scalable design for satellite backhaul with MPLS multiplexing."
+    ]
+  },
+  "methods": {
+    "title": "From the access network to the Internet",
+    "text": [
+      "Villages are reached by three access technologies: FTTH on optical fibre, FTTC on copper and FWA on wireless. Their traffic reaches the PRRA over terrestrial links, then crosses Starlink on an L2VPN over MPLS to the Milan Caldera aggregation point and on to Internet.",
+      "Scalability comes from aggregating several Starlink antennas, from MPLS multiplexing and from the integration with operators' Layer 2 networks, which allows the available bandwidth to be shared dynamically between terminals."
+    ],
+    "steps": [
+      {
+        "title": "1. Collect at the PRRA",
+        "text": "Terrestrial links from the villages end at the PRRA, where an OLT and a Cisco aggregation router gather the traffic."
+      },
+      {
+        "title": "2. Carry it over Starlink",
+        "text": "Up to six Starlink antennas per PRRA carry an L2VPN over MPLS to Milan Caldera, with up to 2 Gbps downlink and 240 Mbps uplink."
+      },
+      {
+        "title": "3. Load the network",
+        "text": "Users are simulated per village: FTTH 75 in download and 50 in upload, FTTC 30 and 30."
+      },
+      {
+        "title": "4. Measure for 60 days",
+        "text": "Speed, UDP latency, TCP round trip time and packet loss are recorded at each PRRA."
+      },
+      {
+        "title": "5. Score the quality",
+        "text": "Results are scored from 1 (unacceptable) to 5 (optimal) for five traffic types."
+      }
+    ],
+    "figures": [
+      {
+        "image": "images/projects/satellite-broadband/architecture.png",
+        "caption": "Figure 1. General architecture: Virtual Villages on FTTH, FTTC and FWA, the PRRA, the Starlink link and the Milan Caldera and Milan Bernina nodes towards the Internet. Labels are in Italian."
+      },
+      {
+        "image": "images/projects/satellite-broadband/prra-azzano-san-paolo.png",
+        "caption": "Figure 2. PRRA Azzano San Paolo, with FTTH and FTTC access, OLT, MPLS router and Starlink kits."
+      },
+      {
+        "image": "images/projects/satellite-broadband/prra-milano-bernina.png",
+        "caption": "Figure 3. PRRA Milano Bernina, with the same equipment as Azzano San Paolo."
+      }
+    ]
+  },
+  "insights": {
+    "title": "Data that drives decisions",
+    "main": {
+      "image": "images/projects/satellite-broadband/villages-map.png",
+      "caption": "Figure 4. Virtual Villages in Lombardy analysed so far: FTTH in green, FTTC in brown."
+    },
+    "charts": [],
+    "gallery": [
+      {
+        "title": "Network quality",
+        "image": "images/projects/satellite-broadband/network-quality.png",
+        "caption": "Figure 5. Preliminary quality indicators and scores under load."
+      }
+    ]
+  },
+  "findings": {
+    "title": "Main findings",
+    "items": [
+      {
+        "title": "Download is high",
+        "text": "The average speed per Virtual Village is 216.4 Mbps in download, against 33.7 Mbps in upload."
+      },
+      {
+        "title": "Latency is moderate",
+        "text": "UDP latency is 63.2 ms in download and 36.5 ms in upload, while TCP round trip time is higher, 102.3 and 95.4 ms, because of handshakes, congestion control and retransmissions."
+      },
+      {
+        "title": "Upload loses more packets",
+        "text": "Packet loss is 0.8% in download and 3.1% in upload."
+      },
+      {
+        "title": "All traffic types score 4 out of 5",
+        "text": "Streaming, gaming, workstream, VoIP and web are all rated as adequate."
+      }
+    ]
+  },
+  "results": {
+    "title": "Results that matter",
+    "items": [
+      {
+        "value": "216.4 Mbps",
+        "label": "Average download per Virtual Village"
+      },
+      {
+        "value": "33.7 Mbps",
+        "label": "Average upload per Virtual Village"
+      },
+      {
+        "value": "63.2 ms",
+        "label": "UDP latency in download"
+      },
+      {
+        "value": "0.8 %",
+        "label": "Packet loss in download"
+      },
+      {
+        "value": "4 / 5",
+        "label": "Quality score for every traffic type"
+      }
+    ]
+  },
+  "limits": {
+    "title": "Limitations and next steps",
+    "items": [
+      "Results cover only 2 of the 10 PRRAs, Milano Bernina and Azzano San Paolo, and are preliminary.",
+      "The sample is too small to support decisions.",
+      "Milano Bernina tested six villages on FTTH and FTTC in parallel, Azzano San Paolo only one, so the two are not fully comparable."
+    ],
+    "nextTitle": "Next steps",
+    "next": [
+      "Complete the data collection at the other 8 PRRAs.",
+      "Validate the indicators and correlate them with weather data.",
+      "Compare FTTH and FTTC in more depth."
+    ]
   }
+},
+{
+  "slug": "clepsydra-galileo-timing-receiver",
+  "titleLight": "CLEPSYDRA",
+  "titleBold": "Galileo Timing Receiver",
+  "summary": "A European project to build certified, Galileo-based timing receivers that give critical infrastructure secure and resilient time synchronization.",
+  "tags": [
+    "Galileo",
+    "Timing",
+    "EUSPA",
+    "Critical Infrastructure"
+  ],
+  "image": "images/projects/thumbnails/clepsydra.png",
+  "heroText": "CLEPSYDRA, funded by the EUSPA Fundamental Elements programme, develops a cost-efficient timing receiver platform at TRL 7/8 based on Galileo Second Generation.",
+  "overview": {
+    "title": "Project at a glance",
+    "text": "CLEPSYDRA is a European project sponsored by the EUSPA Fundamental Elements programme. It aims to build a new generation of certified, Galileo-based timing receivers for critical infrastructure, giving it secure, resilient and highly accurate time synchronization. The receiver platform is cost-efficient and high-performance, at TRL 7/8, and is meant to support a European-standardized timing service compliant with CEN/CENELEC EN 16605:2024.",
+    "stats": [
+      {
+        "value": "TRL 7/8",
+        "label": "Maturity of the receiver platform"
+      },
+      {
+        "value": "4",
+        "label": "Application sectors: energy, telecom, finance, transport"
+      },
+      {
+        "value": "5",
+        "label": "Consortium partners, BIP among them"
+      },
+      {
+        "value": "EN 16605",
+        "label": "CEN/CENELEC standard targeted, edition 2024"
+      }
+    ],
+    "meta": {
+      "Area": "Europe",
+      "Data": "Galileo G2G signals, Timing Service Message, OS-NMA",
+      "Output": "Certified Galileo timing receiver"
+    }
+  },
+  "story": [
+    {
+      "icon": "challenge",
+      "label": "The challenge",
+      "title": "Trusted time for critical infrastructure",
+      "text": "Smart grids, 5G networks, financial markets and transport systems depend on precise time. The project strengthens Europe's technological autonomy in timing services and protects operational continuity against cyber and geopolitical threats."
+    },
+    {
+      "icon": "analyzed",
+      "label": "What was analyzed",
+      "title": "Galileo G2G timing services",
+      "text": "Galileo Second Generation capabilities, including the Timing Service Message (TSM) and Open Service Navigation Message Authentication (OS-NMA), and the needs of four application sectors."
+    },
+    {
+      "icon": "approach",
+      "label": "Our approach",
+      "title": "A certified, standardized receiver",
+      "text": "Build a receiver platform on Galileo G2G that can support a European timing service aligned with EN 16605:2024."
+    }
+  ],
+  "data": {
+    "title": "Data sources",
+    "items": [
+      {
+        "name": "Galileo G2G",
+        "text": "Galileo Second Generation capabilities, including the Timing Service Message (TSM) and Open Service Navigation Message Authentication (OS-NMA)."
+      },
+      {
+        "name": "Standard",
+        "text": "CEN/CENELEC EN 16605:2024, the reference for a European-standardized timing service."
+      },
+      {
+        "name": "Consortium",
+        "text": "Thales Alenia Space, ELPROMA Elektronika, Piktime Systems (Poland), BIP and GEA Space (Czech Republic)."
+      }
+    ],
+    "deliverablesTitle": "What the project delivers",
+    "deliverables": [
+      "A cost-efficient, high-performance timing receiver platform at TRL 7/8.",
+      "A certified Galileo-based receiver for critical infrastructure.",
+      "Support to a European-standardized timing service."
+    ]
+  },
+  "methods": {
+    "title": "From Galileo signals to trusted time",
+    "text": [
+      "The receiver builds on Galileo Second Generation, using the Timing Service Message and OS-NMA authentication to provide secure time. It targets four sectors: energy (smart grids, with GNSS, NTP, PTP IEEE 1588 and 5G), telecom (time and frequency reference for 5G and 6G), finance (timestamping for MiFID II) and transport (traffic management and autonomous mobility)."
+    ],
+    "steps": [
+      {
+        "title": "1. Define sector needs",
+        "text": "Collect timing requirements from energy, telecom, finance and transport."
+      },
+      {
+        "title": "2. Build the receiver platform",
+        "text": "Develop a Galileo G2G receiver at TRL 7/8."
+      },
+      {
+        "title": "3. Certify and standardize",
+        "text": "Align the receiver with EN 16605:2024."
+      }
+    ]
+  },
+  "insights": {
+    "title": "Data that drives decisions",
+    "main": {
+      "image": "images/projects/clepsydra/concept.png",
+      "caption": "Figure 1. CLEPSYDRA concept: Galileo G2G signals (TSM and OS-NMA) feed a certified timing receiver platform that serves four critical-infrastructure sectors."
+    },
+    "charts": []
+  },
+  "results": {
+    "title": "Results that matter",
+    "items": [
+      {
+        "value": "TRL 7/8",
+        "label": "Maturity of the receiver platform"
+      },
+      {
+        "value": "4",
+        "label": "Application sectors addressed"
+      },
+      {
+        "value": "EN 16605",
+        "label": "Standard targeted, edition 2024"
+      }
+    ]
+  }
+}
 ]
