@@ -64,86 +64,86 @@
       {
         "name": "Isabela Saud-Mino",
         "role": "Consultant",
-        "bio": "",
+        "bio": "Over five years of experience in data analytics and geospatial solutions, spanning consulting, industry and research. Specialised in Earth Observation, land-change detection and time-series forecasting, with a solid track record in business and validation analysis. Skilled in building automated Python pipelines, fusing multi-source data and communicating results to non-technical stakeholders.",
         "photo": "images/team/isa.png",
         "linkedin": "https://www.linkedin.com/in/claudiaisabelasaudmino/"
       },
       {
         "name": "Tommaso Soricelli",
         "role": "Consultant",
-        "bio": "",
+        "bio": "Early-career professional in Machine Learning and predictive modelling, with experience at ENEA and in industry. Focused on forecasting, statistical and neural-network models, and optimisation for critical infrastructures. Multidisciplinary mechanical engineering background with solid Python skills.",
         "photo": "images/team/Tom.png",
         "linkedin": "https://www.linkedin.com/in/tommaso-s-a5a496250/"
       },
       {
         "name": "Lucia Savatteri",
         "role": "Consultant",
-        "bio": "",
+        "bio": "Three years of experience in public-sector consulting, focused on business analysis and PMO. Well versed in project management, tender preparation, security governance and stakeholder management across space, sustainability, transport and aviation. Also active in client training, market analysis and digital communication, and author of a paper presented at IAC 2024.",
         "photo": "images/team/Luci.png",
-        "linkedin": ""
+        "linkedin": "https://www.linkedin.com/in/lucia-adele-savatteri-251a99234/"
       },
       {
-        "name": "Edoardo",
-        "role": "Consultant",
-        "bio": "",
+        "name": "Edoardo Scalia",
+        "role": "Lead Consultant",
+        "bio": "Nearly five years of experience in consulting at BIP and Deloitte, in Italy and the Middle East. Skilled in PMO, budget and risk management, and in reporting for institutional and private clients. Builds VBA-based decision-support tools and portfolio dashboards for large-scale programs.",
         "photo": "images/team/edoardo.png",
         "linkedin": "https://www.linkedin.com/in/edoardoscalia/"
       },
       {
         "name": "Irene Tutone",
         "focus": "58%",
-        "role": "Project Manager",
-        "bio": "",
+        "role": "Lead Consultant",
+        "bio": "Nine years of international experience in project and programme management, across space, digital transformation, education and environmental monitoring. Senior PMO consultant at BIP, supporting EUSPA on the Galileo programme in project governance, delivery and contract management. Strong in planning, budget control, risk management and stakeholder coordination, backed by Agile and PRINCE2 Agile certifications. Previously managed a nationally funded education programme in the UK.",
         "photo": "images/team/irenne.png",
         "linkedin": "https://www.linkedin.com/in/irene-tutone/"
       },
       {
         "name": "Valerio Valenti",
-        "role": "Consultant",
-        "bio": "",
+        "role": "Associate Manager",
+        "bio": "Seven years of experience in strategy and management consulting. Solid background in business analysis, project management and change management, built on complex multi-stakeholder projects that support Digital Transformation programs, Business Process Reengineering and improvement initiatives. Expertise in business transformation, economic and financial evaluation, and the application of Agile methodology.",
         "photo": "images/team/valerio.png",
         "linkedin": "https://www.linkedin.com/in/valeriovalenti1995/"
       },
       {
         "name": "Roberto Muscinelli",
-        "role": "Head of BIP Space",
-        "bio": "",
+        "role": "Partner & Head of BIP Space",
+        "bio": "Over fifteen years of experience in the space sector, spanning system engineering, bid and project management, and business development for GNSS and downstream applications. Technical leader and design authority for BIP's space solutions, after senior roles at Thales Alenia Space Italia. Extensive work with EUSPA, ESA, the European Commission and ASI on Galileo and EGNOS, with a strong win rate in competitive tenders.",
         "photo": "images/team/Rob.png",
         "linkedin": "https://www.linkedin.com/in/roberto-muscinelli-6a6a221bb/",
         "featured": true
       },
       {
         "name": "Federica Mezzani",
-        "role": "Associate Manager",
-        "bio": "",
+        "role": "Manager",
+        "bio": "More than ten years of experience across research, engineering and consulting, backed by a PhD in Mechanics and international collaborations. Hands-on work in Earth Observation for environmental monitoring, web GIS platforms and system requirements for Galileo and Moonlight. Recipient of international scientific awards, including the L’Oréal-UNESCO “For Women in Science” prize.",
         "photo": "images/team/Fede.png",
         "linkedin": "https://www.linkedin.com/in/federica-mezzani-ph-d-33976b44/"
       },
       {
-        "name": "Corinne",
+        "name": "Corinne Tamburis",
         "role": "Lead Consultant",
-        "bio": "",
+        "bio": "Seven years of experience in IT and management consulting, grounded in a scientific background in astrophysics and space systems. Deep knowledge of IT governance, cloud migration, system engineering and requirements management in complex multi-stakeholder programs. Track record in satellite-based services, business models and cost-benefit analysis for institutional and telecom clients.",
         "photo": "images/team/Corinne.png",
         "linkedin": "https://www.linkedin.com/in/corinnetamburis/"
       },
       {
         "name": "Beatrice Cascone",
-        "role": "Consultant",
-        "bio": "",
+        "role": "Senior Consultant",
+        "bio": "Over four years of experience in project and contract management within international, multi-stakeholder environments. Strong command of procurement, financial monitoring and risk management for European institutional programs such as EGNOS, in the space and ICT sectors. Known for structured reporting and effective stakeholder coordination.",
         "photo": "images/team/Bea.png",
         "linkedin": "https://www.linkedin.com/in/beatrice-cascone-573906196/"
       },
       {
         "name": "Gianluca Benzi",
         "role": "Consultant",
-        "bio": "",
+        "bio": "Experience in space systems engineering and AI for space, from academic research to consulting. Specialised in GNSS and navigation systems, RF analysis, constellation optimisation and satellite connectivity testing. Skilled in developing Python-based tools and in requirements verification and system validation for international programs.",
         "photo": "images/team/Gianlu.png",
-        "linkedin": ""
+        "linkedin": "https://www.linkedin.com/in/gianluca-benzi/"
       },
       {
         "name": "Flavia Castelli",
         "role": "Consultant",
-        "bio": "",
+        "bio": "Four years of hands-on experience in space propulsion, from university rocketry to industry. Strong skills in the design, simulation and testing of hybrid and green propulsion systems, including CFD and structural analysis. Leadership, project planning and supplier management gained as Head of Propulsion of the Sapienza Rocket Team.",
         "photo": "images/team/Flavia.png",
         "linkedin": "https://www.linkedin.com/in/flavia-castelli-a794b4344/"
       },
@@ -151,7 +151,7 @@
         "name": "Nataly Sarmiento",
         "focus": "42%",
         "role": "Consultant",
-        "bio": "",
+        "bio": "Five years of experience in geospatial analysis and software development, across public institutions and consulting. Strong background in GIS data management and in building QGIS/PyQGIS tools, with a particular ability to turn client needs into functional specifications. Active in space-domain projects for public-sector clients, from requirements analysis to delivery.",
         "photo": "images/team/Naty.png",
         "linkedin": "https://www.linkedin.com/in/nasarmientoo/"
       }

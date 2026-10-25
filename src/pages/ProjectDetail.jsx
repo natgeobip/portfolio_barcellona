@@ -224,7 +224,7 @@ export default function ProjectDetail() {
       )}
 
       <div className="section back-wrap">
-        <Link to="/" className="back">← Tutti i progetti</Link>
+        <Link to="/" className="back">← Our projects</Link>
       </div>
 
       <Footer />
