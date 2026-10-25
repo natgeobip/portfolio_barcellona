@@ -75,7 +75,8 @@ export default function OrbitBanner({ banner, satellite }) {
 
       let k = 0
       // La posizione segue l'etichetta del titolo, quindi il satellite scorre con la pagina.
-      const anchor = document.getElementById(DOCK.id)?.querySelector('.eyebrow')
+      // ultima sezione con etichetta prima del footer ("Our people" in home, l'ultima sezione nei progetti)
+      const anchor = [...document.querySelectorAll(`.section .eyebrow, #${DOCK.id} .eyebrow`)].pop()
       if (anchor) {
         const a = anchor.getBoundingClientRect()
         const ay = a.top + a.height / 2 + DOCK.dy

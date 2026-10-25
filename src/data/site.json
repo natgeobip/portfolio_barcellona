@@ -6,7 +6,8 @@
     "titleBold": "Space Data\nApplication for\ndownstream",
     "text": "We turn satellite data into decisions: geospatial analytics, GIS, remote sensing and data intelligence at the service of innovation.",
     "cta": "Get started",
-    "image": "images/satellite_orbit.png",
+    "image": "images/barcelona_banner.png",
+    "projectImage": "images/satellite_orbit.png",
     "satellite": "images/satellite.png"
   },
   "about": {

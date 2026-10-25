@@ -5,6 +5,7 @@ import SectionHeading from '../components/SectionHeading.jsx'
 import Footer from '../components/Footer.jsx'
 import { storyIcons } from '../components/Icons.jsx'
 import projects from '../data/projects.json'
+import site from '../data/site.json'
 import { asset } from '../utils.js'
 
 const navLinks = [
@@ -58,6 +59,8 @@ export default function ProjectDetail() {
         text={p.heroText}
         cta="Get started"
         ctaTarget="overview"
+        banner={site.hero.projectImage}
+        satellite={site.hero.satellite}
       />
 
       <section className="section" id="overview">
