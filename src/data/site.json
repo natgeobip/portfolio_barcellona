@@ -15,7 +15,7 @@
     "title": "Where smart cities need actionable information",
     "text": [
       "The Space & Mobility team of Business Integration Partners, part of the Government & Public Services (GPS) business area, brings advanced technologies to cities and mobility. We combine technical expertise with business knowledge to turn satellite data into actionable information for cities and territories.",
-      "From air quality and urban heat to flood risk, green spaces and connectivity, we work with public bodies and institutions to make cities more sustainable, resilient and accessible, with clear, repeatable and decision-ready insights."
+      "Government and Public Services (GPS) is an ecosystem of diverse experiences, all ready today to deliver insights about the territory and, by extension, about Smart Cities. Space applications, AI serving citizens and mobility solutions are cross-cutting enablers, connecting a variety of domains across the Smart Cities paradigm."
     ],
     "skills": [
       {
@@ -245,6 +245,14 @@
       {
         "name": "IRIDE",
         "logo": "images/companies/iride_logo.png"
+      },
+      {
+        "name": "ARPA",
+        "logo": "images/companies/arpa.png"
+      },
+      {
+        "name": "ROMA",
+        "logo": "images/companies/roma.png"
       }
     ]
   },
