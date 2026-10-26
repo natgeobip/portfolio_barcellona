@@ -102,7 +102,7 @@
       ]
     },
     "limits": {
-      "title": "Limitations and next steps",
+      "title": "",
       "items": [
         "The estimates are validated against CAMS and ARPA assimilated maps, not directly against ground stations."
       ],
@@ -207,7 +207,7 @@
       ]
     },
     "limits": {
-      "title": "Limitations and next steps",
+      "title": "Next Steps",
       "items": [
         "Thresholds need calibration against real images before the numbers can be trusted.",
         "Freshly ploughed land can meet both the bare soil and the urban rules, and urban wins for now. The multi-year series is what separates the two, because ploughed land turns green again.",
@@ -571,7 +571,7 @@
       ]
     },
     "limits": {
-      "title": "Limitations and next steps",
+      "title": "Next Steps",
       "items": [
         "The analysis shown covers Castelvetrano. Results for the Ribera citrus orchards are not shown yet.",
         "The maps are interpreted visually, season by season. No validation against field measurements, irrigation records or weather station data is reported.",
@@ -698,7 +698,7 @@
       ]
     },
     "limits": {
-      "title": "Limitations and next steps",
+      "title": "Next Steps",
       "items": [
         "The demonstrator is a decision-support tool. It does not replace a full hydraulic or hydrodynamic study of the drainage network.",
         "The rain-on-grid simulation is simplified and meant for preliminary comparison of scenarios and areas.",
@@ -904,7 +904,7 @@
     ]
   },
   "limits": {
-    "title": "Limitations and next steps",
+    "title": "Next Steps",
     "items": [
       "Results cover only 2 of the 10 PRRAs, Milano Bernina and Azzano San Paolo, and are preliminary.",
       "The sample is too small to support decisions.",
