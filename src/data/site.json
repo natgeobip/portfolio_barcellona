@@ -1,10 +1,10 @@
 {
-  "name": "BIP Space",
+  "name": "BIP Smart Cities",
   "hero": {
     "eyebrow": "Portfolio",
     "titleLight": "",
-    "titleBold": "Space Data\nApplication for\ndownstream",
-    "text": "We turn satellite data into decisions: geospatial analytics, GIS, remote sensing and data intelligence at the service of innovation.",
+    "titleBold": "Smart Cities:\nSpace &\nMobility",
+    "text": "We make cities smarter: mobility, urban planning and territorial services powered by satellite intelligence.",
     "cta": "Get started",
     "image": "images/barcelona_banner.png",
     "projectImage": "images/satellite_orbit.png",
@@ -12,39 +12,39 @@
   },
   "about": {
     "eyebrow": "Who we are",
-    "title": "Where space data meets decisions",
+    "title": "Where smart cities meet mobility",
     "text": [
-      "BIP Space is the Earth observation and geospatial data analysis team of Business Integration Partners, part of the Government & Public Services (GPS) business area. We combine technical expertise with business knowledge to turn satellite imagery into actionable information.",
-      "From air quality and urban heat to land-cover change and green-space mapping, we work with public bodies and institutions to turn open satellite data into clear, repeatable and decision-ready insights."
+      "The Space & Mobility team of Business Integration Partners, part of the Government & Public Services (GPS) business area, brings advanced technologies to cities and mobility. We combine technical expertise with business knowledge to turn satellite data into actionable information for cities and territories.",
+      "From air quality and urban heat to flood risk, green spaces and connectivity, we work with public bodies and institutions to make cities more sustainable, resilient and accessible, with clear, repeatable and decision-ready insights."
     ],
     "skills": [
       {
-        "title": "Geospatial Analytics",
-        "text": "Spatial analysis and models built on territorial data."
+        "title": "Urban Analytics",
+        "text": "Spatial analysis and models for cities and territories."
       },
       {
-        "title": "GIS",
-        "text": "Maps, geodatabases and web GIS platforms."
+        "title": "Smart Mobility",
+        "text": "Navigation, positioning and transport solutions powered by satellite data."
       },
       {
-        "title": "Remote Sensing",
-        "text": "Processing of optical and radar satellite data."
+        "title": "Earth Observation",
+        "text": "Satellite data to monitor the urban environment."
       },
       {
-        "title": "Data Intelligence",
-        "text": "Dashboards and insights for operational decisions."
+        "title": "City Data Intelligence",
+        "text": "Dashboards and insights for urban decision-making."
       }
     ]
   },
   "dataSources": {
     "eyebrow": "Our data",
-    "title": "We start from geospatial data and integrate it with other opportunity data",
+    "title": "We start from geospatial data and integrate it with urban and mobility data",
     "items": [
       "Aerial photogrammetry",
       "Georeferenced data",
       "Spatial data",
       "Public databases",
-      "Opportunity data"
+      "Mobility and urban data"
     ]
   },
   "team": {
@@ -53,11 +53,11 @@
     "blocks": [
       {
         "title": "The people behind the work",
-        "text": "Our team brings together data scientists, GIS specialists and remote sensing experts. Each project starts from a real question and ends with results that can be verified, reproduced and put to use."
+        "text": "Our team brings together data scientists, mobility specialists and urban analysts. Each project starts from a real question and ends with results that can be verified, reproduced and put to use."
       },
       {
         "title": "Built by people",
-        "text": "Behind every map and model there is a group of curious people who enjoy working across disciplines, sharing what they learn and challenging each other to make satellite data useful for everyone."
+        "text": "Behind every map and model there is a group of curious people who enjoy working across disciplines, sharing what they learn and challenging each other to make data useful for cities and citizens."
       }
     ],
     "members": [
@@ -106,7 +106,7 @@
       },
       {
         "name": "Roberto Muscinelli",
-        "role": "Partner & Head of BIP Space",
+        "role": "Partner & Head of Smart Cities",
         "bio": "Over fifteen years of experience in the space sector, spanning system engineering, bid and project management, and business development for GNSS and downstream applications. Technical leader and design authority for BIP's space solutions, after senior roles at Thales Alenia Space Italia. Extensive work with EUSPA, ESA, the European Commission and ASI on Galileo and EGNOS, with a strong win rate in competitive tenders.",
         "photo": "images/team/Rob.png",
         "linkedin": "https://www.linkedin.com/in/roberto-muscinelli-6a6a221bb/",

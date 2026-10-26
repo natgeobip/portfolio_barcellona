@@ -715,6 +715,7 @@
   },
   {
   "slug": "satellite-broadband-experimentation",
+  "status": "On going",
   "titleLight": "Satellite Broadband",
   "titleBold": "Experimentation",
   "summary": "A field trial of Starlink satellite backhaul to bring ultra-broadband connectivity to remote Lombardy villages, with preliminary network quality results.",
@@ -919,6 +920,7 @@
 },
 {
   "slug": "clepsydra-galileo-timing-receiver",
+  "status": "On going",
   "titleLight": "CLEPSYDRA",
   "titleBold": "Galileo Timing Receiver",
   "summary": "A European project to build certified, Galileo-based timing receivers that give critical infrastructure secure and resilient time synchronization.",

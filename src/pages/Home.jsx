@@ -18,7 +18,7 @@ export default function Home() {
   const { hero, about, dataSources, team, trusted } = site
 
   return (
-    <>
+    <div className="home">
       <Hero
         variant="home"
         navLinks={navLinks}
@@ -30,7 +30,6 @@ export default function Home() {
         cta={hero.cta}
         ctaTarget="projects"
         banner={hero.image}
-        satellite={hero.satellite}
       />
 
       <LogoCarousel companies={trusted.companies} />
@@ -89,6 +88,6 @@ export default function Home() {
       </section>
 
       <Footer />
-    </>
+    </div>
   )
 }

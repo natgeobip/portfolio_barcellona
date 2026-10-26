@@ -43,6 +43,7 @@ export default function OrbitBanner({ banner, satellite }) {
 
   useEffect(() => {
     const el = sat.current
+    if (!el) return // senza satellite: solo banner statico
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
     let target = 0
     let current = 0
