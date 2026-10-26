@@ -920,7 +920,6 @@
 },
 {
   "slug": "clepsydra-galileo-timing-receiver",
-  "status": "On going",
   "titleLight": "CLEPSYDRA",
   "titleBold": "Galileo Timing Receiver",
   "summary": "A European project to build certified, Galileo-based timing receivers that give critical infrastructure secure and resilient time synchronization.",
@@ -934,28 +933,29 @@
   "heroText": "CLEPSYDRA, funded by the EUSPA Fundamental Elements programme, develops a cost-efficient timing receiver platform at TRL 7/8 based on Galileo Second Generation.",
   "overview": {
     "title": "Project at a glance",
-    "text": "CLEPSYDRA is a European project sponsored by the EUSPA Fundamental Elements programme. It aims to build a new generation of certified, Galileo-based timing receivers for critical infrastructure, giving it secure, resilient and highly accurate time synchronization. The receiver platform is cost-efficient and high-performance, at TRL 7/8, and is meant to support a European-standardized timing service compliant with CEN/CENELEC EN 16605:2024.",
+    "text": "CLEPSYDRA aims to design, develop and bring to market a new generation of certified Galileo-based timing receivers, ensuring secure, resilient and high-precision time synchronization for critical infrastructure. Building on the Timing Service Message (TSM) and Open Service Navigation Message Authentication (OS-NMA) of Galileo Second Generation (G2G), it enables a European-level standardized timing service compliant with CEN/CENELEC EN 16605:2024. Its mission is to strengthen Europe's technological autonomy in time and synchronization services, with a high-performance and cost-efficient receiver platform that protects energy, telecommunications, finance and transport networks against cyber and geopolitical threats. BIP supports the exploitation and commercialization of the product, with strategy and go-to-market, business analysis, economic-financial models, stakeholder engagement, communication and dissemination.",
     "stats": [
       {
         "value": "TRL 7/8",
         "label": "Maturity of the receiver platform"
       },
       {
-        "value": "4",
-        "label": "Application sectors: energy, telecom, finance, transport"
-      },
-      {
         "value": "5",
         "label": "Consortium partners, BIP among them"
       },
       {
-        "value": "EN 16605",
-        "label": "CEN/CENELEC standard targeted, edition 2024"
+        "value": "4",
+        "label": "Core sectors: energy, telecom, finance, transport"
+      },
+      {
+        "value": "99.8%",
+        "label": "ASPIS accuracy in the Jammertest 2025 time-offset test"
       }
     ],
     "meta": {
       "Area": "Europe",
-      "Data": "Galileo G2G signals, Timing Service Message, OS-NMA",
+      "Funding": "EUSPA, Fundamental Elements programme",
+      "Standard": "CEN/CENELEC EN 16605:2024, IEEE P1952",
       "Output": "Certified Galileo timing receiver"
     }
   },
@@ -964,19 +964,19 @@
       "icon": "challenge",
       "label": "The challenge",
       "title": "Trusted time for critical infrastructure",
-      "text": "Smart grids, 5G networks, financial markets and transport systems depend on precise time. The project strengthens Europe's technological autonomy in timing services and protects operational continuity against cyber and geopolitical threats."
+      "text": "Recent GNSS jamming, spoofing and signal-loss events show that a disruption can mean cancelled flights, ship navigation problems and major economic losses. A UK Government report counted over 1,000 GNSS interference events in one year at a London Stock Exchange detector, and estimated losses of £7.64 million for a seven-day outage."
     },
     {
       "icon": "analyzed",
       "label": "What was analyzed",
-      "title": "Galileo G2G timing services",
-      "text": "Galileo Second Generation capabilities, including the Timing Service Message (TSM) and Open Service Navigation Message Authentication (OS-NMA), and the needs of four application sectors."
+      "title": "Galileo G2G, threats and sector needs",
+      "text": "Galileo Second Generation timing services (TSM and OS-NMA), the main spoofing and meaconing attack scenarios, and the synchronization needs, service levels and regulations of energy, telecom, finance, transport and other critical sectors."
     },
     {
       "icon": "approach",
       "label": "Our approach",
-      "title": "A certified, standardized receiver",
-      "text": "Build a receiver platform on Galileo G2G that can support a European timing service aligned with EN 16605:2024."
+      "title": "A certified, standardized timing platform",
+      "text": "A multi-constellation, multi-frequency receiver with a time and frequency core, anti-jamming and ML-based anti-spoofing, built on EN 16605:2024 and designed to address the emerging IEEE P1952 standard for resilient PNT user equipment."
     }
   ],
   "data": {
@@ -984,51 +984,133 @@
     "items": [
       {
         "name": "Galileo G2G",
-        "text": "Galileo Second Generation capabilities, including the Timing Service Message (TSM) and Open Service Navigation Message Authentication (OS-NMA)."
+        "text": "Timing Service Message disseminated on the I/NAV message, with monitoring of GST and UTC accuracy, and OS-NMA authentication."
       },
       {
-        "name": "Standard",
-        "text": "CEN/CENELEC EN 16605:2024, the reference for a European-standardized timing service."
+        "name": "Standards",
+        "text": "CEN/CENELEC EN 16605:2024 for Galileo timing receivers, and the emerging IEEE P1952 for resilient PNT user equipment."
       },
       {
         "name": "Consortium",
-        "text": "Thales Alenia Space, ELPROMA Elektronika, Piktime Systems (Poland), BIP and GEA Space (Czech Republic)."
+        "text": "Thales Alenia Space Italia (GNSS receivers), ELPROMA Elektronika (resilient time synchronization, Poland), PikTime Systems (time transfer and time-frequency software, Poland), GEA Space (navigation and anti-spoofing, Czech Republic) and BIP (exploitation and go-to-market)."
+      },
+      {
+        "name": "Service levels",
+        "text": "Galileo Timing Service Levels: maximum time error of 1000 ns for SL1, 100 ns for SL2, and 15 ns (GST) and 30 ns (UTC) for SL3."
       }
     ],
     "deliverablesTitle": "What the project delivers",
     "deliverables": [
       "A cost-efficient, high-performance timing receiver platform at TRL 7/8.",
       "A certified Galileo-based receiver for critical infrastructure.",
+      "A central point of trusted UTC time, with Galileo as the single source and GPS as a backup.",
       "Support to a European-standardized timing service."
     ]
   },
   "methods": {
     "title": "From Galileo signals to trusted time",
     "text": [
-      "The receiver builds on Galileo Second Generation, using the Timing Service Message and OS-NMA authentication to provide secure time. It targets four sectors: energy (smart grids, with GNSS, NTP, PTP IEEE 1588 and 5G), telecom (time and frequency reference for 5G and 6G), finance (timestamping for MiFID II) and transport (traffic management and autonomous mobility)."
+      "CLEPSYDRA is not an ordinary GNSS time server. It is meant to act as an enterprise (IT) and industrial (OT) time firewall, a central point of trusted UTC time that can optionally be isolated from the physical satellites through RF filtering and GNSS simulation.",
+      "The receiver tracks Galileo E1, E5a/E5b and E6, processes the Timing Service Message, applies OS-NMA authentication and T-RAIM integrity monitoring, and falls back to holdover when GNSS is lost. It outputs 1 PPS and 10 MHz, and distributes time over PTP, NTP and IRIG."
     ],
     "steps": [
       {
         "title": "1. Define sector needs",
-        "text": "Collect timing requirements from energy, telecom, finance and transport."
+        "text": "Collect timing requirements and Galileo service levels for energy, telecom, finance, transport and other sectors."
       },
       {
-        "title": "2. Build the receiver platform",
-        "text": "Develop a Galileo G2G receiver at TRL 7/8."
+        "title": "2. Receive and process Galileo",
+        "text": "Multi-constellation, dual-frequency tracking, TSM decoding, OS-NMA and T-RAIM, with removal of satellites that fail the local barriers."
       },
       {
-        "title": "3. Certify and standardize",
-        "text": "Align the receiver with EN 16605:2024."
+        "title": "3. Detect and mitigate attacks",
+        "text": "RF interference detection and mitigation, plus ASPIS, a machine-learning spoofing detector patented by GEA Space."
+      },
+      {
+        "title": "4. Keep and distribute time",
+        "text": "A GNSS-disciplined time and frequency core with holdover, delivering 1 PPS, 10 MHz, PTP, NTP and IRIG."
+      },
+      {
+        "title": "5. Certify and align with standards",
+        "text": "Align the receiver with EN 16605:2024 and with the five levels of IEEE P1952: detect and alert, recover, resist, withstand and verify."
+      }
+    ],
+    "figures": [
+      {
+        "image": "images/projects/clepsydra/aspis-workflow.png",
+        "caption": "Figure 1. ASPIS workflow: the GNSS receiver streams data in real time to ASPIS, which separates authentic from spoofed signals before they reach the timing engine. The models are trained on over 200 million data points."
+      },
+      {
+        "image": "images/projects/clepsydra/standards.png",
+        "caption": "Figure 2. Alignment with EN 16605:2024 and the five resilience levels of IEEE P1952."
       }
     ]
   },
   "insights": {
     "title": "Data that drives decisions",
     "main": {
-      "image": "images/projects/clepsydra/concept.png",
-      "caption": "Figure 1. CLEPSYDRA concept: Galileo G2G signals (TSM and OS-NMA) feed a certified timing receiver platform that serves four critical-infrastructure sectors."
+      "image": "images/projects/clepsydra/receiver-platform.png",
+      "caption": "Figure 3. The CLEPSYDRA Galileo receiver platform: GNSS antenna, GNSS core (RF front end, DSP and navigation processing) and time and frequency core (time server and GNSS-DO) with IRIG, PTP, NTP, 1 PPS and 10 MHz outputs."
     },
-    "charts": []
+    "charts": [],
+    "gallery": [
+      {
+        "title": "Service levels across sectors",
+        "image": "images/projects/clepsydra/service-levels.png",
+        "caption": "Figure 4. Galileo Timing Service Levels and current and future timing needs of energy, telecom, finance and transport."
+      },
+      {
+        "title": "ASPIS at Jammertest 2025",
+        "image": "images/projects/clepsydra/jammertest-2025.png",
+        "caption": "Figure 5. Live spoofing test with a 15 minute time offset on GPS L1 C/A: the time solution from ASPIS stays on the real time while the raw receiver time jumps. Extract from the Jammertest 2025 report."
+      }
+    ]
+  },
+  "findings": {
+    "title": "Why trusted time matters",
+    "items": [
+      {
+        "title": "Finance",
+        "text": "A UK Government report (October 2023) found over 1,000 GNSS interference events in one year at a London Stock Exchange detector, and estimated £7.64 million of losses for a seven-day GNSS outage."
+      },
+      {
+        "title": "Telecommunications",
+        "text": "Poland's National Institute of Telecommunications (January 2026) warns that GNSS disruptions can destabilise mobile networks, specialised communication systems and emergency services."
+      },
+      {
+        "title": "Aviation",
+        "text": "Repeated GNSS disruptions forced Finnair to suspend flights to Tartu for one month in 2024. Reuters reported two flights returning because GPS interference prevented landing."
+      },
+      {
+        "title": "Maritime",
+        "text": "Finnish and Estonian authorities (June 2025) warned that GNSS disruption in the Gulf of Finland was causing positioning problems, autopilot failures and a higher accident risk."
+      },
+      {
+        "title": "Desynchronization as a cyber threat",
+        "text": "The consortium points out that desynchronizing IT and OT systems is a cheap and non-invasive way to cause denial of service at critical infrastructure, and one that the growing Industry 4.0 market may not perceive."
+      }
+    ]
+  },
+  "useCases": {
+    "title": "Sector applications",
+    "items": [
+      {
+        "title": "Energy (SL2)",
+        "text": "Power transmission networks use Wide Area Monitoring, Protection and Control systems and phasor measurement units. If a unit or the central server drifts out of sync, valid data can be rejected and wrong protection actions triggered. Relevant regulation: NIS2 / CER and the EU System Operation Guideline."
+      },
+      {
+        "title": "Telecom (SL2/SL3)",
+        "text": "5G radio access and core networks need precise phase and frequency, kept through GNSS outages by holdover. CLEPSYDRA adds anti-jamming, anti-spoofing, OS-NMA and T-RAIM. Relevant standards: ITU-T G.8271/G.8272, 3GPP and NIS2."
+      },
+      {
+        "title": "Finance (SL1)",
+        "text": "Trading venues, high-frequency trading and banking data centers need UTC-traceable timestamps and an audit trail. Relevant regulation: MiFID II / MiFIR RTS 25, NIS2 / CER, and eIDAS and ETSI trust-service standards."
+      },
+      {
+        "title": "Transport and others (SL1)",
+        "text": "Air traffic control, rail and waterworks depend on synchronized nodes for event sequencing, monitoring and safe operations. Relevant regulation: NIS2 / CER and ERTMS."
+      }
+    ]
   },
   "results": {
     "title": "Results that matter",
@@ -1038,14 +1120,28 @@
         "label": "Maturity of the receiver platform"
       },
       {
-        "value": "4",
-        "label": "Application sectors addressed"
+        "value": "99.8%",
+        "label": "ASPIS accuracy, Jammertest 2025"
       },
       {
-        "value": "EN 16605",
-        "label": "Standard targeted, edition 2024"
+        "value": "200M+",
+        "label": "Data points used to train the ASPIS models"
+      },
+      {
+        "value": "5",
+        "label": "Consortium partners"
       }
     ]
-  }
+  },
+  "links": [
+    {
+      "label": "Visit the CLEPSYDRA website",
+      "url": "https://www.clepsydra-eu.com/"
+    },
+    {
+      "label": "Follow CLEPSYDRA on LinkedIn",
+      "url": "https://www.linkedin.com/company/clepsydraproduct/"
+    }
+  ]
 }
 ]
