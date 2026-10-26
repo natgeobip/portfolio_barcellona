@@ -192,6 +192,11 @@ img { display: block; max-width: 100%; }
 @keyframes logos-scroll { to { transform: translateX(-50%); } }
 @media (prefers-reduced-motion: reduce) { .logos__track { animation: none; } }
 
+/* ---------- julia AI ---------- */
+.julia__head { display: flex; align-items: center; gap: 24px; }
+.julia__head .section-heading { flex: 1; }
+.julia__logo { height: 96px; width: auto; flex: none; }
+
 /* ---------- footer ---------- */
 .footer {
   color: #fff; padding: 48px 24px 28px; min-height: 220px;
