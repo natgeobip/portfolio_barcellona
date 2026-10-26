@@ -186,17 +186,7 @@
         { "title": "Get health information", "text": "Real-time Emergency Room waiting times and up-to-date pharmacy locations." }
       ]
     },
-    "channels": {
-      "title": "Where to find Julia",
-      "text": "Julia can be reached on five channels. Sharing your location (on WhatsApp, Telegram, web chat and the institutional portal) unlocks answers about what is around you, and pinning the conversation on WhatsApp or Telegram keeps her one tap away.",
-      "items": [
-        { "label": "Roma Capitale Portal", "href": "https://www.comune.roma.it/" },
-        { "label": "WhatsApp", "href": "https://wa.me/+393357302661" },
-        { "label": "Telegram", "href": "https://t.me/JuliaRomeVirtualAssistantBot" },
-        { "label": "Messenger", "href": "https://m.me/61570065705734" },
-        { "label": "Web chat", "href": "https://julia.comune.roma.it/chat/" }
-      ]
-    },
+    
     "how": {
       "eyebrow": "How Julia works",
       "items": [
@@ -213,41 +203,6 @@
         { "q": "How does geolocation work?", "a": "Julia uses your position only if you knowingly share it, and keeps it for a few minutes within the conversation. After that she asks you to share it again if you want location-based answers." },
         { "q": "How does the conversation history work?", "a": "History stays active only for a limited time. Once it expires, it is as if you were talking for the first time: Julia keeps no memory of previous interactions." },
         { "q": "How do I get the best answers?", "a": "Ask clear and precise questions, rephrase if you do not find the answer straight away, and use punctuation to separate different requests. If Julia seems stuck, write \"let's start over\" or \"change topic\"." }
-      ]
-    },
-    "releases": {
-      "title": "Release history",
-      "items": [
-        {
-          "version": "Release 1.0",
-          "points": [
-            "Hotel information, and search for restaurants and bars by area, type and budget",
-            "Mobility: directions, trains and flights, real-time bus waiting times, taxi and public transport fares",
-            "Street services: drinking fountains, tourist info points and public toilets",
-            "Culture, events and shows, Jubilee calendar and info points",
-            "Health and safety: pharmacies, real-time Emergency Room waiting times and Civil Protection alerts"
-          ]
-        },
-        {
-          "version": "Release 2.0",
-          "points": [
-            "Generative model upgraded from OpenAI GPT-4o to GPT-4.1, with location sharing and a better conversation history",
-            "Clarification attempts when a question is ambiguous, and continuous handling of user feedback",
-            "News, shopping, sport and leisure, green spaces, performance venues and places of worship",
-            "Guided tours, educational activities, accommodation, sharing services and study rooms"
-          ]
-        },
-        {
-          "version": "Release 2.5",
-          "isNew": true,
-          "points": [
-            "Institutional Portal widget: guided access to content, documents, online services and administrative procedures",
-            "Information on Departments and Offices, plus Council resolutions and Mayor's ordinances from the last 5 years",
-            "City services: waste bins and AMA collection centres, post offices, water kiosks, Punti Roma Facile and anti-violence centres",
-            "Daily cinema programme",
-            "New access channels (the Institutional Portal and 060608) and a Super Agent orchestrator with specialised agents"
-          ]
-        }
       ]
     },
     "cta": {
