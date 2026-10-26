@@ -99,6 +99,7 @@
       },
       {
         "name": "Valerio Valenti",
+        "focus": "56%",
         "role": "Associate Manager",
         "bio": "Seven years of experience in strategy and management consulting. Solid background in business analysis, project management and change management, built on complex multi-stakeholder projects that support Digital Transformation programs, Business Process Reengineering and improvement initiatives. Expertise in business transformation, economic and financial evaluation, and the application of Agile methodology.",
         "photo": "images/team/valerio.png",
@@ -114,6 +115,7 @@
       },
       {
         "name": "Federica Mezzani",
+        "focus": "45%",
         "role": "Manager",
         "bio": "More than ten years of experience across research, engineering and consulting, backed by a PhD in Mechanics and international collaborations. Hands-on work in Earth Observation for environmental monitoring, web GIS platforms and system requirements for Galileo and Moonlight. Recipient of international scientific awards, including the L’Oréal-UNESCO “For Women in Science” prize.",
         "photo": "images/team/Fede.png",
