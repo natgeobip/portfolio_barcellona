@@ -4,18 +4,20 @@ import TeamGallery from '../components/TeamGallery.jsx'
 import ProjectCarousel from '../components/ProjectCarousel.jsx'
 import Footer from '../components/Footer.jsx'
 import LogoCarousel from '../components/LogoCarousel.jsx'
+import JuliaSection from '../components/JuliaSection.jsx'
 import site from '../data/site.json'
 import projects from '../data/projects.json'
 
 const navLinks = [
   { label: 'WHO WE ARE', id: 'about' },
   { label: 'PROJECTS', id: 'projects' },
+  { label: 'JULIA', id: 'julia' },
   { label: 'MEET OUR TEAM', id: 'team' },
   { label: 'CONTACT US', id: 'contact' },
 ]
 
 export default function Home() {
-  const { hero, about, dataSources, team, trusted } = site
+  const { hero, about, dataSources, team, trusted, julia } = site
 
   return (
     <div className="home">
@@ -73,6 +75,8 @@ export default function Home() {
         <SectionHeading eyebrow={site.projects.eyebrow} title={site.projects.title} />
         <ProjectCarousel projects={projects} />
       </section>
+
+      <JuliaSection data={julia} />
 
       <section className="section" id="team">
         <SectionHeading eyebrow={team.eyebrow} title={team.title} />
