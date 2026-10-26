@@ -91,6 +91,10 @@ img { display: block; max-width: 100%; }
 .about__skills p { font-size: .72rem; color: var(--muted); }
 
 /* ---------- hero banner + satellite orbit ---------- */
+/* pagine progetto: titolo e testo in basso a sinistra, lontano dal satellite */
+.hero--detail.hero--banner { display: flex; flex-direction: column; }
+.hero--detail.hero--banner .navbar, .hero--detail.hero--banner .hero__content { width: 100%; }
+.hero--detail.hero--banner .hero__content { margin-top: auto; margin-bottom: 0; }
 .hero--banner { --hero-h: clamp(480px, 42vw, 660px); height: var(--hero-h); min-height: 0; }
 .hero--banner .navbar, .hero--banner .hero__content { position: relative; z-index: 2; }
 /* leggibilità del testo a sinistra sopra il pianeta */

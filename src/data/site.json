@@ -3,8 +3,8 @@
   "hero": {
     "eyebrow": "Portfolio",
     "titleLight": "",
-    "titleBold": "Smart Cities:\nSpace &\nMobility",
-    "text": "We make cities smarter: mobility, urban planning and territorial services powered by satellite intelligence.",
+    "titleBold": "Bip for Smart cities: \nSpace, Mobility, AI \ncapabilities",
+    "text": "We make cities smarter: mobility, urban planning and territorial services powered by satellite intelligence, AI for cities and navigation",
     "cta": "Get started",
     "image": "images/barcelona_banner.png",
     "projectImage": "images/satellite_orbit.png",
@@ -12,7 +12,7 @@
   },
   "about": {
     "eyebrow": "Who we are",
-    "title": "Where smart cities meet mobility",
+    "title": "Where smart cities need actionable information",
     "text": [
       "The Space & Mobility team of Business Integration Partners, part of the Government & Public Services (GPS) business area, brings advanced technologies to cities and mobility. We combine technical expertise with business knowledge to turn satellite data into actionable information for cities and territories.",
       "From air quality and urban heat to flood risk, green spaces and connectivity, we work with public bodies and institutions to make cities more sustainable, resilient and accessible, with clear, repeatable and decision-ready insights."
