@@ -158,17 +158,103 @@
     ]
   },
 
-  "julia": {
-  "eyebrow": "Julia",
-  "title": "Julia, the virtual assistant of Rome",
-  "intro": ["párrafo 1", "párrafo 2"],
-  "stats": [{ "value": "24/7", "label": "Always available" }],
-  "capabilities": { "title": "...", "items": [{ "title": "...", "text": "...", "tag": "New" }] },
-  "channels": { "title": "...", "text": "...", "items": [{ "label": "WhatsApp", "href": "https://..." }] },
-  "how": { "eyebrow": "...", "items": [{ "label": "...", "title": "...", "text": "..." }] },
-  "faq": { "title": "...", "items": [{ "q": "pregunta", "a": "respuesta" }] },
-  "releases": { "title": "...", "items": [{ "version": "Release 2.5", "isNew": true, "points": ["..."] }] },
-  "cta": { "text": "...", "label": "Meet Julia", "href": "https://julia.comune.roma.it/it/" }
+    "julia": {
+    "logo": "images/julia_logo.png",
+    "eyebrow": "Julia",
+    "title": "Julia, the virtual assistant of Rome",
+    "intro": [
+      "Julia is the virtual assistant of Roma Capitale, presented as the first urban generative AI. Whether you are living Rome during the Jubilee, dealing with everyday life or discovering hidden corners of the city, she answers in real time with up-to-date, certified information.",
+      "She guides residents and visitors through the services of Roma Capitale and the city itself: documents and procedures, events, museums, restaurants, transport and more. A single message is all it takes to start."
+    ],
+    "stats": [
+      { "value": "24/7", "label": "Always available" },
+      { "value": "80+", "label": "Languages spoken" },
+      { "value": "5", "label": "Channels to chat on" },
+      { "value": "3", "label": "Releases: 1.0, 2.0 and 2.5" }
+    ],
+    "capabilities": {
+      "title": "What you can do with Julia",
+      "items": [
+        { "title": "Explore the Institutional Portal", "text": "Information on services, offices, contacts and documents of the Roma Capitale portal.", "tag": "New" },
+        { "title": "Discover the cinema programme", "text": "Films, showtimes and information on the main cinemas in the capital.", "tag": "New" },
+        { "title": "Get practical help and city services", "text": "Find drinking fountains, public toilets, AMA collection centres and more.", "tag": "Update" },
+        { "title": "Find out what to do in Rome", "text": "Events, concerts, exhibitions and shows." },
+        { "title": "Plan your trips", "text": "Public transport, directions, blue-line parking fares and ZTL zones." },
+        { "title": "Find the right place for you", "text": "Where to eat, sleep and relax, to experience each place authentically." },
+        { "title": "Explore history and culture", "text": "Opening hours and details on museums, monuments, attractions and study rooms." },
+        { "title": "Read official city and mobility news", "text": "News published by Roma Capitale and Roma Servizi per la Mobilità." },
+        { "title": "Get health information", "text": "Real-time Emergency Room waiting times and up-to-date pharmacy locations." }
+      ]
+    },
+    "channels": {
+      "title": "Where to find Julia",
+      "text": "Julia can be reached on five channels. Sharing your location (on WhatsApp, Telegram, web chat and the institutional portal) unlocks answers about what is around you, and pinning the conversation on WhatsApp or Telegram keeps her one tap away.",
+      "items": [
+        { "label": "Roma Capitale Portal", "href": "https://www.comune.roma.it/" },
+        { "label": "WhatsApp", "href": "https://wa.me/+393357302661" },
+        { "label": "Telegram", "href": "https://t.me/JuliaRomeVirtualAssistantBot" },
+        { "label": "Messenger", "href": "https://m.me/61570065705734" },
+        { "label": "Web chat", "href": "https://julia.comune.roma.it/chat/" }
+      ]
+    },
+    "how": {
+      "eyebrow": "How Julia works",
+      "items": [
+        { "label": "Designed to evolve", "title": "Better with every release", "text": "Julia's technology improves constantly, which makes her more effective, more useful and more precise with each new release." },
+        { "label": "Certified knowledge", "title": "Every piece of data is validated first", "text": "Julia does not learn everything at once: the quality of information is verified first, and each piece of data is validated and certified before it is added. Her knowledge comes from official sources." },
+        { "label": "Multi-agent architecture", "title": "One orchestrator, many specialised agents", "text": "When a chat starts, a Super Agent orchestrator coordinates several specialised agents to produce a single, complete and reliable answer." }
+      ]
+    },
+    "faq": {
+      "title": "Trust, privacy and tips",
+      "items": [
+        { "q": "How is my data protected?", "a": "Julia complies with the General Data Protection Regulation (GDPR) and uses advanced encryption to protect personal information. No sensitive data is stored without explicit consent." },
+        { "q": "Can I trust the information?", "a": "Julia relies on certified, up-to-date data from official Roma Capitale sources and reliable partners in tourism, mobility and culture. As with any AI, results may not be 100% certain, since they depend on the quality and completeness of the available information." },
+        { "q": "How does geolocation work?", "a": "Julia uses your position only if you knowingly share it, and keeps it for a few minutes within the conversation. After that she asks you to share it again if you want location-based answers." },
+        { "q": "How does the conversation history work?", "a": "History stays active only for a limited time. Once it expires, it is as if you were talking for the first time: Julia keeps no memory of previous interactions." },
+        { "q": "How do I get the best answers?", "a": "Ask clear and precise questions, rephrase if you do not find the answer straight away, and use punctuation to separate different requests. If Julia seems stuck, write \"let's start over\" or \"change topic\"." }
+      ]
+    },
+    "releases": {
+      "title": "Release history",
+      "items": [
+        {
+          "version": "Release 1.0",
+          "points": [
+            "Hotel information, and search for restaurants and bars by area, type and budget",
+            "Mobility: directions, trains and flights, real-time bus waiting times, taxi and public transport fares",
+            "Street services: drinking fountains, tourist info points and public toilets",
+            "Culture, events and shows, Jubilee calendar and info points",
+            "Health and safety: pharmacies, real-time Emergency Room waiting times and Civil Protection alerts"
+          ]
+        },
+        {
+          "version": "Release 2.0",
+          "points": [
+            "Generative model upgraded from OpenAI GPT-4o to GPT-4.1, with location sharing and a better conversation history",
+            "Clarification attempts when a question is ambiguous, and continuous handling of user feedback",
+            "News, shopping, sport and leisure, green spaces, performance venues and places of worship",
+            "Guided tours, educational activities, accommodation, sharing services and study rooms"
+          ]
+        },
+        {
+          "version": "Release 2.5",
+          "isNew": true,
+          "points": [
+            "Institutional Portal widget: guided access to content, documents, online services and administrative procedures",
+            "Information on Departments and Offices, plus Council resolutions and Mayor's ordinances from the last 5 years",
+            "City services: waste bins and AMA collection centres, post offices, water kiosks, Punti Roma Facile and anti-violence centres",
+            "Daily cinema programme",
+            "New access channels (the Institutional Portal and 060608) and a Super Agent orchestrator with specialised agents"
+          ]
+        }
+      ]
+    },
+    "cta": {
+      "text": "Everything in this section comes from the official Julia website.",
+      "label": "Meet Julia",
+      "href": "https://julia.comune.roma.it/it/"
+    }
   },
   
   "projects": {
