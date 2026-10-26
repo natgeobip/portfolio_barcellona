@@ -157,6 +157,20 @@
       }
     ]
   },
+
+  "julia": {
+  "eyebrow": "Julia",
+  "title": "Julia, the virtual assistant of Rome",
+  "intro": ["párrafo 1", "párrafo 2"],
+  "stats": [{ "value": "24/7", "label": "Always available" }],
+  "capabilities": { "title": "...", "items": [{ "title": "...", "text": "...", "tag": "New" }] },
+  "channels": { "title": "...", "text": "...", "items": [{ "label": "WhatsApp", "href": "https://..." }] },
+  "how": { "eyebrow": "...", "items": [{ "label": "...", "title": "...", "text": "..." }] },
+  "faq": { "title": "...", "items": [{ "q": "pregunta", "a": "respuesta" }] },
+  "releases": { "title": "...", "items": [{ "version": "Release 2.5", "isNew": true, "points": ["..."] }] },
+  "cta": { "text": "...", "label": "Meet Julia", "href": "https://julia.comune.roma.it/it/" }
+  },
+  
   "projects": {
     "eyebrow": "Our work",
     "title": "Projects"
