@@ -592,24 +592,42 @@
     "titleLight": "",
     "titleBold": "FloodWatch",
     "subtitle": "Urban Flood Risk & Predictive Maintenance of Urban Assets",
-    "summary": "A demonstrator that combines Earth observation, terrain data, rainfall and field information to map urban flood susceptibility and support drainage management.",
-    "tags": ["Sentinel-2", "Machine Learning", "Flood Risk", "WebGIS"],
+    "summary": "A web GIS platform for public administrations that combines terrain, satellite, weather and field reports to map urban flood risk and support drainage management. Developed for the Italian Space Agency (ASI).",
+    "tags": [
+      "Sentinel-2",
+      "ArcGIS",
+      "Flood Risk",
+      "WebGIS"
+    ],
     "image": "images/projects/thumbnails/floodwatch.png",
-    "heroText": "From heterogeneous territorial data to susceptibility maps, rain scenarios and a risk grid, published as GIS services and explored through a web application.",
+    "heroText": "From terrain and satellite data to flood risk maps and storm scenarios, published as GIS services and explored in a web platform with live weather and reports from the field.",
     "overview": {
       "title": "Project at a glance",
-      "text": "Urban flooding depends on terrain, surface sealing, rainfall and the condition of the drainage network. DRAINS integrates these sources in a modular demonstrator: a reproducible analytical pipeline produces the products, a GIS platform publishes them, and a web application lets users consult, filter and compare them. Citizens and field operators contribute reports and surveys that feed the same picture of the territory.",
+      "text": "Urban flooding depends on terrain, surface sealing, rainfall and the condition of the drains. DRAINS brings these sources into one web platform built on ArcGIS. Flood risk maps and storm scenarios are computed offline from terrain and satellite data, checked, and refreshed every three to six months. Live weather forecasts and reports from citizens and field operators are layered on top, so users see both how prone an area is to flooding and what is happening now.",
       "stats": [
-        { "value": "3", "label": "Rain scenario classes" },
-        { "value": "25 m", "label": "Modelling grid" },
-        { "value": "2", "label": "Territorial feedback flows: citizens and field operators" },
-        { "value": "50 cm", "label": "Target planimetric accuracy for field surveys" }
+        {
+          "value": "2",
+          "label": "Flood scenarios: blocked drains and working drains"
+        },
+        {
+          "value": "3–6 mo",
+          "label": "Refresh cycle of the pre-computed risk maps"
+        },
+        {
+          "value": "4",
+          "label": "User groups: viewers, editors, administrators and citizens"
+        },
+        {
+          "value": "25 m",
+          "label": "Modelling grid"
+        }
       ],
       "meta": {
+        "Client": "Italian Space Agency (ASI)",
         "Area": "Pilot urban area",
-        "Stage": "Demonstrator design",
-        "Data": "Sentinel-2, terrain model, rainfall, drainage network, reports",
-        "Output": "Susceptibility maps, scenarios, risk grid, dashboards"
+        "Stage": "Service concept defined (June 2026)",
+        "Data": "Official flood plans, satellite, terrain model, weather forecasts, citizen and field reports",
+        "Output": "Flood risk maps, storm scenarios, dashboards, mobile app for maintenance crews"
       }
     },
     "story": [
@@ -617,105 +635,195 @@
         "icon": "challenge",
         "label": "The challenge",
         "title": "Flood risk information is scattered",
-        "text": "Terrain, land cover, rainfall, drain conditions and reports from the territory sit in different formats, resolutions and update cycles. Public administrations need them in one place to see where water accumulates and which elements are exposed."
+        "text": "Official plans, terrain, satellite images, weather forecasts and reports from the territory come in different formats and update cycles. Public administrations need them in one place to see where water accumulates and which drains need attention."
       },
       {
         "icon": "analyzed",
         "label": "What was analyzed",
-        "title": "Territorial, satellite and field data",
-        "text": "A digital terrain model and derived factors, Sentinel-2 indices, land cover, green areas, rainfall, OpenStreetMap, historical flood reports and the position and status of drains."
+        "title": "Official, satellite and field data",
+        "text": "Regional and national flood plans (PAI and PGRA) and municipal data, satellite imagery and a digital terrain model, weather forecasts from external services, and geolocated reports and drain surveys collected on the ground."
       },
       {
         "icon": "approach",
         "label": "Our approach",
-        "title": "Process, publish, consult",
-        "text": "Python pipelines handle data fusion, machine learning and simulation. Validated outputs are published as GIS services and consumed by a web application, so the models can be re-run without touching the front end."
+        "title": "Compute offline, publish, overlay live data",
+        "text": "Risk maps and scenarios are produced with GIS analysis, validated and published as standard map services on ArcGIS Enterprise. A web application and a mobile app for maintenance crews consume them, with weather and reports added as live layers."
       }
     ],
     "data": {
       "title": "Data sources",
       "items": [
-        { "name": "Sentinel-2", "text": "Level-2A imagery from STAC catalogues, with scene quality control and cloud masking, used to derive NDVI, SAVI and NDWI." },
-        { "name": "Terrain model", "text": "Digital terrain model and derived factors such as slope, runoff accumulation and the Topographic Wetness Index." },
-        { "name": "Land cover and context", "text": "Land use and cover, sealed surfaces, green areas, buildings, roads and administrative boundaries, including OpenStreetMap." },
-        { "name": "Rainfall and weather", "text": "Rainfall records from monitoring networks to define scenarios, and forecast data from external APIs used as consultation context." },
-        { "name": "Reports and surveys", "text": "Historical flood reports, validated citizen reports and drain surveys from field operators." }
+        {
+          "name": "Official flood and land data",
+          "text": "Hydrogeological and flood-risk plans (PAI, PGRA) and municipal datasets, harmonised in a single geospatial model."
+        },
+        {
+          "name": "Satellite and terrain",
+          "text": "Satellite data such as Sentinel-2 and a digital terrain model, used to derive the Topographic Wetness Index (TWI) and other terrain factors."
+        },
+        {
+          "name": "Land cover and context",
+          "text": "Land use and cover, sealed surfaces, green areas, buildings, roads and administrative boundaries."
+        },
+        {
+          "name": "Weather forecasts",
+          "text": "Forecasts and environmental data from external APIs, updated in near real time and shown as context next to the risk maps."
+        },
+        {
+          "name": "Reports and field surveys",
+          "text": "Reports from citizens and field operators, plus drain surveys, collected with Survey123 and Field Maps."
+        }
       ],
-      "deliverablesTitle": "What the demonstrator produces",
+      "deliverablesTitle": "What the platform delivers",
       "deliverables": [
-        "Continuous and classified flood susceptibility maps.",
-        "Ordinary, intense and extreme rain scenarios, and scenarios linked to the state of the drainage network.",
-        "Water depth maps from a simplified rain-on-grid simulation.",
-        "A risk grid with exposed roads and elements, plus indicators for dashboards.",
-        "A web application with 2D maps, 3D scenes, filters, scenario comparison and export."
+        "A flood risk map showing how prone each area is to water accumulation, based on terrain indicators such as the TWI.",
+        "Two storm scenarios: one with blocked drains, with more intense flooding, and one with working drains, where some areas still flood.",
+        "Live layers for weather forecasts, citizen reports and the state of the drainage network.",
+        "Dashboards with report counts, status and distribution, filters by area, time and event type, and map export to PDF and images.",
+        "A mobile app for maintenance crews to see, update and add reports and drains in the field."
       ]
     },
     "methods": {
-      "title": "From heterogeneous data to a risk grid",
+      "title": "From heterogeneous data to decision maps",
       "text": [
-        "All sources are checked, reprojected to a common reference system, clipped to the area of interest and aligned on a shared grid. Territorial factors can be computed at a finer detail and are then aggregated to a regular 25 m modelling grid, so the model does not claim more precision than the observations support.",
-        "An interpretable supervised model estimates the relative susceptibility to surface water accumulation from the link between territorial factors and historical flood events. Drains are handled separately from the base factors, as a modifier of the scenarios, so that better drainage never raises the estimated risk."
+        "All sources are validated, checked for quality and reprojected to metric reference systems, so that distances and areas are measured correctly. They are then aligned on a regular 25 m modelling grid, so the model does not claim more precision than the observations support.",
+        "Risk maps and scenarios are generated offline with GIS analysis and published as map services after validation. Live weather and reports do not change the models: they add the current picture on top of the pre-computed maps. Drains are handled as a scenario modifier, so that better drainage never raises the estimated risk."
       ],
       "steps": [
-        { "title": "1. Acquire and validate", "text": "Availability, structure, reference system and attribute completeness are verified for every dataset." },
-        { "title": "2. Harmonize", "text": "Reprojection, clipping, gap handling and alignment of resolutions on a common grid." },
-        { "title": "3. Build the features", "text": "Terrain, land cover and satellite indices are computed and linked to the historical flood observations." },
-        { "title": "4. Model susceptibility", "text": "An interpretable classifier is trained and calibrated, with variables selected iteratively and spatially independent validation." },
-        { "title": "5. Add scenarios and simulation", "text": "Rain classes and drain conditions modify the base susceptibility, and a simplified rain-on-grid run estimates water depth." },
-        { "title": "6. Validate and publish", "text": "Checked outputs are published as GIS services and consumed by the web application." }
+        {
+          "title": "1. Collect",
+          "text": "Static data (official plans, satellite, terrain) is imported periodically. Weather and reports arrive continuously."
+        },
+        {
+          "title": "2. Validate and harmonise",
+          "text": "Quality checks, reprojection and alignment on a common grid keep the sources consistent."
+        },
+        {
+          "title": "3. Compute risk",
+          "text": "Terrain indicators such as the TWI describe how prone each area is to water accumulation."
+        },
+        {
+          "title": "4. Model scenarios",
+          "text": "Flood modelling compares storm events with blocked and with working drains."
+        },
+        {
+          "title": "5. Publish",
+          "text": "Validated maps become interoperable services (REST, WMS, WFS) every three to six months."
+        },
+        {
+          "title": "6. Consult and update",
+          "text": "Users explore maps and dashboards; citizens and crews send reports that feed the same picture."
+        }
       ],
       "figures": [
-        { "image": "images/projects/drains-flood-risk/architecture.svg", "caption": "Figure 1. Architecture: processing, publication and consultation are separate, and citizen reports and field surveys feed back into the platform." },
-        { "image": "images/projects/drains-flood-risk/risk-chain.svg", "caption": "Figure 2. Logical chain from territorial factors to the risk grid." }
+        {
+          "image": "images/projects/drains-flood-risk/architecture.svg",
+          "caption": "Figure 1. Architecture: risk maps are computed offline and published as services, while weather, citizen reports and field surveys are added as live layers."
+        },
+        {
+          "image": "images/projects/drains-flood-risk/operational-flow.jpg",
+          "caption": "Figure 2. Operational flow of the platform: data ingestion, processing and analysis, and output generation."
+        }
       ]
     },
     "insights": {
-      "title": "Data that drives decisions",
+      "title": "Maps and tools for decisions",
       "main": {
         "image": "images/projects/drains-flood-risk/risk-chain.svg",
-        "caption": "Figure 3. The base susceptibility describes the territory. Rain scenarios, drainage state and the simulation add the conditions of an event."
+        "caption": "Figure 3. One map shows how prone the terrain is to flooding. Two scenarios show what changes when the drains are blocked or working."
       },
       "charts": [],
       "gallery": [
         {
+          "image": "images/projects/drains-flood-risk/susceptibility-map-3d.jpg",
+          "title": "Flood risk map",
+          "caption": "Figure 4. Illustrative rendering of the flood risk map in 3D. Final visuals may change during development."
+        },
+        {
+          "image": "images/projects/drains-flood-risk/flood-scenario-3d.jpg",
+          "title": "Storm scenario",
+          "caption": "Figure 5. Illustrative rendering of a flood scenario in 3D."
+        },
+        {
+          "image": "images/projects/drains-flood-risk/dashboard.jpg",
+          "title": "Dashboard",
+          "caption": "Figure 6. Illustrative dashboard: reports, weather forecasts and indicators linked to the map."
+        },
+        {
           "image": "images/projects/drains-flood-risk/gis-tools.png",
           "title": "GIS tools in the platform",
-          "caption": "Figure 4. Rendering of the GIS tools in the platform: navigation, drawing, measurement, layer comparison, spatial analysis and export."
+          "caption": "Figure 7. Illustrative rendering of the GIS tools: navigation, drawing, measurement, layer comparison and export."
+        },
+        {
+          "image": "images/projects/drains-flood-risk/field-apps.jpg",
+          "title": "Reporting and maintenance apps",
+          "caption": "Figure 8. Illustrative rendering of the reporting form for the field (left) and the mobile app for maintenance crews (right)."
         }
       ]
     },
     "findings": {
       "title": "Design choices",
       "items": [
-        { "title": "Processing is separate from publication", "text": "The analytical pipeline does not depend on the GIS platform. Models can be re-run, outputs updated and the publication layer replaced without changing the algorithms." },
-        { "title": "Open formats and tools", "text": "Python and open source libraries produce GeoTIFF, GeoPackage, Shapefile and CSV, readable in common desktop GIS software." },
-        { "title": "Drains are a scenario modifier", "text": "Because the position of drains can reflect known problem areas, they are kept out of the base model and applied through explicit, controllable factors." },
-        { "title": "Two sources of ground truth", "text": "Citizen reports and field surveys are kept distinct by origin, accuracy and validation status, yet shown in one view." },
-        { "title": "Spatial validation", "text": "Cross-validation with spatial splits, ROC and AUC, coefficient stability and sensitivity analysis check robustness and reporting bias." }
+        {
+          "title": "Static risk, live context",
+          "text": "Risk maps are pre-computed and refreshed every three to six months. Weather and reports are shown on top of them but never alter the models."
+        },
+        {
+          "title": "Built on open standards",
+          "text": "Map services follow OGC standards (WMS, WFS) and REST APIs, so the platform connects to external systems and can scale."
+        },
+        {
+          "title": "Drains are a scenario modifier",
+          "text": "Blocked and working drains are two separate scenarios, so the effect of maintenance can be compared directly."
+        },
+        {
+          "title": "Citizens and crews feed the platform",
+          "text": "Reports from citizens and field operators are classified by type, status and priority by editors, and improve the data over time."
+        },
+        {
+          "title": "One platform, different roles",
+          "text": "Viewers consult and analyse, editors manage reports and content, administrators handle users, services, data updates and backups."
+        },
+        {
+          "title": "Replicable by design",
+          "text": "The methods and tools can be extended to other territories and to other environmental monitoring and risk management domains."
+        }
       ]
     },
     "results": {
       "title": "Results that matter",
       "items": [
-        { "value": "3", "label": "Rain scenario classes: ordinary, intense, extreme" },
-        { "value": "25 m", "label": "Regular grid for risk and reporting" },
-        { "value": "2D + 3D", "label": "Maps, scenes and dashboards in one web application" },
-        { "value": "Open", "label": "Standard formats and OGC services for interoperability" }
+        {
+          "value": "2",
+          "label": "Storm scenarios: blocked and working drains"
+        },
+        {
+          "value": "2D + 3D",
+          "label": "Maps, scenes and dashboards in one web platform"
+        },
+        {
+          "value": "Mobile",
+          "label": "App for maintenance crews to update reports in the field"
+        },
+        {
+          "value": "Open",
+          "label": "OGC services and REST APIs for interoperability"
+        }
       ]
     },
     "limits": {
       "title": "Next Steps",
       "items": [
-        "The demonstrator is a decision-support tool. It does not replace a full hydraulic or hydrodynamic study of the drainage network.",
-        "The rain-on-grid simulation is simplified and meant for preliminary comparison of scenarios and areas.",
-        "Historical flood reports can be biased towards places where people are more likely to report.",
-        "Final model variables and performance metrics will be documented after calibration and validation."
+        "DRAINS is a decision-support tool. It does not replace a full hydraulic study of the drainage network.",
+        "Risk maps are updated every three to six months. Live weather and reports give context but do not change the models.",
+        "Reports can be biased towards places where people are more likely to report.",
+        "Renderings in this page are illustrative and may change during development."
       ],
       "nextTitle": "Next steps",
       "next": [
-        "Calibrate and validate the susceptibility model and publish its metrics.",
-        "Evaluate forecast rainfall as a model input once consistent time series exist.",
-        "Extend the demonstrator with new datasets, modules and services."
+        "Develop and deploy the platform following the defined service concept.",
+        "Calibrate and validate the risk maps and publish their metrics.",
+        "Extend the platform to new territories and monitoring domains."
       ]
     }
   },
