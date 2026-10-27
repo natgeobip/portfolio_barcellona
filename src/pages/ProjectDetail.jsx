@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom'
 import Hero from '../components/Hero.jsx'
 import SectionHeading from '../components/SectionHeading.jsx'
 import Footer from '../components/Footer.jsx'
+import JuliaSection from '../components/JuliaSection.jsx'
 import { storyIcons } from '../components/Icons.jsx'
 import projects from '../data/projects.json'
 import site from '../data/site.json'
@@ -47,6 +48,31 @@ export default function ProjectDetail() {
   }
 
   const { overview, story, data, methods, insights, findings, results, limits, webgis } = p
+
+  // Julia ha una struttura propria (vedi JuliaSection): hero + sezione dedicata.
+  if (p.julia) {
+    return (
+      <>
+        <Hero
+          variant="detail"
+          navLinks={[{ label: 'JULIA', id: 'julia' }, { label: 'CONTACT US', id: 'contact' }]}
+          eyebrow={`PROJECT ${index + 1}`}
+          titleLight=""
+          titleBold={p.subtitle || p.titleBold}
+          text={p.heroText}
+          cta="Get started"
+          ctaTarget="julia"
+          banner={site.hero.projectImage}
+          satellite={site.hero.satellite}
+        />
+        <JuliaSection data={p.julia} />
+        <div className="section back-wrap">
+          <Link to="/" className="back">← Our projects</Link>
+        </div>
+        <Footer />
+      </>
+    )
+  }
 
   return (
     <>
@@ -193,26 +219,14 @@ export default function ProjectDetail() {
         </div>
       </section>
 
-      {limits && (
+      {limits?.next && (
         <section className="section" id="limits">
-          <SectionHeading eyebrow="Limits" title={limits.title} />
-          <div className="limits">
-            <ul className="bullets">
-              {limits.items.map((t) => (
-                <li key={t}>{t}</li>
-              ))}
-            </ul>
-            {limits.next && (
-              <div>
-                <h3 className="subhead">{limits.nextTitle}</h3>
-                <ul className="bullets">
-                  {limits.next.map((t) => (
-                    <li key={t}>{t}</li>
-                  ))}
-                </ul>
-              </div>
-            )}
-          </div>
+          <SectionHeading eyebrow="Next steps" />
+          <ul className="bullets">
+            {limits.next.map((t) => (
+              <li key={t}>{t}</li>
+            ))}
+          </ul>
         </section>
       )}
 
