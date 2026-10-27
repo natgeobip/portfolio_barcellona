@@ -29,48 +29,57 @@ export default function JuliaSection({ data }) {
           </div>
         </div>
 
-        <h3 className="subhead julia__sub">{capabilities.title}</h3>
-        <ul className="steps julia__caps">
-          {capabilities.items.map((c) => (
-            <li key={c.title}>
-              {c.tag && <span className={`julia__tag julia__tag--${c.tag.toLowerCase()}`}>{c.tag}</span>}
-              <h4>{c.title}</h4>
-              <p>{c.text}</p>
-            </li>
-          ))}
-        </ul>
+        {capabilities && (
+          <>
+            <h3 className="subhead julia__sub">{capabilities.title}</h3>
+            <ul className="steps julia__caps">
+              {capabilities.items.map((c) => (
+                <li key={c.title}>
+                  {c.tag && <span className={`julia__tag julia__tag--${c.tag.toLowerCase()}`}>{c.tag}</span>}
+                  <h4>{c.title}</h4>
+                  <p>{c.text}</p>
+                </li>
+              ))}
+            </ul>
+          </>
+        )}
 
-        <div className="julia__channels">
-          <div>
-            <h3 className="subhead">{channels.title}</h3>
-            <p>{channels.text}</p>
+        {channels && (
+          <div className="julia__channels">
+            <div>
+              <h3 className="subhead">{channels.title}</h3>
+              <p>{channels.text}</p>
+            </div>
+            <ul>
+              {channels.items.map((ch) => (
+                <li key={ch.label}>
+                  <a href={ch.href} target="_blank" rel="noreferrer">
+                    {ch.label} <Arrow />
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
-          <ul>
-            {channels.items.map((ch) => (
-              <li key={ch.label}>
-                <a href={ch.href} target="_blank" rel="noreferrer">
-                  {ch.label} <Arrow />
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
+        )}
       </section>
 
-      <section className="story julia__how" aria-label={how.eyebrow}>
-        <div className="story__inner">
-          {how.items.map((it) => (
-            <article key={it.title}>
-              <p className="story__label">{it.label}</p>
-              <h3>{it.title}</h3>
-              <p>{it.text}</p>
-            </article>
-          ))}
-        </div>
-      </section>
+      {how && (
+        <section className="story julia__how" aria-label={how.eyebrow}>
+          <div className="story__inner">
+            {how.items.map((it) => (
+              <article key={it.title}>
+                <p className="story__label">{it.label}</p>
+                <h3>{it.title}</h3>
+                <p>{it.text}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+      )}
 
       <section className="section julia__more">
         <div className="julia__cols">
+          {faq && (
           <div>
             <h3 className="subhead">{faq.title}</h3>
             <div className="faq">
@@ -82,6 +91,8 @@ export default function JuliaSection({ data }) {
               ))}
             </div>
           </div>
+          )}
+          {releases && (
           <div>
             <h3 className="subhead">{releases.title}</h3>
             <ol className="releases">
@@ -100,15 +111,20 @@ export default function JuliaSection({ data }) {
               ))}
             </ol>
           </div>
+          )}
         </div>
 
-        <div className="julia__cta">
-          <p>{cta.text}</p>
-          <a className="btn" href={cta.href} target="_blank" rel="noreferrer">
-            {cta.label}
-          </a>
-        </div>
+        {cta && (
+          <div className="julia__cta">
+            <p>{cta.text}</p>
+            <a className="btn" href={cta.href} target="_blank" rel="noreferrer">
+              {cta.label}
+            </a>
+          </div>
+        )}
       </section>
     </>
   )
 }
+
+
