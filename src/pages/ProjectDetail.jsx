@@ -28,7 +28,7 @@ function Figure({ image, title, caption, className }) {
   )
 }
 
-// Tutte le sezioni oltre a hero, overview, story, insights e results sono opzionali: se mancano nel JSON non vengono mostrate.
+// Tutte le sezioni oltre a hero, overview, story e insights sono opzionali: se mancano nel JSON non vengono mostrate.
 export default function ProjectDetail() {
   const { slug } = useParams()
   const index = projects.findIndex((p) => p.slug === slug)
@@ -207,17 +207,19 @@ export default function ProjectDetail() {
         </section>
       )}
 
-      <section className="section" id="results">
-        <SectionHeading eyebrow="Results" title={results.title} />
-        <div className="results">
-          {results.items.map((r, i) => (
-            <div key={i}>
-              <strong className={r.small ? 'is-small' : ''}>{r.value}</strong>
-              <span>{r.label}</span>
-            </div>
-          ))}
-        </div>
-      </section>
+      {results && (
+        <section className="section" id="results">
+          <SectionHeading eyebrow="Results" title={results.title} />
+          <div className="results">
+            {results.items.map((r, i) => (
+              <div key={i}>
+                <strong className={r.small ? 'is-small' : ''}>{r.value}</strong>
+                <span>{r.label}</span>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
 
       {limits?.next && (
         <section className="section" id="limits">

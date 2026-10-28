@@ -832,7 +832,7 @@
   "status": "On going",
   "titleLight": "Satellite Broadband",
   "titleBold": "Experimentation",
-  "summary": "A field trial of Starlink satellite backhaul to bring ultra-broadband connectivity to remote Lombardy villages, with preliminary network quality results.",
+  "summary": "A field trial of Starlink satellite backhaul to bring ultra-broadband connectivity to remote Lombardy villages.",
   "tags": [
     "Starlink",
     "Satellite Broadband",
@@ -843,30 +843,21 @@
   "heroText": "Traffic from virtual villages served by fibre, copper and wireless is collected at regional access points and carried over Starlink to Milan, to test whether satellite links can support ultra-broadband services.",
   "overview": {
     "title": "Project at a glance",
-    "text": "The experimentation tests satellite connectivity as backhaul for ultra-broadband access in Lombardy. Traffic from the Virtual Villages, reached through FTTH, FTTC and FWA access networks, is collected at an Access Network Collection Point (PRRA) and forwarded over an L2VPN on MPLS carried by the Starlink infrastructure to the aggregation point in Milan Caldera, then routed to the Internet. Quality is measured under load for 60 days at each PRRA.",
+    "text": "The experimentation tests satellite connectivity as backhaul for ultra-broadband access in Lombardy. Traffic from the Virtual Villages, reached through FTTH, FTTC and FWA access networks, is collected at an Access Network Collection Point (PRRA) and forwarded over an L2VPN on MPLS carried by the Starlink infrastructure to the aggregation point in Milan Caldera, then routed to the Internet. Quality is measured under load at each PRRA.",
     "stats": [
       {
         "value": "10",
         "label": "PRRAs in the experimentation"
       },
       {
-        "value": "2",
-        "label": "PRRAs with the 60 days of data completed"
-      },
-      {
         "value": "6",
         "label": "Starlink antennas per PRRA, at most"
-      },
-      {
-        "value": "7",
-        "label": "Virtual Villages analysed so far"
       }
     ],
     "meta": {
       "Area": "Lombardy, Italy",
-      "Period": "60 days of data collection per PRRA",
       "Data": "Network throughput, latency and packet loss",
-      "Output": "Network quality indicators and scores"
+      "Output": "Network quality measurements under load"
     }
   },
   "story": [
@@ -880,7 +871,7 @@
       "icon": "analyzed",
       "label": "What was analyzed",
       "title": "Throughput, latency and packet loss",
-      "text": "Average download and upload speed per Virtual Village, UDP latency (a ping under load), TCP round trip time and packet loss, measured under simulated load at the PRRAs of Milano Bernina and Azzano San Paolo."
+      "text": "Download and upload speed per Virtual Village, UDP latency (a ping under load), TCP round trip time and packet loss, measured under simulated load at the PRRAs."
     },
     {
       "icon": "approach",
@@ -894,7 +885,7 @@
     "items": [
       {
         "name": "Virtual Villages",
-        "text": "Seven villages in the first analysis: Brugherio and Bergamo on FTTH, and Casalmaiocco, Marudo (town hall and school), Pieve Fissiraga and Broni on FTTC."
+        "text": "Villages reached through FTTH on optical fibre, FTTC on copper and FWA on wireless access networks."
       },
       {
         "name": "PRRA equipment",
@@ -907,9 +898,8 @@
     ],
     "deliverablesTitle": "What the experimentation produces",
     "deliverables": [
-      "Average speed per Virtual Village, in download and upload.",
+      "Speed per Virtual Village, in download and upload.",
       "UDP latency, TCP round trip time and packet loss.",
-      "A quality score from 1 to 5 for streaming, gaming, workstream, VoIP and web.",
       "A scalable design for satellite backhaul with MPLS multiplexing."
     ]
   },
@@ -930,15 +920,11 @@
       },
       {
         "title": "3. Load the network",
-        "text": "Users are simulated per village: FTTH 75 in download and 50 in upload, FTTC 30 and 30."
+        "text": "Traffic from the simulated users of each Virtual Village is generated in download and upload."
       },
       {
-        "title": "4. Measure for 60 days",
+        "title": "4. Measure",
         "text": "Speed, UDP latency, TCP round trip time and packet loss are recorded at each PRRA."
-      },
-      {
-        "title": "5. Score the quality",
-        "text": "Results are scored from 1 (unacceptable) to 5 (optimal) for five traffic types."
       }
     ],
     "figures": [
@@ -960,75 +946,17 @@
     "title": "Data that drives decisions",
     "main": {
       "image": "images/projects/satellite-broadband/villages-map.png",
-      "caption": "Figure 4. Virtual Villages in Lombardy analysed so far: FTTH in green, FTTC in brown."
+      "caption": "Figure 4. Virtual Villages in Lombardy: FTTH in green, FTTC in brown."
     },
     "charts": [],
-    "gallery": [
-      {
-        "title": "Network quality",
-        "image": "images/projects/satellite-broadband/network-quality.png",
-        "caption": "Figure 5. Preliminary quality indicators and scores under load."
-      }
-    ]
-  },
-  "findings": {
-    "title": "Main findings",
-    "items": [
-      {
-        "title": "Download is high",
-        "text": "The average speed per Virtual Village is 216.4 Mbps in download, against 33.7 Mbps in upload."
-      },
-      {
-        "title": "Latency is moderate",
-        "text": "UDP latency is 63.2 ms in download and 36.5 ms in upload, while TCP round trip time is higher, 102.3 and 95.4 ms, because of handshakes, congestion control and retransmissions."
-      },
-      {
-        "title": "Upload loses more packets",
-        "text": "Packet loss is 0.8% in download and 3.1% in upload."
-      },
-      {
-        "title": "All traffic types score 4 out of 5",
-        "text": "Streaming, gaming, workstream, VoIP and web are all rated as adequate."
-      }
-    ]
-  },
-  "results": {
-    "title": "Results that matter",
-    "items": [
-      {
-        "value": "216.4 Mbps",
-        "label": "Average download per Virtual Village"
-      },
-      {
-        "value": "33.7 Mbps",
-        "label": "Average upload per Virtual Village"
-      },
-      {
-        "value": "63.2 ms",
-        "label": "UDP latency in download"
-      },
-      {
-        "value": "0.8 %",
-        "label": "Packet loss in download"
-      },
-      {
-        "value": "4 / 5",
-        "label": "Quality score for every traffic type"
-      }
-    ]
+    "gallery": []
   },
   "limits": {
     "title": "Next Steps",
-    "items": [
-      "Results cover only 2 of the 10 PRRAs, Milano Bernina and Azzano San Paolo, and are preliminary.",
-      "The sample is too small to support decisions.",
-      "Milano Bernina tested six villages on FTTH and FTTC in parallel, Azzano San Paolo only one, so the two are not fully comparable."
-    ],
     "nextTitle": "Next steps",
     "next": [
-      "Complete the data collection at the other 8 PRRAs.",
       "Validate the indicators and correlate them with weather data.",
-      "Compare FTTH and FTTC in more depth."
+      "Compare FTTH, FTTC and FWA access in more depth."
     ]
   }
 },
