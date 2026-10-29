@@ -20,7 +20,7 @@ export default function PersonCard({ name, role, bio, photo, focus = "50%", link
         {bio && <p>{bio}</p>}
         {bio && (
           <button type="button" className="person__more" onClick={(e) => { e.stopPropagation(); setOpen((o) => !o) }}>
-            {open ? 'Ver menos' : 'Ver más...'}
+            {open ? 'Less...' : 'More...'}
           </button>
         )}
       </div>

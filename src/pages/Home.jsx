@@ -1,5 +1,6 @@
 import Hero from '../components/Hero.jsx'
 import SectionHeading from '../components/SectionHeading.jsx'
+import TabbedCarousel from '../components/TabbedCarousel.jsx'
 import TeamGallery from '../components/TeamGallery.jsx'
 import ProjectCarousel from '../components/ProjectCarousel.jsx'
 import Footer from '../components/Footer.jsx'
@@ -84,7 +85,9 @@ export default function Home() {
             </div>
           ))}
         </div>
-        <TeamGallery members={team.members} />
+        <TabbedCarousel
+          slides={team.teams.map((t) => ({ name: t.name, content: <TeamGallery members={t.members} narrow={t.narrow} /> }))}
+        />
       </section>
 
       <Footer />

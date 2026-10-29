@@ -48,28 +48,28 @@ export default function ProjectDetail() {
   }
 
   const { overview, story, data, methods, insights, findings, results, limits, webgis } = p
+  // I progetti del team Mobility non usano banner/satellite né header/footer di Space.
+  const isSpace = p.group === 'Space'
 
-  // Julia ha una struttura propria (vedi JuliaSection): hero + sezione dedicata.
+  // Julia ha una struttura propria (vedi JuliaSection): hero + sezione dedicata, senza banner/satellite e footer di Space.
   if (p.julia) {
     return (
       <>
         <Hero
           variant="detail"
-          navLinks={[{ label: 'JULIA', id: 'julia' }, { label: 'CONTACT US', id: 'contact' }]}
+          navLinks={[{ label: 'JULIA', id: 'julia' }]}
           eyebrow={`PROJECT ${index + 1}`}
           titleLight=""
           titleBold={p.subtitle || p.titleBold}
           text={p.heroText}
           cta="Get started"
           ctaTarget="julia"
-          banner={site.hero.projectImage}
-          satellite={site.hero.satellite}
+          plain
         />
         <JuliaSection data={p.julia} />
         <div className="section back-wrap">
           <Link to="/" className="back">← Our projects</Link>
         </div>
-        <Footer />
       </>
     )
   }
@@ -78,15 +78,16 @@ export default function ProjectDetail() {
     <>
       <Hero
         variant="detail"
-        navLinks={navLinks}
+        navLinks={isSpace ? navLinks : navLinks.filter((l) => l.id !== 'contact')}
         eyebrow={`PROJECT ${index + 1}`}
         titleLight={p.subtitle ? "" : p.titleLight}
         titleBold={p.subtitle || p.titleBold}
         text={p.heroText}
         cta="Get started"
         ctaTarget="overview"
-        banner={site.hero.projectImage}
-        satellite={site.hero.satellite}
+        banner={isSpace ? site.hero.projectImage : undefined}
+        satellite={isSpace ? site.hero.satellite : undefined}
+        plain={!isSpace}
       />
 
       <section className="section" id="overview">
@@ -243,7 +244,7 @@ export default function ProjectDetail() {
         <Link to="/" className="back">← Our projects</Link>
       </div>
 
-      <Footer />
+      {isSpace && <Footer />}
     </>
   )
 }

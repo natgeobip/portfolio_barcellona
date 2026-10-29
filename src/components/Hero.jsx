@@ -4,9 +4,9 @@ import { asset } from '../utils.js'
 
 // variant "home": titolo su una riga — variant "detail": titolo su due righe.
 // banner + satellite (opzionali): immagine di sfondo con satellite animato allo scroll.
-export default function Hero({ variant = 'home', navLinks, eyebrow, titleLogo, titleLight, titleBold, text, cta, ctaTarget, banner, satellite }) {
+export default function Hero({ variant = 'home', navLinks, eyebrow, titleLogo, titleLight, titleBold, text, cta, ctaTarget, banner, satellite, plain }) {
   return (
-    <header className={`hero hero--${variant}${banner ? ' hero--banner' : ''}`}>
+    <header className={`hero hero--${variant}${banner ? ' hero--banner' : ''}${plain ? ' hero--plain' : ''}`}>
       {banner && <OrbitBanner banner={banner} satellite={satellite} />}
       <Navbar links={navLinks} />
       <div className="hero__content">
