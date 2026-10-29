@@ -687,7 +687,8 @@
       "title": "From heterogeneous data to decision maps",
       "text": [
         "All sources are validated, checked for quality and reprojected to metric reference systems, so that distances and areas are measured correctly. They are then aligned on a regular 25 m modelling grid, so the model does not claim more precision than the observations support.",
-        "Risk maps and scenarios are generated offline with GIS analysis and published as map services after validation. Live weather and reports do not change the models: they add the current picture on top of the pre-computed maps. Drains are handled as a scenario modifier, so that better drainage never raises the estimated risk."
+        "Risk maps and scenarios are generated offline with GIS analysis and published as map services after validation. Live weather and reports do not change the models: they add the current picture on top of the pre-computed maps. Drains are handled as a scenario modifier, so that better drainage never raises the estimated risk.",
+        "In plain words: the TWI (Topographic Wetness Index) shows where water tends to gather; PAI and PGRA are the official plans on hydrogeological and flood risk; a storm scenario is a simulation of heavy rain; storm drains are the street inlets that carry water away."
       ],
       "steps": [
         {
@@ -718,46 +719,49 @@
       "figures": [
         {
           "image": "images/projects/drains-flood-risk/architecture.svg",
-          "caption": "Figure 1. Architecture: risk maps are computed offline and published as services, while weather, citizen reports and field surveys are added as live layers."
+          "title": "Flood maps are prepared in advance; live data shows the situation now",
+          "caption": "Figure 1. From data to decisions in five steps. Weather, citizen reports and crew updates are added on top of the pre-computed maps."
         },
         {
           "image": "images/projects/drains-flood-risk/operational-flow.jpg",
-          "caption": "Figure 2. Operational flow of the platform: data ingestion, processing and analysis, and output generation."
+          "title": "Technical view: three phases around one central data model",
+          "caption": "Figure 2. Data intake, offline analysis and outputs, with the users who consume them. Source diagram, labels are in Italian."
         }
       ]
     },
     "insights": {
-      "title": "Maps and tools for decisions",
+      "title": "What the platform shows",
       "main": {
         "image": "images/projects/drains-flood-risk/risk-chain.svg",
-        "caption": "Figure 3. One map shows how prone the terrain is to flooding. Two scenarios show what changes when the drains are blocked or working."
+        "title": "Working drains reduce flooding, but do not remove it",
+        "caption": "Figure 3. One map shows where water tends to gather. Two storm scenarios compare blocked and working drains."
       },
       "charts": [],
       "gallery": [
         {
           "image": "images/projects/drains-flood-risk/susceptibility-map-3d.jpg",
-          "title": "Flood risk map",
-          "caption": "Figure 4. Illustrative rendering of the flood risk map in 3D. Final visuals may change during development."
+          "title": "The risk map shows where water is likely to gather",
+          "caption": "Figure 4. Illustrative 3D rendering of the flood risk map. Labels are in Italian and visuals may change during development."
         },
         {
           "image": "images/projects/drains-flood-risk/flood-scenario-3d.jpg",
-          "title": "Storm scenario",
-          "caption": "Figure 5. Illustrative rendering of a flood scenario in 3D."
+          "title": "A storm scenario shows how deep the water gets, hour by hour",
+          "caption": "Figure 5. Illustrative rendering: water depth after one hour of intense rain with a 50-year return period, followed over 12 hours. Labels are in Italian."
         },
         {
           "image": "images/projects/drains-flood-risk/dashboard.jpg",
-          "title": "Dashboard",
-          "caption": "Figure 6. Illustrative dashboard: reports, weather forecasts and indicators linked to the map."
+          "title": "One dashboard brings maps, weather and reports together",
+          "caption": "Figure 6. Illustrative dashboard mock-up with sample data. Labels are in Italian."
         },
         {
           "image": "images/projects/drains-flood-risk/gis-tools.png",
-          "title": "GIS tools in the platform",
-          "caption": "Figure 7. Illustrative rendering of the GIS tools: navigation, drawing, measurement, layer comparison and export."
+          "title": "Standard GIS tools let users measure, draw and compare layers",
+          "caption": "Figure 7. Illustrative rendering of the GIS tools: navigation, drawing, measurement, layer comparison and export. Labels are in Italian."
         },
         {
           "image": "images/projects/drains-flood-risk/field-apps.jpg",
-          "title": "Reporting and maintenance apps",
-          "caption": "Figure 8. Illustrative rendering of the reporting form for the field (left) and the mobile app for maintenance crews (right)."
+          "title": "Citizens report problems and crews update them on the move",
+          "caption": "Figure 8. Illustrative rendering of the citizen reporting form (left) and the maintenance crew app (right). Labels are in Italian."
         }
       ]
     },

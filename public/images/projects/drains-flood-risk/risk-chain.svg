@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" font-family="Work Sans, Arial, sans-serif">
 <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="#5b6573"/></marker></defs>
 <rect width="1200" height="460" fill="#ffffff"/>
-<text x="40" y="52" font-size="26" font-weight="700" fill="#0b1f3a">Where water gathers, and what happens in a storm</text>
-<text x="40" y="80" font-size="15" fill="#5b6573">One map shows how prone the terrain is to flooding; two scenarios show the effect of the drains</text>
+<text x="40" y="52" font-size="26" font-weight="700" fill="#0b1f3a">Working drains reduce flooding, but do not remove it</text>
+<text x="40" y="80" font-size="15" fill="#5b6573">One map shows where water tends to gather; two storm scenarios compare blocked and working drains</text>
 <rect x="40" y="120" width="230" height="130" rx="10" fill="#f3f4f6" stroke="#d9dde3"/>
 <text x="155" y="170" text-anchor="middle" font-size="19" font-weight="700" fill="#1c2430">Territorial factors</text>
 <text x="155" y="196" text-anchor="middle" font-size="14" fill="#1c2430" opacity=".85">Terrain, land cover,</text>
