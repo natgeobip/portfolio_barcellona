@@ -1727,7 +1727,8 @@
       "label": "About the project",
       "url": "https://www.romasitrasforma.it/en/the-project"
     }
-  ]
+  ],
+  "group": "Urban"
   },
   {
     "slug": "julia-virtual-assistant",
@@ -1864,7 +1865,7 @@
         "href": "https://julia.comune.roma.it/it/"
       }
     },
-    "group": "Mobility"
+    "group": "Urban"
   },
   {
     "slug": "transport-demand-forecasting",
