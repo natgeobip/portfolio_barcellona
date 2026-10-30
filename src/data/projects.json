@@ -1348,31 +1348,25 @@
         "title": "5. Judge suitability",
         "text": "Results become a QoS matrix per site and a suitability table for each service, in download and upload."
       }
-    ],
-    "figures": [
-      {
-        "image": "images/projects/satellite-broadband/architecture.png",
-        "caption": "Figure 1. Technical architecture: Virtual Villages on FTTH, FTTC and FWA, the PRRA, the Starlink link and the Milan Caldera and Milan Bernina nodes towards the Internet. Labels are in Italian."
-      }
     ]
   },
   "insights": {
     "title": "How it works and what it showed",
     "main": {
       "image": "images/projects/satellite-broadband/data-journey.png",
-      "caption": "Figure 2. The journey of a data packet, from a simulated village to the Internet, and the capacity of the satellite link: about 2 Gbps in download and 240 Mbps in upload per hub."
+      "caption": "Figure 1. The journey of a data packet, from a simulated village to the Internet, and the capacity of the satellite link: about 2 Gbps in download and 240 Mbps in upload per hub."
     },
     "charts": [],
     "gallery": [
       {
         "title": "Where the villages are",
         "image": "images/projects/satellite-broadband/villages-map.jpg",
-        "caption": "Figure 3. The 16 Virtual Villages across Lombardy, from the Alpine valleys to the plain, by access technology. Results are flat from the Alps to the plain; the exceptions trace back to site specifics."
+        "caption": "Figure 2. The 16 Virtual Villages across Lombardy, from the Alpine valleys to the plain, by access technology. Results are flat from the Alps to the plain; the exceptions trace back to site specifics."
       },
       {
         "title": "What works, where",
         "image": "images/projects/satellite-broadband/service-suitability.png",
-        "caption": "Figure 4. Service suitability in download and upload at each of the 15 test sites. Download is suitable everywhere; upload is the limit where several villages share one hub."
+        "caption": "Figure 3. Service suitability in download and upload at each of the 15 test sites. Download is suitable everywhere; upload is the limit where several villages share one hub."
       }
     ]
   },
@@ -1389,8 +1383,9 @@
       "Define a concurrency factor to size the number of simultaneous users.",
       "Add uplink capacity, or more antennas where hubs have fewer than six."
     ]
-  },
-  "status": "Completed"
+    },
+  "status": "Completed",
+  "group": "Space"
   },
   {
     "slug": "clepsydra-galileo-timing-receiver",
@@ -2218,11 +2213,11 @@
     "group": "Mobility"
   },
   {
-    "slug": "lombardy-data-mobility-platform",
+     "slug": "data-mobility-platform-infomobility",
     "titleLight": "",
     "titleBold": "Data Mobility Platform For Infomobility",
     "subtitle": "Spatial Analysis For Passenger Information",
-    "summary": "A spatial analysis combines public transport network data, regional mapping and mobility services to identify priority hubs for passenger information kiosks in Lombardy, alongside a regional data platform feasibility study.",
+    "summary": "A spatial analysis combines public transport network data, regional mapping and mobility services to identify priority hubs for passenger information kiosks in the region, alongside a regional data platform feasibility study.",
     "tags": [
       "Travel Information",
       "Public Transport",
@@ -2233,7 +2228,7 @@
     "heroText": "From stop-level services and routes within 450 m to a Connectivity Indicator, the analysis identifies 30 priority hubs to guide the placement of passenger information kiosks.",
     "overview": {
       "title": "Project at a glance",
-      "text": "The project identifies priority locations for passenger information kiosks in Lombardy by combining transport network data, mapping and information on mobility services. Spatial analysis supports the selection of 30 hubs, while a feasibility study compares three options for a regional platform managing static and real-time data under Action 2.8.2 of the 2021–2027 Regional PR FESR Programme.",
+      "text": "The project identifies priority locations for passenger information kiosks in the regione by combining transport network data, mapping and information on mobility services. Spatial analysis supports the selection of 30 hubs, while a feasibility study compares three options for a regional platform managing static and real-time data.",
       "stats": [
         {
           "value": "37,436",
@@ -2251,11 +2246,11 @@
           "value": "212,220",
           "label": "Service trips across timetable validity periods"
         }
-      ],
+    ],
       "meta": {
-        "Area": "Lombardy, Italy; detailed analysis in municipalities with an approved Sustainable Urban Mobility Plan",
-        "Period": "2026; reference weekday 24 April 2026",
-        "Data": "Muoversi in Lombardia, Regione Lombardia Geoportal, ISTAT, Ecomobs",
+        "Area": "Italian Region",
+        "Period": "2026",
+        "Data": "Open and PAL data",
         "Output": "Hub database, indicator and priority selection"
       }
     },
@@ -2269,7 +2264,7 @@
       {
         "icon": "analyzed",
         "label": "What was analyzed",
-        "title": "Stops, routes and mobility services across Lombardy",
+        "title": "Stops, routes and mobility services across the region",
         "text": "The analysis links stops, routes, itineraries and operators with infrastructure, shared and electric mobility services. In municipalities with an approved Sustainable Urban Mobility Plan, mobility points and routes are assessed within 450 m of stops. Regional data assets and platform options are also reviewed."
       },
       {
@@ -2284,11 +2279,11 @@
       "items": [
         {
           "name": "Mobility network and services",
-          "text": "Muoversi in Lombardia provides stops, routes, itineraries, operators and published service trips across the respective timetable validity periods."
+          "text": "PAL provides stops, routes, itineraries, operators and published service trips across the respective timetable validity periods."
         },
         {
           "name": "Regional mapping",
-          "text": "The Regione Lombardia Geoportal provides administrative boundaries and mobility infrastructure, including railways, stations, metro lines, roads and cycle networks."
+          "text": "The Open Geoportal provides administrative boundaries and mobility infrastructure, including railways, stations, metro lines, roads and cycle networks."
         },
         {
           "name": "Population and employment",
@@ -2296,7 +2291,7 @@
         },
         {
           "name": "Mobility planning and services",
-          "text": "Municipal mobility plans identify planning status, while Ecomobs and available service information support the assessment of the mobility context."
+          "text": "Municipal mobility plans identify planning status, while PAL and available service information support the assessment of the mobility context."
         }
       ],
       "deliverablesTitle": "What the product delivers",
@@ -2310,16 +2305,12 @@
       "title": "From raw data to the final product",
       "text": [
         "Stop, route, itinerary and operator records are linked through joins in Tableau and organised with geographic data in QGIS. Municipalities with an approved Sustainable Urban Mobility Plan define the detailed study area. A circular buffer of 450 m is generated around each selected stop. Mobility points are counted by category, together with routes intersecting each buffer. A Connectivity Indicator gives equal importance to total mobility points and route counts. Comparisons, supplemented by available shared mobility information, identify 30 priority hubs for passenger information kiosks.",
-        "The buffer provides a consistent geometric catchment for comparing stops. The indicator combines the presence of mobility points and routes; it does not measure timetable frequency or passenger flows. The source database covers all transport modes, including stops outside Lombardy and services beyond local public transport."
+        "The buffer provides a consistent geometric catchment for comparing stops. The indicator combines the presence of mobility points and routes; it does not measure timetable frequency or passenger flows. The source database covers all transport modes, including stops outside the region and services beyond local public transport."
       ],
       "figures": [
         {
           "image": "images/projects/movility/lombardy-data-mobility-platform/lombardy-method.png",
           "caption": "Figure 1. Mobility hub selection methodology combining transport assessment, geospatial analysis, planning eligibility and connectivity ranking to identify priority hubs."
-        },
-        {
-          "image": "images/projects/movility/lombardy-data-mobility-platform/lombardy-study-area.png",
-          "caption": "Figure 2. The map shows the selection of municipalities for the detailed study area. Highlighted boundaries identify the spatial scope used to select stops and mobility infrastructure."
         }
       ]
     },
@@ -2327,14 +2318,14 @@
       "title": "Data that drives decisions",
       "main": {
         "image": "images/projects/movility/lombardy-data-mobility-platform/lombardy-selected-hub.png",
-        "caption": "Figure 3. The GIS view shows an example of a selected hub and nearby mobility services. Point features and route lines support inspection of connection opportunities; interface labels are in Italian."
+        "caption": "Figure 2. The GIS view shows an example of a selected hub and nearby mobility services. Point features and route lines support inspection of connection opportunities; interface labels are in Italian."
       },
       "charts": [],
       "gallery": [
         {
           "title": "Network Detail",
           "image": "images/projects/movility/lombardy-data-mobility-platform/lombardy-network-detail.png",
-          "caption": "Figure 4. A local view shows routes and connections in the mobility network. Line colours distinguish mapped features; the image does not quantify service frequency or passenger flows."
+          "caption": "Figure 3. A local view shows routes and connections in the mobility network. Line colours distinguish mapped features; the image does not quantify service frequency or passenger flows."
         }
       ]
     },
@@ -2568,11 +2559,11 @@
     "group": "Mobility"
   },
   {
-    "slug": "csr-digitale",
+    "slug": "ticketing-platform",
     "titleLight": "",
-    "titleBold": "CSR Digitale",
+    "titleBold": "Ticketing Platform",
     "subtitle": "Regional Integrated Digital Ticketing Platform",
-    "summary": "CSR Digitale is Lombardy’s integrated digital ticketing platform, connecting operator systems, transport service data and fares to manage digital tickets and passes and support journey reconstruction and best-fare calculation.",
+    "summary": "The ticketing platform is a regional integrated digital ticketing platform, connecting operator systems, transport service data and fares to manage digital tickets and passes and support journey reconstruction and best-fare calculation.",
     "tags": [
       "Account Based Ticketing",
       "Digital Ticketing",
@@ -2581,10 +2572,10 @@
       "Journey Reconstruction"
     ],
     "image": "images/projects/thumbnails/csr-card.png",
-    "heroText": "From ticket issuance and validation events to reconstructed journeys and fare calculation, CSR Digitale connects transport operators through a common regional digital ticketing platform.",
+    "heroText": "From ticket issuance and validation events to reconstructed journeys and fare calculation,the Ticketing Platform connects transport operators through a common regional digital platform.",
     "overview": {
       "title": "Project at a glance",
-      "text": "CSR Digitale is Lombardy’s integrated digital ticketing platform for pre-paid tickets and post-paid bank-card journeys. It connects operator systems, service data and fare rules to support ticket management, journey reconstruction, best-fare calculation and revenue-allocation reporting. APIs, a mobile SDK and a Travel Planner provide supporting tools.",
+      "text": "The ticketing platform is a regional integrated digital ticketing platform for pre-paid tickets and post-paid bank-card journeys. It connects operator systems, service data and fare rules to support ticket management, journey reconstruction, best-fare calculation and revenue-allocation reporting. APIs, a mobile SDK and a Travel Planner provide supporting tools.",
       "stats": [
         {
           "value": "3",
@@ -2604,11 +2595,11 @@
         }
       ],
       "meta": {
-        "Area": "Lombardy, Italy; post-paid pilot within the Milan–Monza integrated fare area",
+        "Area": "Italian Region",
         "Period": "In progress",
-        "Data": "TPLombardia, operator ticketing and validation systems, fare catalogues, fare-zone mapping, payment outcomes",
+        "Data": "Operator ticketing and validation systems, fare catalogues, fare-zone mapping, payment outcomes",
         "Output": "Digital ticketing platform and supporting tools"
-      }
+        }
     },
     "story": [
       {
@@ -2635,7 +2626,7 @@
       "items": [
         {
           "name": "Transport service data",
-          "text": "TPLombardia and operators provide stops, routes, trips, timetables and geometries through standard exchange formats, including General Transit Feed Specification (GTFS) and NeTEx."
+          "text": "Operators provide stops, routes, trips, timetables and geometries through standard exchange formats, including General Transit Feed Specification (GTFS) and NeTEx."
         },
         {
           "name": "Fare catalogues and zones",
@@ -2660,13 +2651,13 @@
     "methods": {
       "title": "From raw data to the final product",
       "text": [
-        "Service data, fare catalogues, zones and operator records establish the platform’s reference data. Operator systems exchange ticket issuance, activation and validation information with CSR Digitale through APIs. For post-paid journeys, payment aliases link validation events across operators. The platform uses service and validation data to reconstruct journeys and apply fare rules, including best-fare logic, while recording payment outcomes. Reconstructed travel supports revenue-allocation reporting. The mobile SDK supports secure ticket presentation; the Travel Planner assists route simulation and fare checks.",
+        "Service data, fare catalogues, zones and operator records establish the platform’s reference data. Operator systems exchange ticket issuance, activation and validation information with the platform through APIs. For post-paid journeys, payment aliases link validation events across operators. The platform uses service and validation data to reconstruct journeys and apply fare rules, including best-fare logic, while recording payment outcomes. Reconstructed travel supports revenue-allocation reporting. The mobile SDK supports secure ticket presentation; the Travel Planner assists route simulation and fare checks.",
         "Account-based ticketing links digital ticket information to regional account references. Stable stop, line and trip identifiers and complete route geometries support journey reconstruction. The SDK provides shared app security functions; the Travel Planner supports operational simulations."
       ],
       "figures": [
         {
           "image": "images/projects/movility/csr-digitale/csr-scope.png",
-          "caption": "Figure 1. Scope of the pilot, covering IVOL and IVOP across Lombardy and STIBM and EMV in the Milan and Monza area, followed by the full regional rollout of integrated digital ticketing."
+          "caption": "Figure 1. Scope of the pilot, covering regional travel passes, integrated fare products and contactless payments in selected areas, followed by the full regional rollout of integrated digital ticketing."
         },
         {
           "image": "images/projects/movility/csr-digitale/csr-ticket-flow.png",
@@ -2678,7 +2669,7 @@
       "title": "Data that drives decisions",
       "main": {
         "image": "images/projects/movility/csr-digitale/csr-ticketing-model.png",
-        "caption": "Figure 3. CSR Digitale architecture, showing the platform’s core functions and API integration with transport operators’ back-end systems, passenger apps, validators and ticket inspection tools."
+        "caption": "Figure 3. Ticketing platform architecture, showing the platform’s core functions and API integration with transport operators’ back-end systems, passenger apps, validators and ticket inspection tools."
       },
       "charts": [],
       "gallery": [
@@ -2688,69 +2679,68 @@
           "caption": "Figure 4. The overview identifies 45 APIs, split into 37 pre-paid and 8 post-paid APIs, plus one SDK with six dedicated methods. SDK methods are counted separately; labels are in Italian."
         },
         {
-          "title": "Travel Planner",
-          "image": "images/projects/movility/csr-digitale/csr-travelplanner.png",
-          "caption": "Figure 5. Regional Travel Planner showing alternative multimodal routes, connections, journey times and associated fares, with itineraries displayed on an interactive map."
-        }
+        "title": "Guest Ticket Search and Management",
+        "image": "images/projects/ticketing-platform/csr-travelplanner.png",
+        "caption": "Figure 5. Guest ticket search interface for viewing issued tickets and their associated details across multiple operators."
+      }
       ]
     },
-    "findings": {
-      "title": "Main findings",
-      "items": [
-        {
-          "title": "Regional ticketing framework",
-          "text": "A common platform framework covers pre-paid tickets and passes and post-paid bank-card journeys, supporting interoperability between transport operators."
-        },
-        {
-          "title": "Journey and fare integration",
-          "text": "Journey reconstruction connects validation events with transport services, supporting best-fare calculation and reporting for revenue allocation."
-        },
-        {
-          "title": "Operator integration tools",
-          "text": "The integration package comprises 45 APIs and one mobile SDK with six dedicated methods for activation, signed barcodes and security functions."
-        },
-        {
-          "title": "Operational Travel Planner",
-          "text": "A supporting Travel Planner compares multimodal itineraries, stops, transfers, travel times and fares for operator simulations and central-system needs."
-        },
-        {
-          "title": "Reporting for operators and authorities",
-          "text": "Reporting provides transport operators and regional authorities with information on ticket sales, validations and reconstructed journeys, supporting monitoring and revenue allocation."
-        }
-      ]
+      "findings": {
+    "title": "Main findings",
+    "items": [
+      {
+        "title": "Regional ticketing framework",
+        "text": "A common platform framework covers pre-paid tickets and passes and post-paid bank-card journeys, supporting interoperability between transport operators."
+      },
+      {
+        "title": "Journey and fare integration",
+        "text": "Journey reconstruction connects validation events with transport services, supporting best-fare calculation and reporting for revenue allocation."
+      },
+      {
+        "title": "Operator integration tools",
+        "text": "The integration package comprises 45 APIs and one mobile SDK with six dedicated methods for activation, signed barcodes and security functions."
+      },
+      {
+        "title": "Operational Travel Planner",
+        "text": "A supporting Travel Planner compares multimodal itineraries, stops, transfers, travel times and fares for operator simulations and central-system needs."
+      },
+      {
+        "title": "Reporting for operators and authorities",
+        "text": "Reporting provides transport operators and regional authorities with information on ticket sales, validations and reconstructed journeys, supporting monitoring and revenue allocation."
+      }
+    ]
     },
     "results": {
-      "title": "Results that matter",
-      "items": [
-        {
-          "value": "45",
-          "label": "Ticketing APIs in the supplied overview"
-        },
-        {
-          "value": "37",
-          "label": "Pre-paid ticketing APIs"
-        },
-        {
-          "value": "8",
-          "label": "Post-paid ticketing APIs"
-        },
-        {
-          "value": "1",
-          "label": "Mobile SDK with six dedicated methods"
-        }
-      ]
+    "title": "Results that matter",
+    "items": [
+      {
+        "value": "45",
+        "label": "Ticketing APIs in the supplied overview"
+      },
+      {
+        "value": "37",
+        "label": "Pre-paid ticketing APIs"
+      },
+      {
+        "value": "8",
+        "label": "Post-paid ticketing APIs"
+      },
+      {
+        "value": "1",
+        "label": "Mobile SDK with six dedicated methods"
+      }
+    ]
     },
     "limits": {
-      "title": "Limitations and next steps",
-      "items": [
-        "Journey reconstruction and fare attribution depend on complete, current service and fare data and coherent validation identifiers. Missing events can require inferred journey legs.",
-        "The pilot limits post-paid bank-card journeys to the Milan–Monza integrated fare area and excludes fare concessions. The supplied material provides no measured adoption, service availability or fare-accuracy results."
-      ],
-      "nextTitle": "Next steps",
-      "next": [
-        "Operator integration and testing, comparison of central fare calculations with operator results, refinement of business rules and configurations.",
-        "Progressive extension of platform interoperability, maintenance of service and fare data, integration with operator mobile applications."
-      ]
+    "title": "Limitations and next steps",
+    "items": [
+      "Journey reconstruction and fare attribution depend on complete, current service and fare data and coherent validation identifiers. Missing events can require inferred journey legs."
+    ],
+    "nextTitle": "Next steps",
+    "next": [
+      "Operator integration and testing, comparison of central fare calculations with operator results, refinement of business rules and configurations.",
+      "Progressive extension of platform interoperability, maintenance of service and fare data, integration with operator mobile applications."
+    ]
     },
     "group": "Mobility"
   },
