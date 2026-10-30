@@ -24,7 +24,16 @@ jobs:
           node-version: 20
           cache: npm
       - run: npm ci
-      - run: npm run build
+      - name: Build (password hash from secret)
+        env:
+          SITE_PASSWORD: ${{ secrets.SITE_PASSWORD }}
+        run: |
+          if [ -z "$SITE_PASSWORD" ]; then
+            echo "Missing SITE_PASSWORD secret" >&2
+            exit 1
+          fi
+          export VITE_SITE_HASH=$(printf '%s' "$SITE_PASSWORD" | sha256sum | cut -d' ' -f1)
+          npm run build
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist

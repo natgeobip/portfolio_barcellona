@@ -343,3 +343,43 @@ img { display: block; max-width: 100%; }
   .home .hero--banner .hero__content,
   .home .hero--banner .navbar { max-width: min(var(--max), 100%); width: 100%; }
 }
+
+/* ---------- password gate ---------- */
+.gate {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: var(--navy);
+}
+.gate__box {
+  width: 100%;
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 36px 32px;
+  background: #fff;
+  border-radius: 8px;
+  text-align: center;
+}
+.gate__box h1 { font-size: 1.4rem; color: var(--navy); }
+.gate__box p { color: var(--muted); font-size: 0.95rem; }
+.gate__box input {
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  font: inherit;
+}
+.gate__box button {
+  padding: 10px 12px;
+  border: 0;
+  border-radius: 4px;
+  background: var(--red);
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+.gate__error { color: var(--red); font-size: 0.9rem; }
