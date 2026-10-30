@@ -1592,6 +1592,281 @@
     "group": "Space"
   },
   {
+  "slug": "roma-si-trasforma",
+  "titleLight": "Roma si",
+  "titleBold": "Trasforma",
+  "summary": "A single digital gateway to Rome's transformation, bringing together urban, social, cultural and environmental initiatives across the city.",
+  "tags": [
+    "Smart Governance",
+    "Urban Monitoring",
+    "Transparency",
+    "PMO"
+  ],
+  "image": "images/projects/thumbnails/roma-si-trasforma.png",
+  "heroText": "Urban Transformation Platform for Roma Capitale: a single source of truth that makes the city's strategic investments visible, understandable and accountable to citizens.",
+  "overview": {
+    "title": "Project at a glance",
+    "text": "Roma si trasforma makes Rome's transformation visible, understandable and accountable. The initiative gives citizens clear information on strategic investments, project progress, timelines and funding, building trust and engagement through transparency. It rests on a governed data foundation shared across departments, entities and the whole city, and on interactive Power BI dashboards that turn project data into clear insights for citizens and decision-makers.",
+    "stats": [
+      {
+        "value": "1,200+",
+        "label": "Published initiatives monitored"
+      },
+      {
+        "value": "€14.2 bn",
+        "label": "Investments monitored and made transparent to citizens"
+      },
+      {
+        "value": "~70%",
+        "label": "Initiatives completed during the governance period"
+      },
+      {
+        "value": "6",
+        "label": "Key transformation areas"
+      }
+    ],
+    "meta": {
+      "Client": "Roma Capitale",
+      "Scope": "Smart governance, urban monitoring, transparency",
+      "Funding": "PNRR, Jubilee 2025, city budget, State, private investors",
+      "Output": "Governance and PMO model, data validation, public website and dashboards"
+    }
+  },
+  "story": [
+    {
+      "icon": "challenge",
+      "label": "The challenge",
+      "title": "Making a city's transformation understandable",
+      "text": "Rome's transformation spans more than 1,200 initiatives funded by different sources. Citizens need clear information on what is being built, when and with which funds, in one place."
+    },
+    {
+      "icon": "analyzed",
+      "label": "What was monitored",
+      "title": "Initiatives across the whole city",
+      "text": "More than 1,200 published initiatives in six areas, from urban regeneration to sustainable mobility, funded by the PNRR, Jubilee 2025, the city budget, the State and private investors."
+    },
+    {
+      "icon": "approach",
+      "label": "Our approach",
+      "title": "One city, one source of truth",
+      "text": "A governance and PMO model and a monitoring and data validation process feed a governed data foundation across departments and entities, published through quality-assured Power BI dashboards."
+    }
+  ],
+  "data": {
+    "title": "Data sources",
+    "items": [
+      {
+        "name": "Initiative data",
+        "text": "Project data on strategic investments, progress, timelines and funding, collected across departments, entities and the entire city."
+      },
+      {
+        "name": "Funding sources",
+        "text": "PNRR, Jubilee 2025, city budget, State and private investors."
+      },
+      {
+        "name": "Key transformation areas",
+        "text": "Urban regeneration and public spaces; sustainability and environmental resilience; culture and heritage enhancement; inclusive and livable communities; smart city and innovation; sustainable mobility."
+      }
+    ],
+    "deliverablesTitle": "What the project delivers",
+    "deliverables": [
+      "A governance and PMO model.",
+      "Monitoring and data validation of the initiatives.",
+      "Interactive Power BI dashboards with reliable, quality-assured insights.",
+      "A public website with an interactive map of the city's initiatives."
+    ]
+  },
+  "insights": {
+    "title": "Data that drives decisions",
+    "main": {
+      "image": "images/projects/roma-si-trasforma/website.png",
+      "caption": "Figure 1. The Roma si trasforma website: an interactive map of the initiatives, with search and filters by theme (culture, inclusion, innovation, sustainability)."
+    },
+    "charts": []
+  },
+  "findings": {
+    "title": "Highlights",
+    "items": [
+      {
+        "title": "One city, one source of truth",
+        "text": "A governed data foundation across departments, entities and the entire city."
+      },
+      {
+        "title": "Trusted public reporting",
+        "text": "Interactive Power BI dashboards providing reliable and quality-assured insights."
+      },
+      {
+        "title": "Turning complexity into clarity",
+        "text": "Project data transformed into meaningful insights for citizens and decision-makers."
+      }
+    ]
+  },
+  "results": {
+    "title": "Results that matter",
+    "items": [
+      {
+        "value": "1,200+",
+        "label": "Published initiatives monitored"
+      },
+      {
+        "value": "€14.2 bn",
+        "label": "Investments monitored and made transparent to citizens"
+      },
+      {
+        "value": "~70%",
+        "label": "Initiatives completed during the governance period"
+      }
+    ]
+  },
+  "links": [
+    {
+      "label": "Visit Roma si trasforma",
+      "url": "https://www.romasitrasforma.it/"
+    },
+    {
+      "label": "About the project",
+      "url": "https://www.romasitrasforma.it/en/the-project"
+    }
+  ]
+  },
+  {
+    "slug": "julia-virtual-assistant",
+    "titleLight": "",
+    "titleBold": "Julia",
+    "subtitle": "Julia, the virtual assistant of Rome",
+    "summary": "The first urban generative AI: the virtual assistant of Roma Capitale, answering residents and visitors in real time with certified information.",
+    "tags": [
+      "Generative AI",
+      "Multi-agent",
+      "Roma Capitale",
+      "Smart City"
+    ],
+    "image": "images/julia_logo.png",
+    "heroText": "The virtual assistant of Roma Capitale: documents, events, transport, culture and city services, in 80+ languages, 24/7.",
+    "julia": {
+      "logo": "images/julia_logo.png",
+      "eyebrow": "Julia",
+      "title": "Julia, the virtual assistant of Rome",
+      "intro": [
+        "Julia is the virtual assistant of Roma Capitale, presented as the first urban generative AI. Whether you are living Rome during the Jubilee, dealing with everyday life or discovering hidden corners of the city, she answers in real time with up-to-date, certified information.",
+        "She guides residents and visitors through the services of Roma Capitale and the city itself: documents and procedures, events, museums, restaurants, transport and more. A single message is all it takes to start."
+      ],
+      "stats": [
+        {
+          "value": "24/7",
+          "label": "Always available"
+        },
+        {
+          "value": "80+",
+          "label": "Languages spoken"
+        },
+        {
+          "value": "5",
+          "label": "Channels to chat on"
+        },
+        {
+          "value": "3",
+          "label": "Releases: 1.0, 2.0 and 2.5"
+        }
+      ],
+      "capabilities": {
+        "title": "What you can do with Julia",
+        "items": [
+          {
+            "title": "Explore the Institutional Portal",
+            "text": "Information on services, offices, contacts and documents of the Roma Capitale portal.",
+            "tag": "New"
+          },
+          {
+            "title": "Discover the cinema programme",
+            "text": "Films, showtimes and information on the main cinemas in the capital.",
+            "tag": "New"
+          },
+          {
+            "title": "Get practical help and city services",
+            "text": "Find drinking fountains, public toilets, AMA collection centres and more.",
+            "tag": "Update"
+          },
+          {
+            "title": "Find out what to do in Rome",
+            "text": "Events, concerts, exhibitions and shows."
+          },
+          {
+            "title": "Plan your trips",
+            "text": "Public transport, directions, blue-line parking fares and ZTL zones."
+          },
+          {
+            "title": "Find the right place for you",
+            "text": "Where to eat, sleep and relax, to experience each place authentically."
+          },
+          {
+            "title": "Explore history and culture",
+            "text": "Opening hours and details on museums, monuments, attractions and study rooms."
+          },
+          {
+            "title": "Read official city and mobility news",
+            "text": "News published by Roma Capitale and Roma Servizi per la Mobilità."
+          },
+          {
+            "title": "Get health information",
+            "text": "Real-time Emergency Room waiting times and up-to-date pharmacy locations."
+          }
+        ]
+      },
+      "how": {
+        "eyebrow": "How Julia works",
+        "items": [
+          {
+            "label": "Designed to evolve",
+            "title": "Better with every release",
+            "text": "Julia's technology improves constantly, which makes her more effective, more useful and more precise with each new release."
+          },
+          {
+            "label": "Certified knowledge",
+            "title": "Every piece of data is validated first",
+            "text": "Julia does not learn everything at once: the quality of information is verified first, and each piece of data is validated and certified before it is added. Her knowledge comes from official sources."
+          },
+          {
+            "label": "Multi-agent architecture",
+            "title": "One orchestrator, many specialised agents",
+            "text": "When a chat starts, a Super Agent orchestrator coordinates several specialised agents to produce a single, complete and reliable answer."
+          }
+        ]
+      },
+      "faq": {
+        "title": "Trust, privacy and tips",
+        "items": [
+          {
+            "q": "How is my data protected?",
+            "a": "Julia complies with the General Data Protection Regulation (GDPR) and uses advanced encryption to protect personal information. No sensitive data is stored without explicit consent."
+          },
+          {
+            "q": "Can I trust the information?",
+            "a": "Julia relies on certified, up-to-date data from official Roma Capitale sources and reliable partners in tourism, mobility and culture. As with any AI, results may not be 100% certain, since they depend on the quality and completeness of the available information."
+          },
+          {
+            "q": "How does geolocation work?",
+            "a": "Julia uses your position only if you knowingly share it, and keeps it for a few minutes within the conversation. After that she asks you to share it again if you want location-based answers."
+          },
+          {
+            "q": "How does the conversation history work?",
+            "a": "History stays active only for a limited time. Once it expires, it is as if you were talking for the first time: Julia keeps no memory of previous interactions."
+          },
+          {
+            "q": "How do I get the best answers?",
+            "a": "Ask clear and precise questions, rephrase if you do not find the answer straight away, and use punctuation to separate different requests. If Julia seems stuck, write \"let's start over\" or \"change topic\"."
+          }
+        ]
+      },
+      "cta": {
+        "text": "Everything in this section comes from the official Julia website.",
+        "label": "Meet Julia",
+        "href": "https://julia.comune.roma.it/it/"
+      }
+    },
+    "group": "Mobility"
+  },
+  {
     "slug": "transport-demand-forecasting",
     "titleLight": "Transport Demand",
     "titleBold": "Forecasting Model",
@@ -3320,143 +3595,6 @@
         "Extension to a wider geographical area, assessment of model scalability.",
         "Training of additional models for different road categories, assessment of infrastructure-specific traffic patterns."
       ]
-    },
-    "group": "Mobility"
-  },
-  {
-    "slug": "julia-virtual-assistant",
-    "titleLight": "",
-    "titleBold": "Julia",
-    "subtitle": "Julia, the virtual assistant of Rome",
-    "summary": "The first urban generative AI: the virtual assistant of Roma Capitale, answering residents and visitors in real time with certified information.",
-    "tags": [
-      "Generative AI",
-      "Multi-agent",
-      "Roma Capitale",
-      "Smart City"
-    ],
-    "image": "images/julia_logo.png",
-    "heroText": "The virtual assistant of Roma Capitale: documents, events, transport, culture and city services, in 80+ languages, 24/7.",
-    "julia": {
-      "logo": "images/julia_logo.png",
-      "eyebrow": "Julia",
-      "title": "Julia, the virtual assistant of Rome",
-      "intro": [
-        "Julia is the virtual assistant of Roma Capitale, presented as the first urban generative AI. Whether you are living Rome during the Jubilee, dealing with everyday life or discovering hidden corners of the city, she answers in real time with up-to-date, certified information.",
-        "She guides residents and visitors through the services of Roma Capitale and the city itself: documents and procedures, events, museums, restaurants, transport and more. A single message is all it takes to start."
-      ],
-      "stats": [
-        {
-          "value": "24/7",
-          "label": "Always available"
-        },
-        {
-          "value": "80+",
-          "label": "Languages spoken"
-        },
-        {
-          "value": "5",
-          "label": "Channels to chat on"
-        },
-        {
-          "value": "3",
-          "label": "Releases: 1.0, 2.0 and 2.5"
-        }
-      ],
-      "capabilities": {
-        "title": "What you can do with Julia",
-        "items": [
-          {
-            "title": "Explore the Institutional Portal",
-            "text": "Information on services, offices, contacts and documents of the Roma Capitale portal.",
-            "tag": "New"
-          },
-          {
-            "title": "Discover the cinema programme",
-            "text": "Films, showtimes and information on the main cinemas in the capital.",
-            "tag": "New"
-          },
-          {
-            "title": "Get practical help and city services",
-            "text": "Find drinking fountains, public toilets, AMA collection centres and more.",
-            "tag": "Update"
-          },
-          {
-            "title": "Find out what to do in Rome",
-            "text": "Events, concerts, exhibitions and shows."
-          },
-          {
-            "title": "Plan your trips",
-            "text": "Public transport, directions, blue-line parking fares and ZTL zones."
-          },
-          {
-            "title": "Find the right place for you",
-            "text": "Where to eat, sleep and relax, to experience each place authentically."
-          },
-          {
-            "title": "Explore history and culture",
-            "text": "Opening hours and details on museums, monuments, attractions and study rooms."
-          },
-          {
-            "title": "Read official city and mobility news",
-            "text": "News published by Roma Capitale and Roma Servizi per la Mobilità."
-          },
-          {
-            "title": "Get health information",
-            "text": "Real-time Emergency Room waiting times and up-to-date pharmacy locations."
-          }
-        ]
-      },
-      "how": {
-        "eyebrow": "How Julia works",
-        "items": [
-          {
-            "label": "Designed to evolve",
-            "title": "Better with every release",
-            "text": "Julia's technology improves constantly, which makes her more effective, more useful and more precise with each new release."
-          },
-          {
-            "label": "Certified knowledge",
-            "title": "Every piece of data is validated first",
-            "text": "Julia does not learn everything at once: the quality of information is verified first, and each piece of data is validated and certified before it is added. Her knowledge comes from official sources."
-          },
-          {
-            "label": "Multi-agent architecture",
-            "title": "One orchestrator, many specialised agents",
-            "text": "When a chat starts, a Super Agent orchestrator coordinates several specialised agents to produce a single, complete and reliable answer."
-          }
-        ]
-      },
-      "faq": {
-        "title": "Trust, privacy and tips",
-        "items": [
-          {
-            "q": "How is my data protected?",
-            "a": "Julia complies with the General Data Protection Regulation (GDPR) and uses advanced encryption to protect personal information. No sensitive data is stored without explicit consent."
-          },
-          {
-            "q": "Can I trust the information?",
-            "a": "Julia relies on certified, up-to-date data from official Roma Capitale sources and reliable partners in tourism, mobility and culture. As with any AI, results may not be 100% certain, since they depend on the quality and completeness of the available information."
-          },
-          {
-            "q": "How does geolocation work?",
-            "a": "Julia uses your position only if you knowingly share it, and keeps it for a few minutes within the conversation. After that she asks you to share it again if you want location-based answers."
-          },
-          {
-            "q": "How does the conversation history work?",
-            "a": "History stays active only for a limited time. Once it expires, it is as if you were talking for the first time: Julia keeps no memory of previous interactions."
-          },
-          {
-            "q": "How do I get the best answers?",
-            "a": "Ask clear and precise questions, rephrase if you do not find the answer straight away, and use punctuation to separate different requests. If Julia seems stuck, write \"let's start over\" or \"change topic\"."
-          }
-        ]
-      },
-      "cta": {
-        "text": "Everything in this section comes from the official Julia website.",
-        "label": "Meet Julia",
-        "href": "https://julia.comune.roma.it/it/"
-      }
     },
     "group": "Mobility"
   }
