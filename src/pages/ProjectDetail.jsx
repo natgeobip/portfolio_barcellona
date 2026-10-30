@@ -28,7 +28,7 @@ function Figure({ image, title, caption, className }) {
   )
 }
 
-// Tutte le sezioni oltre a hero, overview, story e insights sono opzionali: se mancano nel JSON non vengono mostrate.
+// Tutte le sezioni oltre a hero, overview e story sono opzionali: se mancano nel JSON non vengono mostrate.
 export default function ProjectDetail() {
   const { slug } = useParams()
   const index = projects.findIndex((p) => p.slug === slug)
@@ -47,7 +47,7 @@ export default function ProjectDetail() {
     )
   }
 
-  const { overview, story, data, methods, insights, findings, results, limits, webgis } = p
+  const { overview, story, data, methods, insights, findings, useCases, results, limits, webgis, links } = p
   // I progetti del team Mobility non usano banner/satellite né header/footer di Space.
   const isSpace = p.group === 'Space'
 
@@ -78,7 +78,7 @@ export default function ProjectDetail() {
     <>
       <Hero
         variant="detail"
-        navLinks={isSpace ? navLinks : navLinks.filter((l) => l.id !== 'contact')}
+        navLinks={navLinks.filter((l) => (isSpace || l.id !== 'contact') && (insights || l.id !== 'insights'))}
         eyebrow={`PROJECT ${index + 1}`}
         titleLight={p.subtitle ? "" : p.titleLight}
         titleBold={p.subtitle || p.titleBold}
@@ -181,24 +181,40 @@ export default function ProjectDetail() {
         </section>
       )}
 
-      <section className="section" id="insights">
-        <SectionHeading eyebrow="Data & Insights" title={insights.title} />
-        <div className="insights" style={{ '--n': insights.charts?.length ?? 0 }}>
-          <Figure className="insights__main" {...insights.main} />
-          {insights.charts?.map((c) => (
-            <Figure key={c.image} className="insights__chart" {...c} />
+      {insights && (
+        <section className="section" id="insights">
+          <SectionHeading eyebrow="Data & Insights" title={insights.title} />
+          <div className="insights" style={{ '--n': insights.charts?.length ?? 0 }}>
+            <Figure className="insights__main" {...insights.main} />
+            {insights.charts?.map((c) => (
+              <Figure key={c.image} className="insights__chart" {...c} />
+            ))}
+          </div>
+          {insights.gallery?.map((g) => (
+            <Figure key={g.image} className="figure-wide" {...g} />
           ))}
-        </div>
-        {insights.gallery?.map((g) => (
-          <Figure key={g.image} className="figure-wide" {...g} />
-        ))}
-      </section>
+        </section>
+      )}
 
       {findings && (
         <section className="section findings" id="findings">
           <SectionHeading eyebrow="Findings" title={findings.title} />
           <ul className="findings__grid">
             {findings.items.map((f) => (
+              <li key={f.title}>
+                <h4>{f.title}</h4>
+                <p>{f.text}</p>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      {useCases && (
+        <section className="section findings" id="usecases">
+          <SectionHeading eyebrow="Applications" title={useCases.title} />
+          <ul className="findings__grid">
+            {useCases.items.map((f) => (
               <li key={f.title}>
                 <h4>{f.title}</h4>
                 <p>{f.text}</p>
@@ -230,6 +246,17 @@ export default function ProjectDetail() {
               <li key={t}>{t}</li>
             ))}
           </ul>
+        </section>
+      )}
+
+      {links?.length > 0 && (
+        <section className="section" id="links">
+          <SectionHeading eyebrow="Learn more" title="Follow the project" />
+          <div className="linkrow">
+            {links.map((l) => (
+              <a key={l.url} className="btn" href={l.url} target="_blank" rel="noreferrer">{l.label}</a>
+            ))}
+          </div>
         </section>
       )}
 

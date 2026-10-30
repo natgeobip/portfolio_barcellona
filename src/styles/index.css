@@ -297,6 +297,7 @@ img { display: block; max-width: 100%; }
 .findings__grid h4 { font-size: .9rem; color: var(--navy); margin-bottom: 6px; }
 .findings__grid p { font-size: .75rem; color: var(--muted); }
 .linkrow { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 18px; }
+.linkrow { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 18px; }
 .limits { display: grid; grid-template-columns: 1.4fr 1fr; gap: 48px; margin-top: 18px; align-items: start; }
 
 .notfound { text-align: center; padding: 120px 24px; }
