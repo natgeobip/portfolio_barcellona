@@ -1231,138 +1231,166 @@
     "group": "Space"
   },
   {
-    "slug": "satellite-broadband-experimentation",
-    "status": "On going",
-    "titleLight": "Satellite Broadband",
-    "titleBold": "Experimentation",
-    "summary": "A field trial of Starlink satellite backhaul to bring ultra-broadband connectivity to remote Lombardy villages.",
-    "tags": [
-      "Starlink",
-      "Satellite Broadband",
-      "MPLS L2VPN",
-      "Network Quality"
-    ],
-    "image": "images/projects/thumbnails/satellite-broadband.png",
-    "heroText": "Traffic from virtual villages served by fibre, copper and wireless is collected at regional access points and carried over Starlink to Milan, to test whether satellite links can support ultra-broadband services.",
-    "overview": {
-      "title": "Project at a glance",
-      "text": "The experimentation tests satellite connectivity as backhaul for ultra-broadband access in Lombardy. Traffic from the Virtual Villages, reached through FTTH, FTTC and FWA access networks, is collected at an Access Network Collection Point (PRRA) and forwarded over an L2VPN on MPLS carried by the Starlink infrastructure to the aggregation point in Milan Caldera, then routed to the Internet. Quality is measured under load at each PRRA.",
-      "stats": [
-        {
-          "value": "10",
-          "label": "PRRAs in the experimentation"
-        },
-        {
-          "value": "6",
-          "label": "Starlink antennas per PRRA, at most"
-        }
-      ],
-      "meta": {
-        "Area": "Lombardy, Italy",
-        "Data": "Network throughput, latency and packet loss",
-        "Output": "Network quality measurements under load"
-      }
-    },
-    "story": [
+  "slug": "satellite-broadband-experimentation",
+  "titleLight": "Satellite Broadband",
+  "titleBold": "Experimentation",
+  "summary": "A field trial of Starlink satellite backhaul for ultra-broadband in Lombardy: 16 virtual villages across 10 access hubs, tested under load from February to August 2026.",
+  "tags": [
+    "Starlink",
+    "Satellite Broadband",
+    "MPLS L2VPN",
+    "Network Quality"
+  ],
+  "image": "images/projects/thumbnails/satellite-broadband.png",
+  "heroText": "Traffic from virtual villages served by fibre, copper and wireless is collected at regional access points and carried over Starlink to Milan, to test whether satellite links can support ultra-broadband services.",
+  "overview": {
+    "title": "Project at a glance",
+    "text": "The experimentation tested satellite connectivity as backhaul for ultra-broadband access in Lombardy. Traffic from 16 Virtual Villages, reached through FTTH, FTTC and FWA access networks, is collected at ten local access hubs (PRRA) and forwarded over an L2VPN on MPLS carried by the Starlink infrastructure to the aggregation point in Milan Caldera, then routed to the Internet. Quality was measured under load in more than 1,000 test sessions of about six hours, between February and August 2026.",
+    "stats": [
       {
-        "icon": "challenge",
-        "label": "The challenge",
-        "title": "Ultra-broadband beyond the terrestrial network",
-        "text": "Remote villages are hard to serve with terrestrial backhaul. The trial checks whether Starlink links can carry the traffic of fibre, copper and wireless access networks with enough quality for everyday services."
+        "value": "10",
+        "label": "PRRAs tested, all completed"
       },
       {
-        "icon": "analyzed",
-        "label": "What was analyzed",
-        "title": "Throughput, latency and packet loss",
-        "text": "Download and upload speed per Virtual Village, UDP latency (a ping under load), TCP round trip time and packet loss, measured under simulated load at the PRRAs."
+        "value": "16",
+        "label": "Virtual Villages on fibre, copper and wireless"
       },
       {
-        "icon": "approach",
-        "label": "Our approach",
-        "title": "Starlink as MPLS backhaul",
-        "text": "Each PRRA aggregates its villages and sends their traffic over an L2VPN on MPLS carried by Starlink. Capacity grows with the number of antennas, up to about 2 Gbps in download and 240 Mbps in upload with six antennas."
+        "value": "1,000+",
+        "label": "Load-test sessions of about 6 hours"
+      },
+      {
+        "value": "≤ 5.1 ms",
+        "label": "Jitter at every site (threshold 30 ms)"
       }
     ],
-    "data": {
-      "title": "Data sources",
-      "items": [
-        {
-          "name": "Virtual Villages",
-          "text": "Villages reached through FTTH on optical fibre, FTTC on copper and FWA on wireless access networks."
-        },
-        {
-          "name": "PRRA equipment",
-          "text": "Each PRRA has 6 Starlink Enterprise kits with modem, 1 KVH satellite kit with a 74 cm antenna, 1 Davis weather station, 1 Cisco NCS 540 aggregation router and 1 Huawei EA5801E-FL16 OLT."
-        },
-        {
-          "name": "Weather data",
-          "text": "Weather stations at each PRRA, to correlate network quality with weather conditions in the next phase."
-        }
-      ],
-      "deliverablesTitle": "What the experimentation produces",
-      "deliverables": [
-        "Speed per Virtual Village, in download and upload.",
-        "UDP latency, TCP round trip time and packet loss.",
-        "A scalable design for satellite backhaul with MPLS multiplexing."
-      ]
+    "meta": {
+      "Area": "Lombardy, Italy",
+      "Period": "February – August 2026",
+      "Data": "Throughput, UDP latency, jitter, packet loss, TCP round trip time and retransmissions",
+      "Output": "QoS matrix per site and service suitability by direction"
+    }
+  },
+  "story": [
+    {
+      "icon": "challenge",
+      "label": "The challenge",
+      "title": "Ultra-broadband beyond the terrestrial network",
+      "text": "Remote villages are hard to serve with terrestrial backhaul. The trial checks whether Starlink links can carry the traffic of fibre, copper and wireless access networks with enough quality for everyday services."
     },
-    "methods": {
-      "title": "From the access network to the Internet",
-      "text": [
-        "Villages are reached by three access technologies: FTTH on optical fibre, FTTC on copper and FWA on wireless. Their traffic reaches the PRRA over terrestrial links, then crosses Starlink on an L2VPN over MPLS to the Milan Caldera aggregation point and on to Internet.",
-        "Scalability comes from aggregating several Starlink antennas, from MPLS multiplexing and from the integration with operators' Layer 2 networks, which allows the available bandwidth to be shared dynamically between terminals."
-      ],
-      "steps": [
-        {
-          "title": "1. Collect at the PRRA",
-          "text": "Terrestrial links from the villages end at the PRRA, where an OLT and a Cisco aggregation router gather the traffic."
-        },
-        {
-          "title": "2. Carry it over Starlink",
-          "text": "Up to six Starlink antennas per PRRA carry an L2VPN over MPLS to Milan Caldera, with up to 2 Gbps downlink and 240 Mbps uplink."
-        },
-        {
-          "title": "3. Load the network",
-          "text": "Traffic from the simulated users of each Virtual Village is generated in download and upload."
-        },
-        {
-          "title": "4. Measure",
-          "text": "Speed, UDP latency, TCP round trip time and packet loss are recorded at each PRRA."
-        }
-      ],
-      "figures": [
-        {
-          "image": "images/projects/satellite-broadband/architecture.png",
-          "caption": "Figure 1. General architecture: Virtual Villages on FTTH, FTTC and FWA, the PRRA, the Starlink link and the Milan Caldera and Milan Bernina nodes towards the Internet. Labels are in Italian."
-        },
-        {
-          "image": "images/projects/satellite-broadband/prra-azzano-san-paolo.png",
-          "caption": "Figure 2. PRRA Azzano San Paolo, with FTTH and FTTC access, OLT, MPLS router and Starlink kits."
-        },
-        {
-          "image": "images/projects/satellite-broadband/prra-milano-bernina.png",
-          "caption": "Figure 3. PRRA Milano Bernina, with the same equipment as Azzano San Paolo."
-        }
-      ]
+    {
+      "icon": "analyzed",
+      "label": "What was analyzed",
+      "title": "Six network quality metrics",
+      "text": "Throughput, UDP latency, UDP jitter, UDP packet loss, TCP round trip time and TCP retransmission rate, measured under simulated load at all 10 PRRAs."
     },
-    "insights": {
-      "title": "Data that drives decisions",
-      "main": {
-        "image": "images/projects/satellite-broadband/villages-map.png",
-        "caption": "Figure 4. Virtual Villages in Lombardy: FTTH in green, FTTC in brown."
+    {
+      "icon": "approach",
+      "label": "Our approach",
+      "title": "Starlink as MPLS backhaul",
+      "text": "Each PRRA aggregates its villages and sends their traffic over an L2VPN on MPLS carried by Starlink. Capacity grows with the number of antennas, up to about 2 Gbps in download and 240 Mbps in upload with six antennas."
+    }
+  ],
+  "data": {
+    "title": "Data sources",
+    "items": [
+      {
+        "name": "Virtual Villages",
+        "text": "16 villages: 9 on FTTH (Bergamo, Brugherio, Brescia, Milano Caracciolo ×2, Eupilio, Moglia, Montalto Pavese, Val Masino), 5 on FTTC (Marudo ×2, Broni, Pieve Fissiraga, Casalmaiocco) and 2 on FWA (Corte de' Frati, Sondrio)."
       },
-      "charts": [],
-      "gallery": []
+      {
+        "name": "PRRA equipment",
+        "text": "Each PRRA has 6 Starlink Enterprise kits with modem, 1 KVH satellite kit with a 74 cm antenna, 1 Davis weather station, 1 Cisco NCS 540 aggregation router and 1 Huawei EA5801E-FL16 OLT."
+      },
+      {
+        "name": "Test toolchain",
+        "text": "iPerf 2.2.1, Prometheus and Grafana, with 4 central servers and 11 relocatable units. The emulated services are streaming, VoIP, video conferencing, gaming and web."
+      },
+      {
+        "name": "Weather data",
+        "text": "Weather stations at each PRRA, to relate network quality to weather conditions."
+      }
+    ],
+    "deliverablesTitle": "What the experimentation produces",
+    "deliverables": [
+      "Throughput per Virtual Village, in download and upload.",
+      "UDP latency, jitter, packet loss, TCP round trip time and retransmission rate.",
+      "A QoS matrix per site.",
+      "A service suitability table by direction: suitable, acceptable depending on load, or to be optimised.",
+      "A scalable design for satellite backhaul with MPLS multiplexing."
+    ]
+  },
+  "methods": {
+    "title": "From the access network to the Internet",
+    "text": [
+      "Villages are reached by three access technologies: FTTH on optical fibre, FTTC on copper and FWA on wireless. Their traffic reaches the PRRA over terrestrial links, then crosses Starlink on an L2VPN over MPLS to the Milan Caldera aggregation point and on to Internet.",
+      "Scalability comes from aggregating several Starlink antennas, from MPLS multiplexing and from the integration with operators' Layer 2 networks, which allows the available bandwidth to be shared dynamically between terminals.",
+      "Two test regimes were used: defined bandwidth, and free bandwidth with elastic TCP. They change how throughput should be read: at Broni, for example, 78 Mbps in defined bandwidth against 42 Mbps in free bandwidth."
+    ],
+    "steps": [
+      {
+        "title": "1. Collect at the PRRA",
+        "text": "Terrestrial links from the villages end at the PRRA, where an OLT and a Cisco aggregation router gather the traffic."
+      },
+      {
+        "title": "2. Carry it over Starlink",
+        "text": "Up to six Starlink antennas per PRRA carry an L2VPN over MPLS to Milan Caldera, with up to 2 Gbps downlink and 240 Mbps uplink."
+      },
+      {
+        "title": "3. Load the network",
+        "text": "Users are simulated per village. Final configurations: FTTH 75 download and 46 upload, FTTC Broni–Pieve Fissiraga 33 and 26, FTTC Marudo–Casalmaiocco 23 and 25."
+      },
+      {
+        "title": "4. Run the test sessions",
+        "text": "More than 1,000 sessions of about six hours, between February and August 2026, record throughput, UDP latency, jitter, packet loss, TCP round trip time and retransmissions."
+      },
+      {
+        "title": "5. Judge suitability",
+        "text": "Results become a QoS matrix per site and a suitability table for each service, in download and upload."
+      }
+    ],
+    "figures": [
+      {
+        "image": "images/projects/satellite-broadband/architecture.png",
+        "caption": "Figure 1. Technical architecture: Virtual Villages on FTTH, FTTC and FWA, the PRRA, the Starlink link and the Milan Caldera and Milan Bernina nodes towards the Internet. Labels are in Italian."
+      }
+    ]
+  },
+  "insights": {
+    "title": "How it works and what it showed",
+    "main": {
+      "image": "images/projects/satellite-broadband/data-journey.png",
+      "caption": "Figure 2. The journey of a data packet, from a simulated village to the Internet, and the capacity of the satellite link: about 2 Gbps in download and 240 Mbps in upload per hub."
     },
-    "limits": {
-      "title": "Next Steps",
-      "nextTitle": "Next steps",
-      "next": [
-        "Validate the indicators and correlate them with weather data.",
-        "Compare FTTH, FTTC and FWA access in more depth."
-      ]
-    },
-    "group": "Space"
+    "charts": [],
+    "gallery": [
+      {
+        "title": "Where the villages are",
+        "image": "images/projects/satellite-broadband/villages-map.jpg",
+        "caption": "Figure 3. The 16 Virtual Villages across Lombardy, from the Alpine valleys to the plain, by access technology. Results are flat from the Alps to the plain; the exceptions trace back to site specifics."
+      },
+      {
+        "title": "What works, where",
+        "image": "images/projects/satellite-broadband/service-suitability.png",
+        "caption": "Figure 4. Service suitability in download and upload at each of the 15 test sites. Download is suitable everywhere; upload is the limit where several villages share one hub."
+      }
+    ]
+  },
+  "limits": {
+    "title": "Next steps",
+    "items": [
+      "Contention for the shared uplink, without shaping or policing.",
+      "A SFP anomaly between Telespazio and Starlink (28 June to 9 July).",
+      "Under-sizing and obstructions at Sondrio, and mountainous terrain at Val Masino."
+    ],
+    "nextTitle": "Next steps",
+    "next": [
+      "Apply traffic shaping and policing on the shared uplink.",
+      "Define a concurrency factor to size the number of simultaneous users.",
+      "Add uplink capacity, or more antennas where hubs have fewer than six."
+    ]
+  },
+  "status": "Completed"
   },
   {
     "slug": "clepsydra-galileo-timing-receiver",
