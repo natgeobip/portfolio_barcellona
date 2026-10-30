@@ -2368,16 +2368,16 @@
       ]
     },
     "limits": {
-      "title": "Limitations and next steps",
-      "items": [
-        "Buffers represent geometric distances rather than actual walking routes. Barriers, crossings and accessibility require local checks.",
-        "The indicator measures the availability of mobility points and routes, rather than service frequency, connection quality or passenger flows. Network totals include stops outside Lombardy and services beyond local public transport."
-      ],
-      "nextTitle": "Next steps",
-      "next": [
-        "Assessment of pilot results to guide subsequent expansion to other regional hubs.",
-        "Integration of additional modes and services, including shared mobility, taxis and demand-responsive transport, to provide real-time information across transport modes."
-      ]
+    "title": "Limitations and next steps",
+    "items": [
+      "Buffers represent geometric distances rather than actual walking routes. Barriers, crossings and accessibility require local checks.",
+      "The indicator measures the availability of mobility points and routes, rather than service frequency, connection quality or passenger flows. Network totals include stops outside Lombardy and services beyond local public transport."
+    ],
+    "nextTitle": "Next steps",
+    "next": [
+      "Assessment of pilot results to guide subsequent expansion to other regional hubs.",
+      "Integration of additional modes and services, including shared mobility, taxis and demand-responsive transport, to provide real-time information across transport modes."
+    ]
     },
     "group": "Mobility"
   },
@@ -2680,7 +2680,7 @@
         },
         {
         "title": "Guest Ticket Search and Management",
-        "image": "images/projects/ticketing-platform/csr-travelplanner.png",
+        "image": "images/projects/movility/csr-digitale/csr-travelplanner.png",
         "caption": "Figure 5. Guest ticket search interface for viewing issued tickets and their associated details across multiple operators."
       }
       ]
