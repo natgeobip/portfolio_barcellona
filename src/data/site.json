@@ -191,11 +191,12 @@
             "linkedin": "https://www.linkedin.com/in/niccol%C3%B2-silvestri-02ab7482/"
           },
           {
-            "name": "Debora Fanti",
-            "role": "Senior Manager",
-            "bio": "Debora Fanti is a Senior Manager at BIP with 10 years of experience supporting digital and organisational transformation. Her work spans transport, public administration, and energy&utilities, contributing to smarter, more sustainable cities through the evolution of mobility, infrastructure, and public services.",
-            "photo": "images/team/movility/Debora-Fanti.png",
-            "linkedin": "https://www.linkedin.com/in/deborafanti1357",
+            
+            "name": "Giuseppe Costantino",
+            "role": "Partner",
+            "bio": "Partner at BIP with over 20 years of experience in the Transport & Mobility sector, leading complex digital transformation, innovation and strategic advisory programmes for transport operators, railway companies and Public Administrations. He has developed strong expertise in the railway sector, managing strategic relationships and transformation programmes across one of Italy’s leading railway groups.",
+            "photo": "images/team/movility/giuseppe-costantino-portrait.png",
+            "linkedin": "https://www.linkedin.com/in/giuseppe-costantino-b005391/",
             "featured": true
           },
           {
@@ -206,11 +207,11 @@
             "linkedin": "https://www.linkedin.com/in/fabiola-filardo/"
           },
           {
-            "name": "Giuseppe Costantino",
-            "role": "Partner",
-            "bio": "Partner at BIP with over 20 years of experience in the Transport & Mobility sector, leading complex digital transformation, innovation and strategic advisory programmes for transport operators, railway companies and Public Administrations. He has developed strong expertise in the railway sector, managing strategic relationships and transformation programmes across one of Italy’s leading railway groups.",
-            "photo": "images/team/movility/giuseppe-costantino-portrait.png",
-            "linkedin": "https://www.linkedin.com/in/giuseppe-costantino-b005391/"
+            "name": "Debora Fanti",
+            "role": "Senior Manager",
+            "bio": "Debora Fanti is a Senior Manager at BIP with 10 years of experience supporting digital and organisational transformation. Her work spans transport, public administration, and energy&utilities, contributing to smarter, more sustainable cities through the evolution of mobility, infrastructure, and public services.",
+            "photo": "images/team/movility/Debora-Fanti.png",
+            "linkedin": "https://www.linkedin.com/in/deborafanti1357"
           }
         ]
       },
@@ -225,18 +226,11 @@
             "linkedin": "https://www.linkedin.com/in/leonardo-squarcetti/"
           },
           {
-            "name": "Alessio Centrella",
-            "role": "Consultant",
-            "bio": "Brings data analysis and management skills to digital innovation projects for public administration, with an MSc in Economics and Management earned with top honours. Helped design and pilot an AI agent for a public-sector project and prepares the analyses and proposals that support client decisions. Winner of the 2025 SIM Marketing Award and of a Best Project Award at the ASviS Sustainable Development Festival.",
-            "photo": "images/team/urban/Roma Capitale_Consultant_Alessio Centrella.png",
-            "linkedin": "https://www.linkedin.com/in/alessio-centrella-b6a295290/"
-          },
-          {
-            "name": "Rita Scotto d’Apollonia",
-            "role": "Senior Consultant",
-            "bio": "PMO and project governance specialist in public-sector digital transformation, with over six years of consulting experience and an MSc in Innovation and International Management. Currently runs the PMO for an AI-based transformation programme, covering planning, Steering Committees, risks, KPIs and cost control. Designed and delivered training initiatives, driving adoption of new IT solutions.",
-            "photo": "images/team/urban/Roma Capitale_Senior Consultant_Rita Scotto d'Apollonia.png",
-            "linkedin": "https://www.linkedin.com/in/rita-scotto-d-apollonia-63924b198/"
+            "name": "Daniele Attaccalite",
+            "role": "Manager",
+            "bio": "A career that bridges public administration and digital infrastructure: from coordinating the monitoring of business incentives at Invitalia to leading data centre design projects at Aruba, reporting directly to the CEO. A management engineer by training, he now supports public clients with NRRP-funded data centres for the Department for Digital Transformation and project dashboards for clients.",
+            "photo": "images/team/urban/Roma Capitale_Manager_Daniele Attaccalite.jpg",
+            "linkedin": "https://www.linkedin.com/in/danieleattaccalite/"
           },
           {
             "name": "Dalila Spina",
@@ -246,12 +240,27 @@
             "linkedin": "https://www.linkedin.com/in/spina-dalila/"
           },
           {
+            "name": "Rita Scotto d’Apollonia",
+            "role": "Senior Consultant",
+            "bio": "PMO and project governance specialist in public-sector digital transformation, with over six years of consulting experience and an MSc in Innovation and International Management. Currently runs the PMO for an AI-based transformation programme, covering planning, Steering Committees, risks, KPIs and cost control. Designed and delivered training initiatives, driving adoption of new IT solutions.",
+            "photo": "images/team/urban/Roma Capitale_Senior Consultant_Rita Scotto d'Apollonia.png",
+            "linkedin": "https://www.linkedin.com/in/rita-scotto-d-apollonia-63924b198/"
+          },
+          
+          {
             "name": "Matteo Villani",
             "role": "Partner",
             "bio": "Partner in strategy and organisational consulting specialising in public procurement and strategic planning for public bodies. A decade of hands-on work with Consip, Italy’s central purchasing body, including support for its Industrial Plan, plus programmes for Roma Capitale and the Regione Lazio. Leads a team of over 50 consultants and has brought in new public-sector clients such as the Ministry of Economy and Finance, Invitalia and AgID.",
             "photo": "images/team/urban/Roma Capitale_Partner_ Matteo Villani.png",
             "linkedin": "https://www.linkedin.com/in/matteo-villani-b5777a55/",
             "featured": true
+          },
+          {
+            "name": "Domenico Terracciano",
+            "role": "Senior Director",
+            "bio": "Nearly fifteen years of experience in consulting, programme and portfolio management, with a strong focus on public administration and National Recovery and Resilience Plan initiatives, backed by an MSc in Space Engineering. Hands-on leadership of digital transformation programmes for major public sector clients, including the Italian Prime Minister’s Office, the Ministry of Justice, Consip and Roma Capitale, plus studies for the European Commission. PMP, TOGAF 9 and ITIL 4 certified, with expertise in PM², the European Commission’s project management methodology.",
+            "photo": "images/team/urban/Roma Capitale_Senior Director_ Domenico Terracciano.jpg",
+            "linkedin": "https://www.linkedin.com/in/domenico-terracciano-a511b0b4/"
           },
           {
             "name": "Federica Pereira Alves",
@@ -267,18 +276,11 @@
             "linkedin": "https://www.linkedin.com/in/sara-frau-5069a9a7/"
           },
           {
-            "name": "Daniele Attaccalite",
-            "role": "Manager",
-            "bio": "A career that bridges public administration and digital infrastructure: from coordinating the monitoring of business incentives at Invitalia to leading data centre design projects at Aruba, reporting directly to the CEO. A management engineer by training, he now supports public clients with NRRP-funded data centres for the Department for Digital Transformation and project dashboards for clients.",
-            "photo": "images/team/urban/Roma Capitale_Manager_Daniele Attaccalite.jpg",
-            "linkedin": "https://www.linkedin.com/in/danieleattaccalite/"
-          },
-          {
-            "name": "Domenico Terracciano",
-            "role": "Senior Director",
-            "bio": "Nearly fifteen years of experience in consulting, programme and portfolio management, with a strong focus on public administration and National Recovery and Resilience Plan initiatives, backed by an MSc in Space Engineering. Hands-on leadership of digital transformation programmes for major public sector clients, including the Italian Prime Minister’s Office, the Ministry of Justice, Consip and Roma Capitale, plus studies for the European Commission. PMP, TOGAF 9 and ITIL 4 certified, with expertise in PM², the European Commission’s project management methodology.",
-            "photo": "images/team/urban/Roma Capitale_Senior Director_ Domenico Terracciano.jpg",
-            "linkedin": "https://www.linkedin.com/in/domenico-terracciano-a511b0b4/"
+            "name": "Alessio Centrella",
+            "role": "Consultant",
+            "bio": "Brings data analysis and management skills to digital innovation projects for public administration, with an MSc in Economics and Management earned with top honours. Helped design and pilot an AI agent for a public-sector project and prepares the analyses and proposals that support client decisions. Winner of the 2025 SIM Marketing Award and of a Best Project Award at the ASviS Sustainable Development Festival.",
+            "photo": "images/team/urban/Roma Capitale_Consultant_Alessio Centrella.png",
+            "linkedin": "https://www.linkedin.com/in/alessio-centrella-b6a295290/"
           }
         ]
       }
