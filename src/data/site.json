@@ -285,6 +285,43 @@
             "linkedin": "https://www.linkedin.com/in/alessio-centrella-b6a295290/"
           }
         ]
+      },
+      {
+        "name": "Digital Transformation",
+        "narrow": true,
+        "members": [
+          {
+            "name": "Valeria Sarrocco",
+            "role": "Director",
+            "bio": "Dynamic and results-driven consultant with extensive experience in Public Sector transformation, specializing in Central and Local Public Administrations across ICT, transportation, healthcare, and energy. Recognized for leading complex digital transformation programs, driving innovation and operational efficiency, and delivering value through data-driven decision-making and cross-sector collaboration. Highly skilled in business development, program governance, and end-to-end project delivery - from process design to implementation and change management. Skilled in managing executive-level client relationships, guiding multidisciplinary teams, and aligning technology solutions with strategic business objectives to ensure impactful and sustainable outcomes.",
+            "photo": "images/team/digital/Valeria.jpeg"
+          },
+          {
+            "name": "Flavio Bovino",
+            "role": "Senior Manager",
+            "bio": "Public Sector Digital Transformation Manager and Strategic Advisor with 8+ years of experience in digital innovation, ICT program management, and public sector consulting. Specialized in digital governance, public procurement, cloud transformation, and digital healthcare, bridging strategic objectives and technological innovation through effective program leadership, stakeholder management, and the delivery of citizen-centric digital services.",
+            "photo": "images/team/digital/Flavio.jpeg"
+          },
+          {
+            "name": "Mirko Zerboni",
+            "role": "Partner",
+            "bio": "Public Sector Digital Transformation Manager and Strategic Advisor with 8+ years of experience in digital innovation, ICT program management, and public sector consulting. Specialized in digital governance, public procurement, cloud transformation, and digital healthcare, bridging strategic objectives and technological innovation through effective program leadership, stakeholder management, and the delivery of citizen-centric digital services.",
+            "photo": "images/team/digital/Mirko.jpeg",
+            "featured": true
+          },
+          {
+            "name": "Viviana Lanza",
+            "role": "Senior Manager",
+            "bio": "Senior Manager with 15+ years of experience in IT consulting, project management, and digital transformation for the public sector, specializing in mobility and transport systems since 2013. Certified in AgilePM Foundation, ITIL 4 Foundation, and Scrum Master, with expertise in managing complex digital platforms, business process design, requirements analysis, and geospatial data analysis (GIS). Skilled in stakeholder management, multidisciplinary team coordination, and IT governance.",
+            "photo": "images/team/digital/Viviana.jpeg"
+          },
+          {
+            "name": "Benedetta Ossola",
+            "role": "Project Manager",
+            "bio": "PMP-certified IT Project Manager and Technology Advisor with 10+ years of experience in digital transformation, enterprise applications, and IT consulting. Specialized in AI-driven solutions, technology strategy, and complex digital platforms, bridging business needs and technical innovation through effective project leadership, stakeholder management, and solution design.",
+            "photo": "images/team/digital/Benedetta.jpeg"
+          }
+        ]
       }
     ]
   },
